@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">I Know That Scripture</string>
+    <string name="scriptures_label">Scriptures</string>
+	<string name="addscripture_label">Add New</string>
+	<string name="addedit_label">Add/Edit</string>
+	<string name="passage_hint">Enter passage here</string>
+	<string name="book_hint">Enter book name (ex. 1 John, Acts)</string>
+	<string name="chapter_hint">Enter chapter number</string>
+	<string name="verse_hint">Enter verse number (only one)</string>
+	<string name="joke_honesty">Job interview:\n"What's your greatest weakness?"\n"Honesty."\n"I don't think honesty is a weakness."\n"I don't give a damn what you think."</string>
+	
+	<string name="submit">Submit</string>
+	
+	<string name="book_prompt">Choose a book</string>
+	<string name="book_default">Book default</string>
+	<string name="book_1">Book 1</string>
+	<string name="book_2">Book 2</string>
+	<string name="book_3">Book 3</string>
+	
+	<string name="chapter_prompt">Choose a chapter</string>
+	<string name="chapter_default">chapter default</string>
+	<string name="chapter_1">Chapter 1</string>
+	<string name="chapter_2">Chapter 2</string>
+	<string name="chapter_3">Chapter 3</string>
+	
+	
+	<string name="verse_prompt">Choose a verse</string>
+	<string name="verse_default">verse default</string>
+	<string name="verse_1">Verse 1</string>
+	<string name="verse_2">Verse 2</string>
+	<string name="verse_3">Verse 3</string>
+</resources>

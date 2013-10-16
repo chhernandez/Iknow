@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+	<string-array name="book_array">
+		<item>@string/book_1</item>
+		<item>@string/book_2</item>
+		<item>@string/book_3</item>
+	</string-array>
+
+	
+	<string-array name="chapter_array">
+		<item>@string/chapter_1</item>
+		<item>@string/chapter_2</item>
+		<item>@string/chapter_3</item>
+	</string-array>
+	
+	<string-array name="verse_array">
+		<item>@string/verse_1</item>
+		<item>@string/verse_2</item>
+		<item>@string/verse_3</item>
+	</string-array>
+</resources>
