@@ -2,10 +2,8 @@ package team.kyb.database;
 
 
 
+
 import team.kyb.R;
-import team.kyb.R.id;
-import team.kyb.R.layout;
-import team.kyb.R.menu;
 import android.app.ListActivity;
 import android.content.Intent;
 import android.database.Cursor;

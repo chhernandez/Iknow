@@ -12,11 +12,34 @@
         android:id="@+id/bookTextView"
         style="@style/bookStyle"
         ></TextView>
-            
+  	
+	<TextView
+	    android:id="@+id/space2"
+	    android:layout_below="@id/passageTextView"
+	    android:layout_toRightOf="@id/bookTextView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content" 
+	    android:layout_marginTop="10dp"
+	    android:textSize="20sp"
+	    android:text=" ">
+	
+	</TextView>            
     <TextView
         android:id="@+id/chapterTextView"
         style="@style/chapterStyle"
         ></TextView>
+    
+	<TextView
+	    android:id="@+id/colon2"
+	    android:layout_below="@id/passageTextView"
+	    android:layout_toRightOf="@id/chapterTextView"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:layout_marginTop="10dp"	    
+	    android:textSize="20sp"
+	    
+	    >
+	</TextView>    
    
     <TextView
         android:id="@+id/verseTextView"

@@ -24,26 +24,28 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int about=0x7f080013;
-        public static final int addscripture=0x7f080014;
+        public static final int about=0x7f080015;
+        public static final int addscripture=0x7f080016;
         public static final int bookListView=0x7f080006;
         public static final int bookTextView=0x7f08000c;
         public static final int booktext=0x7f080001;
         public static final int chapterListView=0x7f080008;
-        public static final int chapterTextView=0x7f08000d;
+        public static final int chapterTextView=0x7f08000e;
         public static final int chaptertext=0x7f080002;
         public static final int colon1=0x7f080009;
-        public static final int exit=0x7f080012;
-        public static final int help=0x7f080011;
+        public static final int colon2=0x7f08000f;
+        public static final int exit=0x7f080014;
+        public static final int help=0x7f080013;
         public static final int passageListView=0x7f080005;
         public static final int passageTextView=0x7f08000b;
         public static final int passagetext=0x7f080000;
         public static final int saveScriptureButton=0x7f080004;
-        public static final int scriptures=0x7f08000f;
-        public static final int settings=0x7f080010;
+        public static final int scriptures=0x7f080011;
+        public static final int settings=0x7f080012;
         public static final int space1=0x7f080007;
+        public static final int space2=0x7f08000d;
         public static final int verseListView=0x7f08000a;
-        public static final int verseTextView=0x7f08000e;
+        public static final int verseTextView=0x7f080010;
         public static final int versetext=0x7f080003;
     }
     public static final class layout {

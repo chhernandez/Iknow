@@ -1,10 +1,8 @@
 package team.kyb.database;
 
 
+
 import team.kyb.R;
-import team.kyb.R.id;
-import team.kyb.R.layout;
-import team.kyb.R.string;
 import android.app.Activity;
 import android.app.AlertDialog;
 import android.os.AsyncTask;
