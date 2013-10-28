@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">I Know That Scripture</string>
+    <string name="scriptures_label">Scriptures Database</string>
+    <string name="settings_label">Settings</string>
+    <string name="help_label">Help</string>
+    <string name="exit_label">Exit Game</string>
+    <string name="about_label">About</string>
+	<string name="addscripture_label">Add New</string>
+	<string name="addedit_label">Add/Edit</string>
+	<string name="passage_hint">Enter passage here</string>
+	<string name="book_hint">Enter book name (ex. 1 John, Acts)</string>
+	<string name="chapter_hint">Enter chapter number</string>
+	<string name="verse_hint">Enter verse number (only one)</string>
+	<string name="save_button_label">Save</string>
+	<string name="vpassageTitle">Passage text is required</string>
+	<string name="vpassageMessage">Please enter passage text</string>
+	<string name="vbookTitle">Bible book name is required</string>
+	<string name="vbookMessage">Please enter Bible book name</string>	
+	<string name="vchapterTitle">Chapter is required</string>
+	<string name="vchapterMessage">Please enter chapter number</string>	
+	<string name="vverseTitle">Verse number is required</string>
+	<string name="vverseMessage">Please enter verse number</string>	
+	<string name="vButton">OK</string>
+</resources>
