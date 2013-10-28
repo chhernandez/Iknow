@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="team.iknowthatscripture"
+    package="team.kyb"
     android:versionCode="1"
     android:versionName="1.0" >
 
@@ -14,7 +14,7 @@
         android:label="@string/app_name"
         android:theme="@style/AppTheme" >
         <activity
-            android:name="team.iknowthatscripture.MainActivity"
+            android:name="team.kyb.MainActivity"
             android:label="@string/app_name" >
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -22,13 +22,21 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        
+         <activity 
+            android:name="team.kyb.database.UpdateScripture"
+            android:label="@string/update_label">
+            
+        </activity>       
          <activity
-            android:name="team.iknowthatscripture.database.AddEditScripture"
+            android:name="team.kyb.database.AddEditScripture"
             android:label="@string/addedit_label" >
-        </activity>        
+        </activity>   
+        
+"
               
         <activity
-            android:name="team.iknowthatscripture.database.Scriptures"
+            android:name="team.kyb.database.Scriptures"
             android:label="@string/scriptures_label" >
         </activity>        
 

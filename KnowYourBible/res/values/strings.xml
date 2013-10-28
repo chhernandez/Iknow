@@ -9,6 +9,7 @@
     <string name="about_label">About</string>
 	<string name="addscripture_label">Add New</string>
 	<string name="addedit_label">Add/Edit</string>
+	<string name="update_label">Update</string>
 	<string name="passage_hint">Enter passage here</string>
 	<string name="book_hint">Enter book name (ex. 1 John, Acts)</string>
 	<string name="chapter_hint">Enter chapter number</string>
