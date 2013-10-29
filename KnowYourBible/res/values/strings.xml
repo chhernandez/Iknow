@@ -2,12 +2,18 @@
 <resources>
 
     <string name="app_name">I Know That Scripture</string>
+    
     <string name="scriptures_label">Scriptures Database</string>
     <string name="settings_label">Settings</string>
     <string name="help_label">Help</string>
     <string name="exit_label">Exit Game</string>
     <string name="about_label">About</string>
 	<string name="addscripture_label">Add New</string>
+	<string name="editscripture_label">Edit</string>
+	<string name="deletescripture_label">Delete</string>
+	
+    <string name="confirmDelete">Are You Sure?</string>
+    <string name="confirmDeleteMessage">This will delete the scripture.</string>	
 	<string name="addedit_label">Add/Edit</string>
 	<string name="update_label">Update</string>
 	<string name="passage_hint">Enter passage here</string>

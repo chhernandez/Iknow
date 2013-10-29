@@ -3,9 +3,14 @@ package team.kyb.database;
 
 import team.kyb.R;
 import android.app.Activity;
+import android.app.AlertDialog;
+import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.view.Menu;
+import android.view.MenuInflater;
+import android.view.MenuItem;
 import android.widget.TextView;
 
 public class UpdateScripture extends Activity {
@@ -85,5 +90,48 @@ public class UpdateScripture extends Activity {
 		
 	} // end of 	private class LoadScriptureTask extends AsyncTask<Long, Object, Cursor> {
 	
+	//create the menu for the update scripture
+	@Override
+	public boolean onCreateOptionsMenu(Menu menu){
+		super.onCreateOptionsMenu(menu);
+		MenuInflater inflater = getMenuInflater();
+		inflater.inflate(R.menu.update_menu, menu);
+		return true;
+	}
+	
+	//handle choice from options menu
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item){
+		switch (item.getItemId()){
+		case R.id.editscripture:
+/*			// create an Intent to launch the AddEditScripture Activity
+			Intent addEditScripture = new Intent(this, AddEditScripture.class);
+			
+			addEditScripture.putExtra(Scriptures.ROW_ID, rowID);
+			addEditScripture.putExtra("passage", passage.getText());
+			addEditScripture.putExtra("book", book.getText());
+			addEditScripture.putExtra("chapter", chapter.getText());
+			addEditScripture.putExtra("verse", verse.getText());
+			startActivity(addEditScripture);*/
+			return true;
+		case R.id.deletescripture:
+			deleteScripture();
+			return true;
+		default:
+			return super.onOptionsItemSelected(item);
+		}
+	}
+
+	private void deleteScripture() {
+		// TODO Auto-generated method stub
+		AlertDialog.Builder builder = new AlertDialog.Builder(UpdateScripture.this);
+		
+		builder.setTitle(R.string.confirmDelete);
+		builder.setMessage(R.string.confirmDeleteMessage);
+		
+		// provide an OK button
+	//	builder.setPositiveButton(R.string.button_delete, listener)
+		
+	}
 	
 }  // end of public class UpdateScripture extends Activity {
