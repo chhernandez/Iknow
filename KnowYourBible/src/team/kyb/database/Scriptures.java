@@ -1,8 +1,6 @@
 package team.kyb.database;
 
 
-
-
 import team.kyb.R;
 import android.app.ListActivity;
 import android.content.Intent;
@@ -105,7 +103,9 @@ public class Scriptures extends ListActivity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		MenuInflater inflater = getMenuInflater();
+		
 		inflater.inflate(R.menu.scriptures_menu, menu);
+		
 		return true;
 	} 
 

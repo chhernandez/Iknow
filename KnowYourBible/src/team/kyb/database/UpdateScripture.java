@@ -8,6 +8,7 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
 import android.view.MenuItem;
@@ -95,16 +96,20 @@ public class UpdateScripture extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu){
 		super.onCreateOptionsMenu(menu);
 		MenuInflater inflater = getMenuInflater();
+		
 		inflater.inflate(R.menu.update_menu, menu);
+		/*inflater.inflate(R.menu.scriptures_menu, menu);	*/
+		
 		return true;
 	}
+
 	
 	//handle choice from options menu
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item){
 		switch (item.getItemId()){
 		case R.id.editscripture:
-/*			// create an Intent to launch the AddEditScripture Activity
+			// create an Intent to launch the AddEditScripture Activity
 			Intent addEditScripture = new Intent(this, AddEditScripture.class);
 			
 			addEditScripture.putExtra(Scriptures.ROW_ID, rowID);
@@ -112,7 +117,15 @@ public class UpdateScripture extends Activity {
 			addEditScripture.putExtra("book", book.getText());
 			addEditScripture.putExtra("chapter", chapter.getText());
 			addEditScripture.putExtra("verse", verse.getText());
-			startActivity(addEditScripture);*/
+			
+			Log.d("edit scripture", "row id:" + rowID);	
+			Log.d("edit scripture", "passage:" + passage.getText());	
+			Log.d("edit scripture", "book:" + book.getText());
+			Log.d("edit scripture", "chapter:" + chapter.getText());
+			Log.d("edit scripture", "verse:" + verse.getText());  
+		
+			
+			startActivity(addEditScripture);
 			return true;
 		case R.id.deletescripture:
 			deleteScripture();

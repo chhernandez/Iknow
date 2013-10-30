@@ -37,8 +37,8 @@ public class AddEditScripture extends Activity {
 			rowID = extras.getLong("row_id");
 			passage.setText(extras.getString("passage"));
 			book.setText(extras.getString("book"));
-			chapter.setText(extras.getInt("chapter"));
-			verse.setText(extras.getInt("verse"));
+			chapter.setText(extras.getString("chapter"));
+			verse.setText(extras.getString("verse"));
 			
 		} // end if extras
 		
