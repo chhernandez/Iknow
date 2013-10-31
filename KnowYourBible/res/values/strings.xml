@@ -12,6 +12,9 @@
 	<string name="editscripture_label">Edit</string>
 	<string name="deletescripture_label">Delete</string>
 	
+    <string name="button_cancel">Cancel</string>
+    <string name="button_delete">Delete</string>	
+	
     <string name="confirmDelete">Are You Sure?</string>
     <string name="confirmDeleteMessage">This will delete the scripture.</string>	
 	<string name="addedit_label">Add/Edit</string>

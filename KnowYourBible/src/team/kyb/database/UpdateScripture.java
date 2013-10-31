@@ -4,6 +4,7 @@ package team.kyb.database;
 import team.kyb.R;
 import android.app.Activity;
 import android.app.AlertDialog;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
@@ -128,6 +129,8 @@ public class UpdateScripture extends Activity {
 			startActivity(addEditScripture);
 			return true;
 		case R.id.deletescripture:
+			
+			Log.d("delete scripture", "delete");  			
 			deleteScripture();
 			return true;
 		default:
@@ -137,14 +140,46 @@ public class UpdateScripture extends Activity {
 
 	private void deleteScripture() {
 		// TODO Auto-generated method stub
+		
+		Log.d("inside delete scripture", "delete");  		
 		AlertDialog.Builder builder = new AlertDialog.Builder(UpdateScripture.this);
 		
 		builder.setTitle(R.string.confirmDelete);
 		builder.setMessage(R.string.confirmDeleteMessage);
 		
 		// provide an OK button
-	//	builder.setPositiveButton(R.string.button_delete, listener)
+		builder.setPositiveButton(R.string.button_delete, 
+				new DialogInterface.OnClickListener() {
+					
+					@Override
+					public void onClick(DialogInterface dialog, int button) {
+
+						final DatabaseConnector databaseConnector = new DatabaseConnector(UpdateScripture.this);
+						
+						// create an AsyncTask that deletes the scripture in another 
+						// thread, then calls finish after the deletion
+						AsyncTask<Long, Object, Object> deleteTask = new AsyncTask<Long, Object, Object>() {	
+							
+							@Override
+							protected Object doInBackground(Long... params){
+								databaseConnector.deleteScripture(params[0]);
+								return null;
+							}
+							
+							@Override
+							protected void onPostExecute(Object result){
+								finish();
+							}
+						}; // end of AsyncTask<Long, Object, Object> deleteTask = new AsyncTask<Long, Object, Object>() {	
+						
+						deleteTask.execute(new Long[] { rowID });
+						
+					} // end of public void onClick(DialogInterface dialog, int button) {
+				} // end of new DialogInterface.OnClickListener() {
+		); // end of builder.setPositiveButton(R.string.button_delete, 
 		
-	}
+		builder.setNegativeButton(R.string.button_cancel, null);
+		builder.show();
+	} // end of private void deleteScripture() {
 	
 }  // end of public class UpdateScripture extends Activity {
