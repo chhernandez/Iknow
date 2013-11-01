@@ -131,11 +131,19 @@ public class Scriptures extends ListActivity {
 			return true;
 		case R.id.listchapters:
 			
-		//	deleteScripture();
+			// create a new Intent to launch
+			Intent listChapters = 
+					new Intent(this, DisplayChapters.class);
+			startActivity(listChapters); 
+
 			return true;	
 		case R.id.listverses:
 			
-		//	deleteScripture();
+			// create a new Intent to launch
+			Intent listVerses = 
+					new Intent(this, DisplayVerses.class);
+			startActivity(listVerses); 
+
 			return true;			
 		default:		
 			return super.onOptionsItemSelected(item); 

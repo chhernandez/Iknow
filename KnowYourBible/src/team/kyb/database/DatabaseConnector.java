@@ -89,12 +89,16 @@ public class DatabaseConnector {
 	   
 	    // use rawQuery to get all chapters from the scriptures table
 	   public Cursor getAllChapters() {
-		   return database.rawQuery("select distinct chapter from scriptures order by chapter", new String[] {"chapter"});
+		      return database.query(true, "scriptures", 
+		    		  new String[] { "_id" ,"chapter"}, 
+		    		  null, null, "chapter", null, null, null);	
 	   }
 	   
 	    // use rawQuery to get all chapters from the scriptures table
 	   public Cursor getAllVerses() {
-		   return database.rawQuery("select distinct verse from scriptures order by verse", new String[] {"verse"});
+		      return database.query(true, "scriptures", 
+		    		  new String[] { "_id" ,"chapter"}, 
+		    		  null, null, "chapter", null, null, null);	
 	   }
 	   
 	   // get a Cursor containing all information about the movie specified

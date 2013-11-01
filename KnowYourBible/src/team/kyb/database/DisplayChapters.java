@@ -9,38 +9,33 @@ import android.widget.CursorAdapter;
 import android.widget.ListView;
 import android.widget.SimpleCursorAdapter;
 
-public class DisplayBooks extends ListActivity {
-
-	private ListView bookListView; 
-	private CursorAdapter bookAdapter; 	
+public class DisplayChapters extends ListActivity{
+	
+	private ListView chapterListView; 
+	private CursorAdapter chapterAdapter; 	
 	
 	// called when the Activity is first started
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState); 
 		
-	
-	//	setContentView(R.layout.display_scriptures);
+
 		
-		bookListView = getListView();
-	//	scriptureListView.setOnItemClickListener(viewScriptureListener); 		
-		
-		// map each scripture passage to a ListView
-		// in the ListView layout
-	//	String passagedetail = "passage";
-		String[] from = new String[] {"book"};
+		chapterListView = getListView();
+
+		String[] from = new String[] {"chapter"};
 		int[] to = new int[] { 
-				R.id.bookView,
+				R.id.chapterView,
 				};
-		bookAdapter = new SimpleCursorAdapter(
-				DisplayBooks.this, 
-				R.layout.book_list, null, 
+		chapterAdapter = new SimpleCursorAdapter(
+				DisplayChapters.this, 
+				R.layout.chapter_list, null, 
 				from, to);
 		// public SimpleCursorAdapter (Context context, 
 		// int layout, Cursor c, 
 		// String[] from, int[] to)
 
-		setListAdapter(bookAdapter); 		
+		setListAdapter(chapterAdapter); 		
 		
 	}	// end of public void onCreate(Bundle savedInstanceState) {
 	
@@ -54,34 +49,35 @@ public class DisplayBooks extends ListActivity {
 	
 	@Override
 	protected void onStop() {
-		Cursor cursor = bookAdapter.getCursor(); 
+		Cursor cursor = chapterAdapter.getCursor(); 
 
 		if (cursor != null) 
 			cursor.deactivate(); // deactivate it
 
-		bookAdapter.changeCursor(null); // adapter now has no Cursor
+		chapterAdapter.changeCursor(null); // adapter now has no Cursor
 		super.onStop();
 	} 	
 	
 	// performs database query outside GUI thread
 	private class GetScripturesTask extends AsyncTask<Object, Object, Cursor> {
 		DatabaseConnector databaseConnector = 
-				new DatabaseConnector(DisplayBooks.this);
+				new DatabaseConnector(DisplayChapters.this);
 
 		// perform the database access
 		@Override
 		protected Cursor doInBackground(Object... params) {
 			databaseConnector.open();
 
-			return databaseConnector.getAllBooks(); 
+			return databaseConnector.getAllChapters(); 
 		} 
 
 		// use the Cursor returned from the doInBackground method
 		@Override
 		protected void onPostExecute(Cursor result) {
 		
-			bookAdapter.changeCursor(result); 
+			chapterAdapter.changeCursor(result); 
 			databaseConnector.close();
 		} 
 	} // end class GetScripturesTask		
-} // end of public class DisplayBooks extends ListActivity {
+
+} // end of public class DisplayChapters extends ListActivity{
