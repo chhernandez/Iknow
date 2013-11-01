@@ -1,18 +1,32 @@
 package team.iknowthatscripture;
 
 
-import android.os.Bundle;
+import java.util.ArrayList;
+import java.util.List;
+
 import android.app.Activity;
 import android.content.Intent;
+import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.ArrayAdapter;
+import android.widget.Spinner;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 
+	
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
+		
+		displayVerse();
+		
+		addItemsOnSpinnerBook();
+		addItemsOnSpinnerChapter();
+		addItemsOnSpinnerVerse();
 	}
 
 	@Override
@@ -32,6 +46,48 @@ public class MainActivity extends Activity {
 		startActivity(listScriptures); 
 		return super.onOptionsItemSelected(item); 
 	} 	
+
+	private void displayVerse()
+	{
+		String exampleText = getResources().getString(R.string.joke_honesty) ;
+		TextView textview_text = (TextView)  findViewById(R.id.textview_text);
+		textview_text.setText(exampleText);
+	}
 	
+	private void addItemsOnSpinnerBook()
+	{
+		Spinner spinnerBook = (Spinner) findViewById(R.id.spinner_book);
+		List<String> list = new ArrayList<String>();
+		list.add("book new 0");
+		list.add("book new 1");
+		list.add("book new 2");
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinnerBook.setAdapter(dataAdapter);
+	}
+	
+	private void addItemsOnSpinnerChapter()
+	{
+		Spinner spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
+		List<String> list = new ArrayList<String>();
+		list.add("chapter new 0");
+		list.add("chapter new 1");
+		list.add("chapter new 2");
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinnerChapter.setAdapter(dataAdapter);
+	}
+	
+	private void addItemsOnSpinnerVerse()
+	{
+		Spinner spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
+		List<String> list = new ArrayList<String>();
+		list.add("verse new 0");
+		list.add("verse new 1");
+		list.add("verse new 2");
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinnerVerse.setAdapter(dataAdapter);
+	}
 	
 } // end of public class MainActivity extends Activity {
