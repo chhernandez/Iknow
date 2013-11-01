@@ -9,6 +9,13 @@
     <string name="exit_label">Exit Game</string>
     <string name="about_label">About</string>
 	<string name="addscripture_label">Add New</string>
+	<string name="listbooks_label">List Books</string>
+	<string name="listchapters_label">List Chapters</string>
+	<string name="listverses_label">List Verses</string>	
+	<string name="displaybooks_label">Books</string>
+	<string name="displaychapters_label">Chapters</string>
+	<string name="displayverses_label">Verses</string>
+		
 	<string name="editscripture_label">Edit</string>
 	<string name="deletescripture_label">Delete</string>
 	

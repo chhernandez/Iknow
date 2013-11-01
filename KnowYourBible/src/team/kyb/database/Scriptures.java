@@ -113,11 +113,33 @@ public class Scriptures extends ListActivity {
 	// handle choice from options menu
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// create a new Intent to launch
-		Intent addNew = 
-				new Intent(this, AddEditScripture.class);
-		startActivity(addNew); 
-		return super.onOptionsItemSelected(item); 
+		
+		switch (item.getItemId()){
+		case R.id.addscripture:		
+		
+			// create a new Intent to launch
+			Intent addNew = 
+					new Intent(this, AddEditScripture.class);
+			startActivity(addNew); 
+			return true;
+		case R.id.listbooks:
+			
+			// create a new Intent to launch
+			Intent listBooks = 
+					new Intent(this, DisplayBooks.class);
+			startActivity(listBooks); 
+			return true;
+		case R.id.listchapters:
+			
+		//	deleteScripture();
+			return true;	
+		case R.id.listverses:
+			
+		//	deleteScripture();
+			return true;			
+		default:		
+			return super.onOptionsItemSelected(item); 
+		}
 	} 	
 	
 	

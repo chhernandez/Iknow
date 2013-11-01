@@ -35,8 +35,10 @@
             android:label="@string/addedit_label" >
         </activity>   
         
-"
-              
+        <activity
+            android:name="team.kyb.database.DisplayBooks"
+            android:label="@string/displaybooks_label" >
+        </activity>       
         <activity
             android:name="team.kyb.database.Scriptures"
             android:label="@string/scriptures_label" >

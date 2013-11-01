@@ -71,6 +71,32 @@ public class DatabaseConnector {
 		      // String groupBy, String having, String orderBy)
 	   }
 	   
+	    // use rawQuery to get all books from the scriptures table
+	   public Cursor getAllBooks() {
+		   
+/*		      return database.query(
+		    		  "scriptures", 
+		    		  new String[] {"_id","book"}, 
+		    		  null, null, null, null, 
+		    		  "book");	*/
+		      
+		      return database.query(true, "scriptures", 
+		    		  new String[] { "_id" ,"book"}, 
+		    		  null, null, "book", null, null, null);		      
+		   
+		 //  return database.rawQuery("select distinct book from scriptures order by book", new String[] {"book"});
+	   }	   
+	   
+	    // use rawQuery to get all chapters from the scriptures table
+	   public Cursor getAllChapters() {
+		   return database.rawQuery("select distinct chapter from scriptures order by chapter", new String[] {"chapter"});
+	   }
+	   
+	    // use rawQuery to get all chapters from the scriptures table
+	   public Cursor getAllVerses() {
+		   return database.rawQuery("select distinct verse from scriptures order by verse", new String[] {"verse"});
+	   }
+	   
 	   // get a Cursor containing all information about the movie specified
 	   // by the given id
 	   public Cursor getOneScripture(long id) {

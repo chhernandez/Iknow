@@ -5,4 +5,19 @@
         android:title="@string/addscripture_label"
         ></item>
 
+    <item
+        android:id="@+id/listbooks"
+        android:title="@string/listbooks_label"
+        ></item>
+    
+    <item
+        android:id="@+id/listchapters"
+        android:title="@string/listchapters_label"
+        ></item>
+    
+    <item
+        android:id="@+id/listverses"
+        android:title="@string/listverses_label"
+        ></item>    
+    
 </menu>
