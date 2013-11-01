@@ -43,7 +43,12 @@
         <activity
             android:name="team.kyb.database.DisplayChapters"
             android:label="@string/displaychapters_label" >
-        </activity>        
+        </activity>  
+        
+        <activity
+            android:name="team.kyb.database.DisplayVerses"
+            android:label="@string/displayverses_label" >
+        </activity>         
         
         <activity
             android:name="team.kyb.database.Scriptures"

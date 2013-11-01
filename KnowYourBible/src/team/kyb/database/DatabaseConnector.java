@@ -97,8 +97,8 @@ public class DatabaseConnector {
 	    // use rawQuery to get all chapters from the scriptures table
 	   public Cursor getAllVerses() {
 		      return database.query(true, "scriptures", 
-		    		  new String[] { "_id" ,"chapter"}, 
-		    		  null, null, "chapter", null, null, null);	
+		    		  new String[] { "_id" ,"verse"}, 
+		    		  null, null, "verse", null, null, null);	
 	   }
 	   
 	   // get a Cursor containing all information about the movie specified
