@@ -50,6 +50,11 @@
             android:label="@string/displayverses_label" >
         </activity>         
         
+      	<activity
+            android:name="team.kyb.database.RandomScripture"
+            android:label="@string/randomscripture_label" >
+        </activity>  
+        
         <activity
             android:name="team.kyb.database.Scriptures"
             android:label="@string/scriptures_label" >

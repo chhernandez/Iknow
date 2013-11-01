@@ -15,6 +15,7 @@
 	<string name="displaybooks_label">Books</string>
 	<string name="displaychapters_label">Chapters</string>
 	<string name="displayverses_label">Verses</string>
+	<string name="randomscripture_label">Random</string>
 		
 	<string name="editscripture_label">Edit</string>
 	<string name="deletescripture_label">Delete</string>

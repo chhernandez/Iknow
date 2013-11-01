@@ -100,7 +100,21 @@ public class DatabaseConnector {
 		    		  new String[] { "_id" ,"verse"}, 
 		    		  null, null, "verse", null, null, null);	
 	   }
+	   //SELECT * FROM table ORDER BY RANDOM() LIMIT 1
+//"RANDOM() limit 1"
 	   
+	   public Cursor getRandomScripture() {
+		   
+		      return database.query(
+		    		  "scriptures", 
+		    		  new String[] {"_id", "passage", "book", "chapter", "verse"}, 
+		    		  null, null, null, null, 
+		    		  "RANDOM() limit 1");		   
+		   
+/*		      return database.query(
+		 	         "scriptures", null, "_id=" + id, null, null, null, "RANDOM() limit 1");*/
+	   }	   
+
 	   // get a Cursor containing all information about the movie specified
 	   // by the given id
 	   public Cursor getOneScripture(long id) {

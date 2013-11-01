@@ -96,7 +96,7 @@ public class Scriptures extends ListActivity {
 			scriptureAdapter.changeCursor(result); 
 			databaseConnector.close();
 		} 
-	} // end class GetContactsTask	
+	} // end class GetScriptureTask	
 	
 	// create the Activity's menu from a menu resource XML file
 	@Override
@@ -144,7 +144,15 @@ public class Scriptures extends ListActivity {
 					new Intent(this, DisplayVerses.class);
 			startActivity(listVerses); 
 
-			return true;			
+			return true;
+		case R.id.randomscripture:
+			
+			// create a new Intent to launch
+			Intent randompassage = 
+					new Intent(this, RandomScripture.class);
+			startActivity(randompassage); 
+
+			return true;				
 		default:		
 			return super.onOptionsItemSelected(item); 
 		}

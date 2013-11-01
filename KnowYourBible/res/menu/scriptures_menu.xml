@@ -19,5 +19,10 @@
         android:id="@+id/listverses"
         android:title="@string/listverses_label"
         ></item>    
+        
+    <item
+        android:id="@+id/randomscripture"
+        android:title="@string/randomscripture_label"
+        ></item>    
     
 </menu>

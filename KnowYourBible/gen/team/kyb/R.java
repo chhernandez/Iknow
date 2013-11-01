@@ -24,36 +24,43 @@ public final class R {
         public static final int ic_launcher=0x7f020000;
     }
     public static final class id {
-        public static final int about=0x7f080018;
-        public static final int addscripture=0x7f080019;
+        public static final int about=0x7f08001e;
+        public static final int addscripture=0x7f08001f;
+        public static final int bookLView=0x7f08000e;
         public static final int bookListView=0x7f080008;
-        public static final int bookTextView=0x7f08000e;
+        public static final int bookTextView=0x7f080014;
         public static final int bookView=0x7f080000;
         public static final int booktext=0x7f080003;
+        public static final int chapterLView=0x7f080010;
         public static final int chapterListView=0x7f08000a;
-        public static final int chapterTextView=0x7f080010;
+        public static final int chapterTextView=0x7f080016;
         public static final int chapterView=0x7f080001;
         public static final int chaptertext=0x7f080004;
         public static final int colon1=0x7f08000b;
-        public static final int colon2=0x7f080011;
-        public static final int deletescripture=0x7f08001e;
-        public static final int editscripture=0x7f08001d;
-        public static final int exit=0x7f080017;
-        public static final int help=0x7f080016;
-        public static final int listbooks=0x7f08001a;
-        public static final int listchapters=0x7f08001b;
-        public static final int listverses=0x7f08001c;
+        public static final int colon2=0x7f080017;
+        public static final int colon3=0x7f080011;
+        public static final int deletescripture=0x7f080025;
+        public static final int editscripture=0x7f080024;
+        public static final int exit=0x7f08001d;
+        public static final int help=0x7f08001c;
+        public static final int listbooks=0x7f080020;
+        public static final int listchapters=0x7f080021;
+        public static final int listverses=0x7f080022;
+        public static final int passageLView=0x7f08000d;
         public static final int passageListView=0x7f080007;
-        public static final int passageTextView=0x7f08000d;
+        public static final int passageTextView=0x7f080013;
         public static final int passagetext=0x7f080002;
+        public static final int randomscripture=0x7f080023;
         public static final int saveScriptureButton=0x7f080006;
-        public static final int scriptures=0x7f080014;
-        public static final int settings=0x7f080015;
+        public static final int scriptures=0x7f08001a;
+        public static final int settings=0x7f08001b;
         public static final int space1=0x7f080009;
-        public static final int space2=0x7f08000f;
+        public static final int space2=0x7f080015;
+        public static final int space3=0x7f08000f;
+        public static final int verseLView=0x7f080012;
         public static final int verseListView=0x7f08000c;
-        public static final int verseTextView=0x7f080012;
-        public static final int verseView=0x7f080013;
+        public static final int verseTextView=0x7f080018;
+        public static final int verseView=0x7f080019;
         public static final int versetext=0x7f080005;
     }
     public static final class layout {
@@ -62,8 +69,9 @@ public final class R {
         public static final int chapter_list=0x7f030002;
         public static final int scripture_add=0x7f030003;
         public static final int scripture_list=0x7f030004;
-        public static final int scripture_update=0x7f030005;
-        public static final int verse_list=0x7f030006;
+        public static final int scripture_random=0x7f030005;
+        public static final int scripture_update=0x7f030006;
+        public static final int verse_list=0x7f030007;
     }
     public static final class menu {
         public static final int main_menu=0x7f070000;
@@ -72,40 +80,41 @@ public final class R {
     }
     public static final class string {
         public static final int about_label=0x7f050005;
-        public static final int addedit_label=0x7f050013;
+        public static final int addedit_label=0x7f050014;
         public static final int addscripture_label=0x7f050006;
         public static final int app_name=0x7f050000;
-        public static final int book_hint=0x7f050016;
-        public static final int button_cancel=0x7f05000f;
-        public static final int button_delete=0x7f050010;
-        public static final int chapter_hint=0x7f050017;
-        public static final int confirmDelete=0x7f050011;
-        public static final int confirmDeleteMessage=0x7f050012;
-        public static final int deletescripture_label=0x7f05000e;
+        public static final int book_hint=0x7f050017;
+        public static final int button_cancel=0x7f050010;
+        public static final int button_delete=0x7f050011;
+        public static final int chapter_hint=0x7f050018;
+        public static final int confirmDelete=0x7f050012;
+        public static final int confirmDeleteMessage=0x7f050013;
+        public static final int deletescripture_label=0x7f05000f;
         public static final int displaybooks_label=0x7f05000a;
         public static final int displaychapters_label=0x7f05000b;
         public static final int displayverses_label=0x7f05000c;
-        public static final int editscripture_label=0x7f05000d;
+        public static final int editscripture_label=0x7f05000e;
         public static final int exit_label=0x7f050004;
         public static final int help_label=0x7f050003;
         public static final int listbooks_label=0x7f050007;
         public static final int listchapters_label=0x7f050008;
         public static final int listverses_label=0x7f050009;
-        public static final int passage_hint=0x7f050015;
-        public static final int save_button_label=0x7f050019;
+        public static final int passage_hint=0x7f050016;
+        public static final int randomscripture_label=0x7f05000d;
+        public static final int save_button_label=0x7f05001a;
         public static final int scriptures_label=0x7f050001;
         public static final int settings_label=0x7f050002;
-        public static final int update_label=0x7f050014;
-        public static final int vButton=0x7f050022;
-        public static final int vbookMessage=0x7f05001d;
-        public static final int vbookTitle=0x7f05001c;
-        public static final int vchapterMessage=0x7f05001f;
-        public static final int vchapterTitle=0x7f05001e;
-        public static final int verse_hint=0x7f050018;
-        public static final int vpassageMessage=0x7f05001b;
-        public static final int vpassageTitle=0x7f05001a;
-        public static final int vverseMessage=0x7f050021;
-        public static final int vverseTitle=0x7f050020;
+        public static final int update_label=0x7f050015;
+        public static final int vButton=0x7f050023;
+        public static final int vbookMessage=0x7f05001e;
+        public static final int vbookTitle=0x7f05001d;
+        public static final int vchapterMessage=0x7f050020;
+        public static final int vchapterTitle=0x7f05001f;
+        public static final int verse_hint=0x7f050019;
+        public static final int vpassageMessage=0x7f05001c;
+        public static final int vpassageTitle=0x7f05001b;
+        public static final int vverseMessage=0x7f050022;
+        public static final int vverseTitle=0x7f050021;
     }
     public static final class style {
         /** 
