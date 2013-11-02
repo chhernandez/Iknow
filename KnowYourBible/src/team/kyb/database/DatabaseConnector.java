@@ -5,12 +5,17 @@ import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.database.sqlite.SQLiteDatabase.CursorFactory;
+import android.util.Log;
 
 public class DatabaseConnector {
 
 	   private static final String DATABASE_NAME = "dbScriptures";
+	   
+	   private static final String DB_PATH = "/data/data/team.kyb/databases/";
+		 
 	   private SQLiteDatabase database; 
 	   private DatabaseOpenHelper databaseOpenHelper; 	
 	
@@ -20,11 +25,63 @@ public class DatabaseConnector {
 	   }	   
 	   
 	   public void open() throws SQLException {
-		      // create or open a database for reading/writing
-		      database = databaseOpenHelper.getWritableDatabase();
-	   } 	   
 	   
-	   public void close() {
+	//	   boolean dbExist = checkDataBase();
+		   
+			// create or open a database for reading/writing
+		    database = databaseOpenHelper.getWritableDatabase();	   
+	   
+/*		      if (dbExist){
+		    	  // do nothing database already exists
+ 					Log.d("dbExist", "True");	
+		      } else {
+		    	  Log.d("dbExist", "False");	*/
+
+		    	  // create or open a database for reading/writing
+			   //   database = databaseOpenHelper.getWritableDatabase(); 
+			      
+	/*		      preInsertScripture(
+			    		  "Throw all your anxiety on him, because he cares for you.",
+			    		  "1 Peter", 5, 7);*/
+  
+		  //    }				   
+	   } 	   
+
+
+	public void preInsertScripture(String passage, String book, int chapter, 
+		      int verse) {
+		   
+		      ContentValues newScripture = new ContentValues();
+		      newScripture.put("passage", passage);
+		      newScripture.put("book", book);
+		      newScripture.put("chapter", chapter);
+		      newScripture.put("verse", verse);
+		      open();
+		      database.insert("scriptures", null, newScripture);
+		      close();
+	}
+
+	public boolean checkDataBase() {
+    	  
+      	SQLiteDatabase checkDB = null;
+      	 
+    	try{
+    		String myPath = DB_PATH + DATABASE_NAME;
+    		
+    		Log.d("DB_Path", myPath);	
+    		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
+     	} catch(SQLiteException e) {
+     		//database does't exist yet.
+     	}
+ 
+    	if(checkDB != null){
+     		checkDB.close();
+     	}
+ 
+    	return checkDB != null ? true : false;
+	}
+
+	public void close() {
 		      if (database != null)
 		         database.close();
 	   } 	   
@@ -135,25 +192,28 @@ public class DatabaseConnector {
 	   
 	   private class DatabaseOpenHelper extends SQLiteOpenHelper {
 
+
 		      public DatabaseOpenHelper(Context context, String name,
 		         CursorFactory factory, int version) {
 		         super(context, name, factory, version);
-		      } 
-
+		      }
+ 
 
 		      // creates the scriptures table when the database is created
 		      @Override   
 		      public void onCreate(SQLiteDatabase db) {
-		         // query to create a new table named ratings
-		         String createQuery = "CREATE TABLE scriptures" +
-		            "(_id INTEGER PRIMARY KEY autoincrement, " +
-		            "passage TEXT, " +
-		            "book TEXT, " +
-		            "chapter INTEGER, " +
-		            "verse INTEGER);";
-		                  
-		         db.execSQL(createQuery);
-		      }
+		    	  
+			         // query to create a new table named ratings
+			         String createQuery = "CREATE TABLE scriptures" +
+			            "(_id INTEGER PRIMARY KEY autoincrement, " +
+			            "passage TEXT, " +
+			            "book TEXT, " +
+			            "chapter INTEGER, " +
+			            "verse INTEGER);";
+			                  
+			         db.execSQL(createQuery);	
+		      };	         
+			         
 
 		      @Override
 		      public void onUpgrade(SQLiteDatabase db, int oldVersion, 

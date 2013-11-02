@@ -57,6 +57,13 @@ public class Scriptures extends ListActivity {
 		
 	}
 	
+	/*	ArrayList<String> mArrayList = new ArrayList<String>();
+	mCursor.moveToFirst();
+	while(!mCursor.isAfterLast()) {
+	     mArrayList.add(mCursor.getString(mCursor.getColumnIndex(dbAdapter.KEY_NAME))); //add the item
+	     mCursor.moveToNext();
+	}	*/	
+	
 	@Override
 	protected void onResume() {
 		super.onResume(); 

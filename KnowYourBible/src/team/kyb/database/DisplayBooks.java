@@ -40,9 +40,15 @@ public class DisplayBooks extends ListActivity {
 		// int layout, Cursor c, 
 		// String[] from, int[] to)
 
-		setListAdapter(bookAdapter); 		
+		setListAdapter(bookAdapter); 	
+		
 		
 	}	// end of public void onCreate(Bundle savedInstanceState) {
+	
+	
+
+	
+	
 	
 	@Override
 	protected void onResume() {
