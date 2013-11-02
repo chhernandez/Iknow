@@ -41,4 +41,138 @@
 	<string name="vverseTitle">Verse number is required</string>
 	<string name="vverseMessage">Please enter verse number</string>	
 	<string name="vButton">OK</string>
+	
+	<string name="passage_a1">Throw all your anxiety on him, because he cares for you.</string>
+	<string name="passage_b1">@string/book60</string>
+	<string name="passage_c1">5</string>
+	<string name="passage_d1">7</string>
+	
+	<string name="passage_a2">Happy are the pure in heart, since they will see God.</string>
+	<string name="passage_b2">@string/book40</string>
+	<string name="passage_c2">5</string>
+	<string name="passage_d2">8</string>
+	
+	<string name="passage_a3">In the beginning God created the heavens and the earth.</string>
+	<string name="passage_b3">@string/book1</string>
+	<string name="passage_c3">1</string>
+	<string name="passage_d3">1</string>
+	
+	<string name="passage_a4">Serve Jehovah with rejoicing. Come in before him with a joyful cry.</string>
+	<string name="passage_b4">@string/book19</string>
+	<string name="passage_c4">100</string>
+	<string name="passage_d4">2</string>
+	
+	<string name="passage_a5">As the last enemy, death is to be brought to nothing.</string>
+	<string name="passage_b5">@string/book46</string>
+	<string name="passage_c5">15</string>
+	<string name="passage_d5">26</string>
+	
+	<string name="passage_a6">Always rejoice in [the] Lord. Once more I will say, Rejoice!</string>
+	<string name="passage_b6">@string/book50</string>
+	<string name="passage_c6">4</string>
+	<string name="passage_d6">4</string>
+	
+	<string name="passage_a7">Not many of you should become teachers, my brothers, knowing that we shall receive heavier judgment.</string>
+	<string name="passage_b7">@string/book59</string>
+	<string name="passage_c7">3</string>
+	<string name="passage_d7">1</string>
+	
+	<string name="passage_a8">You were bought with a price; stop becoming slaves of men.</string>
+	<string name="passage_b8">@string/book46</string>
+	<string name="passage_c8">7</string>
+	<string name="passage_d8">23</string>		
+	
+	<string name="passage_a9">So, then, let us not sleep on as to rest do, but let us stay awake and keep our senses.</string>
+	<string name="passage_b9">@string/book52</string>
+	<string name="passage_c9">5</string>
+	<string name="passage_d9">6</string>
+	
+	<string name="passage_a10">Even those troubled with unclean spirits were cured.</string>
+	<string name="passage_b10">@string/book42</string>
+	<string name="passage_c10">6</string>
+	<string name="passage_d10">18</string>
+	
+	<string name="passage_a11">Well, then, have I become YOUR enemy because I tell YOU the truth?</string>
+	<string name="passage_b11">@string/book48</string>
+	<string name="passage_c11">4</string>
+	<string name="passage_d11">16</string>
+	
+	<string name="passage_a12">And the family heads became jealous of Joseph and sold him into Egypt.</string>
+	<string name="passage_b12">@string/book44</string>
+	<string name="passage_c12">7</string>
+	<string name="passage_d12">9</string>
+	
+	<string name="passage_a13">The tree that you saw that grew great and becam strong, whose top reached the heavens and was visible to all the earth,</string>
+	<string name="passage_b13">@string/book27</string>
+	<string name="passage_c13">4</string>
+	<string name="passage_d13">20</string>	
+	
+
+	<string name="book1">Gensis</string>
+	<string name="book2">Exodus</string>	
+	<string name="book3">Leviticus</string>	
+	<string name="book4">Numbers</string>
+	<string name="book5">Deuteronomy</string>	
+	<string name="book6">Joshua</string>	
+	<string name="book7">Judges</string>
+	<string name="book8">Ruth</string>	
+	<string name="book9">1 Samuel</string>		
+	<string name="book10">2 Samuel</string>
+	<string name="book11">1 Kings</string>	
+	<string name="book12">2 Kings</string>	
+	<string name="book13">1 Chronicles</string>
+	<string name="book14">2 Chronicles</string>	
+	<string name="book15">Ezra</string>	
+	<string name="book16">Nehemiah</string>
+	<string name="book17">Esther</string>	
+	<string name="book18">Job</string>				
+	<string name="book19">Psalms</string>		
+	<string name="book20">Proverbs</string>
+	<string name="book21">Ecclesiates</string>	
+	<string name="book22">Song of Solomon</string>	
+	<string name="book23">Isaiah</string>
+	<string name="book24">Jeremiah</string>	
+	<string name="book25">Lamentations</string>	
+	<string name="book26">Ezekiel</string>
+	<string name="book27">Daniel</string>	
+	<string name="book28">Hosea</string>	
+	<string name="book29">Joel</string>		
+	<string name="book30">Amos</string>
+	<string name="book31">Obadiah</string>	
+	<string name="book32">Jonah</string>	
+	<string name="book33">Micah</string>
+	<string name="book34">Nahum</string>	
+	<string name="book35">Habakkuk</string>	
+	<string name="book36">Zephaniah</string>
+	<string name="book37">Haggai</string>	
+	<string name="book38">Zechariah</string>	
+	<string name="book39">Malachi</string>		
+	<string name="book40">Matthew</string>
+	<string name="book41">Mark</string>	
+	<string name="book42">Luke</string>	
+	<string name="book43">John</string>
+	<string name="book44">Acts</string>	
+	<string name="book45">Romans</string>	
+	<string name="book46">1 Corinthians</string>
+	<string name="book47">2 Corinthians</string>	
+	<string name="book48">Galatians</string>	
+	<string name="book49">Ephesians</string>		
+	<string name="book50">Philippians</string>
+	<string name="book51">Colossians</string>	
+	<string name="book52">1 Thessalonians</string>	
+	<string name="book53">2 Thessalonians</string>
+	<string name="book54">1 Timothy</string>	
+	<string name="book55">2 Timothy</string>	
+	<string name="book56">Titus</string>
+	<string name="book57">Philemon</string>	
+	<string name="book58">Hebrews</string>
+	<string name="book59">James</string>		
+	<string name="book60">1 Peter</string>	
+	<string name="book61">2 Peter</string>	
+	<string name="book62">1 John</string>	
+	<string name="book63">2 John</string>
+	<string name="book64">3 John</string>	
+	<string name="book65">Jude</string>	
+	<string name="book66">Revelation</string>	
+	
 </resources>
