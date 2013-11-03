@@ -122,7 +122,7 @@ public class DatabaseConnector {
 		    		  "scriptures", 
 		    		  new String[] {"_id", "passage", "book", "chapter", "verse"}, 
 		    		  null, null, null, null, 
-		    		  "passage");
+		    		  "book");
 		      // query(String table, 
 		      // String[] columns, String selection, String[] selectionArgs, 
 		      // String groupBy, String having, String orderBy)
