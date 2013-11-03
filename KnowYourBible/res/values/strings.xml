@@ -1,7 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
 
-    <string name="app_name">I Know That Scripture</string>
+    <string name="app_name">Know Your Bible</string>
+    
+    <string name="iknow_label">I Know That Scripture</string>
+    <string name="games_label">More Games</string>
     
     <string name="scriptures_label">Scriptures Database</string>
     <string name="settings_label">Settings</string>

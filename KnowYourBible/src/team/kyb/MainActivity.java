@@ -12,11 +12,11 @@ import android.database.Cursor;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.CursorAdapter;
 
 public class MainActivity extends Activity {
 	
-
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
@@ -26,6 +26,40 @@ public class MainActivity extends Activity {
 		preScriptureTask.execute((Object[]) null); 		
 	}
 
+	public void startIKnow(View v) {
+		startIKnowGame();
+	}	
+	
+
+	private void startIKnowGame() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	public void startScriptures(View v) {
+		startScripturesDatabase();
+	}	
+	
+
+	private void startScripturesDatabase() {
+		// TODO Auto-generated method stub
+		// create a new Intent to launch
+		Intent listScriptures = 
+				new Intent(this, Scriptures.class);
+		startActivity(listScriptures);	
+		
+	}	
+	
+	public void startGames(View v) {
+		startMoreGames();
+	}	
+	
+
+	private void startMoreGames() {
+		// TODO Auto-generated method stub
+		
+	}			
+	
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
@@ -37,11 +71,28 @@ public class MainActivity extends Activity {
 	// handle choice from options menu
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// create a new Intent to launch
-		Intent listScriptures = 
-				new Intent(this, Scriptures.class);
-		startActivity(listScriptures); 
-		return super.onOptionsItemSelected(item); 
+		
+		switch (item.getItemId()){
+		case R.id.scriptures:			
+		
+			// create a new Intent to launch
+			Intent listScriptures = 
+					new Intent(this, Scriptures.class);
+			startActivity(listScriptures); 
+			return true;
+		case R.id.settings:
+			return true;
+		case R.id.help:
+			return true;
+		case R.id.exit:
+			finish();
+			return true;
+		case R.id.about:
+			return true;
+		default:		
+			return super.onOptionsItemSelected(item); 
+		}			
+			
 	} 	
 	
 /*	@Override
