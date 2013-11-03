@@ -178,4 +178,9 @@
 	<string name="book65">Jude</string>	
 	<string name="book66">Revelation</string>	
 	
+	<string name="just_letter">Just one letter plz!</string>
+    <string name="guessed_letter">You have guessed: </string>
+    <string name="count_left">Number of guesses left: </string>
+	
+	
 </resources>

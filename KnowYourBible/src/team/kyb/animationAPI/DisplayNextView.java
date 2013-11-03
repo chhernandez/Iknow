@@ -1,4 +1,4 @@
-package com.example.hangmansimple;
+package team.kyb.animationAPI;
 
 import android.view.animation.Animation;
 import android.widget.ImageView;

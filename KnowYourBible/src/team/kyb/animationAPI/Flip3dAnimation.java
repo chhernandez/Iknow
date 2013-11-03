@@ -1,4 +1,4 @@
-package com.example.hangmansimple;
+package team.kyb.animationAPI;
 
 import android.graphics.Camera;
 import android.graphics.Matrix;

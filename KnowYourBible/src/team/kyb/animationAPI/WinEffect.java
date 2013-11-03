@@ -1,9 +1,10 @@
-package com.example.hangmansimple;
+package team.kyb.animationAPI;
 
 import java.util.Random;
 import java.util.Timer;
 import java.util.TimerTask;
 
+import team.kyb.R;
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;

@@ -1,12 +1,14 @@
-package com.example.hangmansimple;
+package team.kyb.extragames;
 
+import team.kyb.R;
+import team.kyb.animationAPI.AnimationHelper;
+import team.kyb.animationAPI.LoseEffect;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
-import android.view.animation.AccelerateInterpolator;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -99,7 +101,7 @@ public class HangmanMain extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main, menu);
+		//getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 

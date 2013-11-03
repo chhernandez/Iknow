@@ -1,4 +1,4 @@
-package com.example.hangmansimple;
+package team.kyb.extragames;
 
 import java.util.ArrayList;
 import java.util.Scanner;
