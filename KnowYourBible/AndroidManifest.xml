@@ -58,7 +58,12 @@
         <activity
             android:name="team.kyb.database.Scriptures"
             android:label="@string/scriptures_label" >
-        </activity>        
+        </activity>   
+        
+        <activity
+            android:name="team.kyb.extragames.HangmanMain"
+            android:label="@string/hangman_label" >
+        </activity>         
 
     </application>
 

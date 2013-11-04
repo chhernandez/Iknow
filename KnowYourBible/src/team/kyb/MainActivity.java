@@ -4,6 +4,7 @@ package team.kyb;
 import team.kyb.R;
 import team.kyb.database.DatabaseConnector;
 import team.kyb.database.Scriptures;
+import team.kyb.extragames.HangmanMain;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -22,7 +23,7 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		// preinsert the scripture to the database using a separate thread
+		// pre populate the scriptures to the database using a separate thread
 		preScriptureTask.execute((Object[]) null); 		
 	}
 
@@ -57,7 +58,9 @@ public class MainActivity extends Activity {
 
 	private void startMoreGames() {
 		// TODO Auto-generated method stub
-		
+		Intent moreGames = 
+				new Intent(this, HangmanMain.class);
+		startActivity(moreGames);		
 	}			
 	
 	@Override

@@ -5,6 +5,8 @@
     
     <string name="iknow_label">I Know That Scripture</string>
     <string name="games_label">More Games</string>
+    <string name="hangman_label">Hangman</string>
+    
     
     <string name="scriptures_label">Scriptures Database</string>
     <string name="settings_label">Settings</string>
