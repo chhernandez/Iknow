@@ -65,6 +65,16 @@
             android:label="@string/hangman_label" >
         </activity>         
 
+                <activity
+            android:name="team.kyb.animationAPI.winEffect"
+            android:label=" " >
+        </activity> 
+        
+        <activity
+            android:name="team.kyb.animationAPI.loseEffect"
+            android:label=" " >
+        </activity>                  
+        
     </application>
 
 </manifest>
