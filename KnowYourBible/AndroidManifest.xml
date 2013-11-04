@@ -73,7 +73,13 @@
         <activity
             android:name="team.kyb.animationAPI.loseEffect"
             android:label=" " >
-        </activity>                  
+        </activity>    
+   
+      	<activity
+            android:name="team.kyb.iknow.IKnowGame"
+            android:label=" " >
+        </activity>    
+                    
         
     </application>
 

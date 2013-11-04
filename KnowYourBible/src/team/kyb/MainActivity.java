@@ -5,6 +5,7 @@ import team.kyb.R;
 import team.kyb.database.DatabaseConnector;
 import team.kyb.database.Scriptures;
 import team.kyb.extragames.HangmanMain;
+import team.kyb.iknow.IKnowGame;
 import android.os.AsyncTask;
 import android.os.Bundle;
 import android.app.Activity;
@@ -34,6 +35,10 @@ public class MainActivity extends Activity {
 
 	private void startIKnowGame() {
 		// TODO Auto-generated method stub
+		// create a new Intent to launch
+		Intent iknowgame = 
+				new Intent(this, IKnowGame.class);
+		startActivity(iknowgame);	
 		
 	}
 
