@@ -1,13 +1,15 @@
 package team.kyb.database;
 
+import java.util.Random;
+
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
-import android.database.sqlite.SQLiteDatabase.CursorFactory;
 import android.util.Log;
 
 public class DatabaseConnector {
@@ -171,6 +173,14 @@ public class DatabaseConnector {
 /*		      return database.query(
 		 	         "scriptures", null, "_id=" + id, null, null, null, "RANDOM() limit 1");*/
 	   }	   
+	   
+	   public Cursor getRandomScriptureForGame() {
+		    Random rd = new Random();
+		    Cursor cursor = getAllScriptures();
+		    int totalScriptures = cursor.getCount();
+            cursor.moveToPosition(rd.nextInt(totalScriptures - 1));
+			return cursor;
+	   }
 
 	   // get a Cursor containing all information about the movie specified
 	   // by the given id

@@ -3,19 +3,27 @@ package team.kyb.extragames;
 import team.kyb.R;
 import team.kyb.animationAPI.AnimationHelper;
 import team.kyb.animationAPI.LoseEffect;
+import team.kyb.database.DatabaseConnector;
+import team.kyb.database.RandomScripture;
 import android.app.Activity;
 import android.content.Intent;
+import android.database.Cursor;
+import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
 import android.view.View;
 import android.widget.Button;
+import android.widget.CursorAdapter;
 import android.widget.ImageView;
+import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 public class HangmanMain extends Activity {
-	private AnimationHelper animationHelper = new AnimationHelper(); 
-	
+	DatabaseConnector database = new DatabaseConnector(this);
+
+	private AnimationHelper animationHelper = new AnimationHelper();
+
 	private Button mKeyboard[] = new Button[26];
 
 	private TextView mWord, mGuessLeft, mStatus;
@@ -27,7 +35,7 @@ public class HangmanMain extends Activity {
 	private int mHangmanView[] = new int[] { R.drawable.hangman0,
 			R.drawable.hangman1, R.drawable.hangman2, R.drawable.hangman3,
 			R.drawable.hangman4, R.drawable.hangman5, R.drawable.hangman6 };
-	
+
 	private ImageView mHangman[] = new ImageView[7];
 
 	@Override
@@ -51,6 +59,11 @@ public class HangmanMain extends Activity {
 		setNextFiveHangManView();
 
 		declaringKeyboard();
+		
+		database.open();
+
+		String temp = database.getRandomScriptureForGame().getString(1);
+		mStatus.setText(temp);
 
 		mGame = new HangmanGame("khuong", 6);
 
@@ -101,7 +114,7 @@ public class HangmanMain extends Activity {
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
 		// Inflate the menu; this adds items to the action bar if it is present.
-		//getMenuInflater().inflate(R.menu.main, menu);
+		// getMenuInflater().inflate(R.menu.main, menu);
 		return true;
 	}
 
@@ -119,8 +132,8 @@ public class HangmanMain extends Activity {
 				mKeyboard[location].setEnabled(false);
 				int wrong = mGame.makeGuess(pressedLetter);
 				if (wrong == 0) {
-					animationHelper.applyRotation(mHangman[trackImage], mHangman[++trackImage],
-							0, 90);
+					animationHelper.applyRotation(mHangman[trackImage],
+							mHangman[++trackImage], 0, 90);
 					Log.d("FLIP", "Value of trackImage " + trackImage);
 				}
 				mGuessLeft.setText("" + mGame.numGuessesRemaining());
