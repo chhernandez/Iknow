@@ -25,13 +25,21 @@ public class IKnowGame extends Activity {
 //	private Spinner spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
 //	private Spinner spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
 	
+	private String userBook, userChapter, userVerse;
+	private String correctBook, correctChapter, correctVerse;
+	private TextView tv_game_status, tv_numCorrect, tv_numAttempts;
+	private int numCorrect, numAttempts;
+	
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.activity_main);
+		setContentView(R.layout.iknow_layout);
 		
 		displayVerse();
+		
+		numAttempts = 0;
+		numCorrect = 0;
 		
 		addItemsOnSpinnerBook();
 		addItemsOnSpinnerChapter();
@@ -108,10 +116,10 @@ public class IKnowGame extends Activity {
 		
 		Button buttonSubmit = (Button) findViewById(R.id.button_submit);
 		
-		final String correctBook = "book new 0";
-		final String correctChapter = "chapter new 0";
-		final String correctVerse = "verse new 0";
 		
+		correctBook = "book new 0";
+		correctChapter = "chapter new 0";
+		correctVerse = "verse new 0";
 		
 		
 		buttonSubmit.setOnClickListener(new OnClickListener(){
@@ -127,11 +135,16 @@ public class IKnowGame extends Activity {
 //								"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 //								, Toast.LENGTH_SHORT).show();
 				
-				String userBook = String.valueOf(spinnerBook.getSelectedItem());
-				String userChapter = String.valueOf(spinnerChapter.getSelectedItem());
-				String userVerse = String.valueOf(spinnerVerse.getSelectedItem());
+				userBook = String.valueOf(spinnerBook.getSelectedItem());
+				userChapter = String.valueOf(spinnerChapter.getSelectedItem());
+				userVerse = String.valueOf(spinnerVerse.getSelectedItem());
 				
-				if ( correctBook.equals(userBook) == true )
+				tv_game_status = (TextView) findViewById(R.id.game_status);
+				tv_numCorrect = (TextView) findViewById(R.id.numCorrect);
+				tv_numAttempts = (TextView) findViewById(R.id.numAttempts);
+				
+				
+				if ( correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
 				{
 					Toast.makeText(IKnowGame.this, 
 							"Correct: " +
@@ -139,6 +152,12 @@ public class IKnowGame extends Activity {
 									"\nSpinnerChapter : "+ String.valueOf(spinnerChapter.getSelectedItem()) + 
 									"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 									, Toast.LENGTH_SHORT).show();
+					tv_game_status.setText("Correct !");
+					numCorrect++;
+					numAttempts++;
+					tv_numCorrect.setText(String.valueOf(numCorrect));
+					tv_numAttempts.setText(String.valueOf(numAttempts));
+					
 				}
 				else
 				{
@@ -148,6 +167,9 @@ public class IKnowGame extends Activity {
 									"\nSpinnerChapter : "+ String.valueOf(spinnerChapter.getSelectedItem()) + 
 									"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 									, Toast.LENGTH_SHORT).show();
+					tv_game_status.setText("Incorrect !");
+					numAttempts++;
+					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 
 				
