@@ -5,7 +5,9 @@ import java.util.List;
 
 import team.kyb.MainActivity;
 import team.kyb.R;
+import team.kyb.database.DatabaseConnector;
 import team.kyb.database.Scriptures;
+import team.kyb.extragames.ScriptureForGameHelper;
 import android.app.Activity;
 import android.content.Intent;
 import android.os.Bundle;
@@ -18,12 +20,17 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
+import android.widget.SimpleCursorAdapter;
+import android.widget.CursorAdapter;
+import android.database.Cursor;
 
 public class IKnowGame extends Activity {
 
 //	private Spinner spinnerBook = (Spinner) findViewById(R.id.spinner_book);
 //	private Spinner spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
 //	private Spinner spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
+	
+	DatabaseConnector database = new DatabaseConnector(this);
 	
 	private String userBook, userChapter, userVerse;
 	private String correctBook, correctChapter, correctVerse;
@@ -52,9 +59,18 @@ public class IKnowGame extends Activity {
 		addItemsOnSpinnerVerse();
 		
 		// GET RANDOM VERSE !!!
-		verseToDisplay = getResources().getString(R.string.joke_honesty) ;
-		tv_displayVerse = (TextView)  findViewById(R.id.textview_text);
-		displayVerse(tv_displayVerse, verseToDisplay);
+		// error when i add the below part in  -------------------------------------------------
+		database.open();
+		ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
+		database.close();
+		verseToDisplay = scripture.getScriptureFull();
+		// error when i add the above part in  ------------------------------------------------
+		
+		
+		// If i use this line then the app will work just fine
+//		verseToDisplay = getResources().getString(R.string.joke_honesty) ;
+
+		displayVerse(verseToDisplay);
 		
 		// Get correct book, chapter, verse to check user's answer
 		correctBook = "book 0";
@@ -84,9 +100,9 @@ public class IKnowGame extends Activity {
 		return super.onOptionsItemSelected(item); 
 	} 	
 
-	public void displayVerse(TextView textview_text, String verseToDisplay)
+	public void displayVerse( String verseToDisplay)
 	{
-//		TextView textview_text = (TextView)  findViewById(R.id.textview_text);
+		TextView textview_text = (TextView)  findViewById(R.id.textview_text);
 		textview_text.setText(verseToDisplay);
 	}
 	
@@ -206,9 +222,13 @@ public class IKnowGame extends Activity {
 			@Override
 			public void onClick(View v) {
 				// GET RANDOM VERSE !!!
+//				database.open();
+//				ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
+//				database.close();
+//				verseToDisplay = scripture.getScriptureMissing();
 				verseToDisplay = "answer is 1 1 1";
-				tv_displayVerse = (TextView)  findViewById(R.id.textview_text);
-				displayVerse(tv_displayVerse, verseToDisplay);
+//				tv_displayVerse = (TextView)  findViewById(R.id.textview_text);
+				displayVerse(verseToDisplay);
 				
 				// Get correct book, chapter, verse to check user's answer
 				correctBook = "book 1";

@@ -2,6 +2,8 @@ package team.kyb.extragames;
 
 import java.util.ArrayList;
 import java.util.Scanner;
+import team.kyb.database.DatabaseConnector;
+import team.kyb.database.RandomScripture;
 
 public class HangmanGame {
 
