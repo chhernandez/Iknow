@@ -24,9 +24,20 @@ public class ScriptureForGameHelper {
 		int rdint = rd.nextInt(passageFull.length());
 		posOfWord = passageFull.indexOf(" ", rdint);
 		posOfWord++;
+		
+		//Normal case
 		int endPos = passageFull.indexOf(" ", posOfWord);
-		if (endPos < 0)
+		
+		//Case words at the end
+		if (endPos < 0) {
 			endPos = passageFull.indexOf(".", posOfWord);
+			endPos--;
+		}
+		
+		//Case word follow by a comma
+		if (passageFull.charAt(endPos) == ',') {
+			endPos--;
+		}
 
 		randomMissingWord = passageFull.substring(posOfWord, endPos);
 

@@ -19,10 +19,9 @@ import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.FrameLayout;
 
-
 public class LoseEffect extends Activity {
 
-	Random rd;
+	Random rd = new Random();
 
 	FallingObject[] objs = new FallingObject[30];
 
@@ -55,7 +54,6 @@ public class LoseEffect extends Activity {
 		Display display = getWindowManager().getDefaultDisplay();
 		mScrWidth = display.getWidth();
 		mScrHeight = display.getHeight();
-		rd = new Random();
 
 		mPrevTime = System.currentTimeMillis();
 		mPrevXAcc = 0;
@@ -79,16 +77,21 @@ public class LoseEffect extends Activity {
 
 	protected void changingSpeedAndPosForObject(FallingObject obj12,
 			float aveXA, float aveYA, long time) {
-		obj12.mBallVelocity.x += aveXA * time / 1000 / ACC_FUDGE_FACTOR; // acceleration
-																			// in
-																			// m/sec^2
+		// Randomize x-axis velocity
+		int rdint = rd.nextInt();
+		if (rdint % 2 == 0) {
+			obj12.mBallVelocity.x += aveXA * time / 1000 / ACC_FUDGE_FACTOR;
+		} else {
+			obj12.mBallVelocity.x -= aveXA * time / 1000 / ACC_FUDGE_FACTOR;
+		}
 		obj12.mBallVelocity.y += aveYA * time / 1000 / ACC_FUDGE_FACTOR;
 	}
 
 	private FallingObject creatingFallingObject() {
 		android.graphics.PointF mBallPos = new android.graphics.PointF();
 		android.graphics.PointF mBallVelocity = new android.graphics.PointF();
-		Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.angel);
+		Bitmap bm = BitmapFactory.decodeResource(getResources(),
+				R.drawable.fireball);
 
 		// create variables for ball position and speed
 		mBallPos.x = rd.nextInt(mScrWidth);
@@ -96,7 +99,8 @@ public class LoseEffect extends Activity {
 
 		mBallVelocity.x = rd.nextFloat();
 		mBallVelocity.y = rd.nextFloat();
-		FallingObject a = new FallingObject(this, mBallPos.x, mBallPos.y, 20, bm);
+		FallingObject a = new FallingObject(this, mBallPos.x, mBallPos.y, 20,
+				bm);
 		a.mBallPos = mBallPos;
 		a.mBallVelocity = mBallVelocity;
 		return a;
@@ -129,54 +133,48 @@ public class LoseEffect extends Activity {
 	}
 
 	@Override
-    public void onResume() //app moved to foreground (also occurs at app startup)
-    {
-        //create timer to move ball to new position
-        mTmr = new Timer(); 
-        mTsk = new TimerTask() {
+	public void onResume() // app moved to foreground (also occurs at app
+							// startup)
+	{
+		// create timer to move ball to new position
+		mTmr = new Timer();
+		mTsk = new TimerTask() {
 			public void run() {
-				for (int i = 0; i< objs.length; i++) {
+				for (int i = 0; i < objs.length; i++) {
 					final FallingObject objHere = objs[i];
-					
+
 					if (objHere.mBallPos.y + objHere.mR >= mScrHeight) {
-						objHere.mBallVelocity.y = -(objHere.mBallVelocity.y);
-						objHere.mBallPos.y = mScrHeight - objHere.mR;
+						objHere.mBallPos.y = 0;
 					}
-					
+
 					if (objHere.mBallPos.x + objHere.mR >= mScrWidth) {
-						objHere.mBallPos.x = mScrWidth - objHere.mR;
-						objHere.mBallVelocity.x = -(objHere.mBallVelocity.x);
+						objHere.mBallPos.x = 0;
 					}
-					
-					if (objHere.mBallPos.x - objHere.mR <= 0) {
-						objHere.mBallVelocity.x = -(objHere.mBallVelocity.x);
-						objHere.mBallPos.x = objHere.mR;
-					}
-					
-					if (objHere.mBallPos.y - objHere.mR <= 0) {
-						objHere.mBallVelocity.y = -(objHere.mBallVelocity.y);
-						objHere.mBallPos.y = objHere.mR;
-					}
-					
+
 					// move ball based on current speed
-					objHere.mBallPos.x += objHere.mBallVelocity.x;
+					int rdint = rd.nextInt();
+					if (rdint % 2 == 0) {
+						objHere.mBallPos.x += objHere.mBallVelocity.x;
+					} else {
+						objHere.mBallPos.x -= objHere.mBallVelocity.x;
+					}
 					objHere.mBallPos.y += objHere.mBallVelocity.y;
-					
+
 					// update ball class instance
 					objHere.mX = objHere.mBallPos.x;
 					objHere.mY = objHere.mBallPos.y;
-					
-				    RedrawHandler.post(new Runnable() {
-					    public void run() {
-						   objHere.invalidate();
-					    }
-				    });
+
+					RedrawHandler.post(new Runnable() {
+						public void run() {
+							objHere.invalidate();
+						}
+					});
 				}
 			}
 		};
-        mTmr.schedule(mTsk,10,10); //start timer
-        super.onResume();
-    } // onResume
+		mTmr.schedule(mTsk, 10, 10); // start timer
+		super.onResume();
+	} // onResume
 
 	@Override
 	public void onDestroy() // main thread stopped

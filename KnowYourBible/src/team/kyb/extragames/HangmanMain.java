@@ -3,6 +3,7 @@ package team.kyb.extragames;
 import team.kyb.R;
 import team.kyb.animationAPI.AnimationHelper;
 import team.kyb.animationAPI.LoseEffect;
+import team.kyb.animationAPI.WinEffect;
 import team.kyb.database.DatabaseConnector;
 import team.kyb.database.RandomScripture;
 import android.app.Activity;
@@ -26,10 +27,12 @@ public class HangmanMain extends Activity {
 
 	private Button mKeyboard[] = new Button[26];
 
-	private TextView mWord, mGuessLeft, mStatus;
+	private TextView mWord, mGuessLeft, mStatus, mScriptureHangman;
 
 	private HangmanGame mGame;
 
+	private String hiddenWord;
+	
 	private int trackImage = 0;
 
 	private int mHangmanView[] = new int[] { R.drawable.hangman0,
@@ -46,6 +49,7 @@ public class HangmanMain extends Activity {
 		mWord = (TextView) findViewById(R.id.word_hang_man);
 		mGuessLeft = (TextView) findViewById(R.id.countValue);
 		mStatus = (TextView) findViewById(R.id.status);
+		mScriptureHangman = (TextView) findViewById(R.id.scripture_hangman);
 
 		mHangman[0] = (ImageView) findViewById(R.id.hangmanView00);
 		mHangman[1] = (ImageView) findViewById(R.id.hangmanView01);
@@ -64,9 +68,10 @@ public class HangmanMain extends Activity {
 		ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
 		database.close();
 
-		mStatus.setText(scripture.getPassageMissing());
+		mScriptureHangman.setText(scripture.getScriptureMissing());
 
-		mGame = new HangmanGame("khuong", 6);
+		hiddenWord = scripture.getRandomMissingWord();
+		mGame = new HangmanGame(hiddenWord.toLowerCase(), 6);
 
 	}
 
@@ -137,15 +142,16 @@ public class HangmanMain extends Activity {
 							mHangman[++trackImage], 0, 90);
 					Log.d("FLIP", "Value of trackImage " + trackImage);
 				}
-				mGuessLeft.setText("" + mGame.numGuessesRemaining());
+				mGuessLeft.setText("Guesses left: " + mGame.numGuessesRemaining());
 				mWord.setText(mGame.displayGameState());
 				if (mGame.gameOver()) {
 					if (mGame.isWin()) {
 						mStatus.setText("YOU WIN");
+						winEffect();
 					} else {
 						mStatus.setText("YOU LOSE");
+						mWord.setText(hiddenWord);
 						loseEffect();
-
 					}
 				} else {
 					mStatus.setText("CONTINUE !");
@@ -161,7 +167,8 @@ public class HangmanMain extends Activity {
 	}
 
 	public void winEffect() {
-
+		Intent intent = new Intent(this, WinEffect.class);
+		startActivity(intent);
 	}
 
 }
