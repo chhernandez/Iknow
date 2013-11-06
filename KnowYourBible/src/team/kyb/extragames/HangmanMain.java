@@ -61,9 +61,10 @@ public class HangmanMain extends Activity {
 		declaringKeyboard();
 		
 		database.open();
+		ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
+		database.close();
 
-		String temp = database.getRandomScriptureForGame().getString(1);
-		mStatus.setText(temp);
+		mStatus.setText(scripture.getPassageMissing());
 
 		mGame = new HangmanGame("khuong", 6);
 
