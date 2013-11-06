@@ -56,7 +56,7 @@
         style="@style/NiceButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="12"
+        android:lines="9"
         android:text="Ready" />
     
     <Spinner
@@ -102,13 +102,24 @@
   	    android:text="@string/submit" 
   	    android:layout_margin="20dp"
   	/>
-  	
+  	  	
   	<TextView
         android:id="@+id/game_status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
   	    android:layout_gravity="center_horizontal"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:textSize="20sp" />
+  	
+  	<Button
+  	    android:id="@+id/next_iknow"
+  	    android:layout_width="wrap_content"
+  	    android:layout_height="wrap_content"
+  	    android:layout_gravity="right"
+  	    android:text="Next" 
+  	    android:layout_margin="10dp"
+  	/>
+  	
+
 
 </LinearLayout>

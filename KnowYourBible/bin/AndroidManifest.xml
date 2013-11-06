@@ -66,14 +66,14 @@
         </activity>         
 
                 <activity
-            android:name="team.kyb.animationAPI.winEffect"
+            android:name="team.kyb.animationAPI.WinEffect"
             android:label=" " >
         </activity> 
         
         <activity
-            android:name="team.kyb.animationAPI.loseEffect"
+            android:name="team.kyb.animationAPI.LoseEffect"
             android:label=" " >
-        </activity>    
+        </activity> 
    
       	<activity
             android:name="team.kyb.iknow.IKnowGame"
