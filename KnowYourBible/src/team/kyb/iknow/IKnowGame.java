@@ -39,6 +39,8 @@ public class IKnowGame extends Activity {
 	private int numCorrect, numAttempts;
 	private String verseToDisplay;
 	private TextView tv_displayVerse;
+	private ArrayList<String> listVerses;
+	private int numVerses;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -59,24 +61,33 @@ public class IKnowGame extends Activity {
 		addItemsOnSpinnerVerse();
 		
 		// GET RANDOM VERSE !!!
-		// error when i add the below part in  -------------------------------------------------
+
 		database.open();
 		ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
+		verseToDisplay = scripture.getPassage();
+		
+		// Uncomment when have all spinners populated
+//		correctBook = scripture.getBook();
+//		correctChapter = String.valueOf(scripture.getChapter());
+//		correctVerse = String.valueOf(scripture.getVerse());
+		
+		
+		numVerses = database.getAllVerses().getCount();
+//		verseToDisplay = String.valueOf(numVerses);
+		
+//		Cursor cursorVerses = database.getAllVerses();
+//		ScriptureForGameHelper verseI = new ScriptureForGameHelper(cursorVerses);
+//		verseToDisplay = String.valueOf(verseI.getVerse());
+		
 		database.close();
-		verseToDisplay = scripture.getScriptureFull();
-		// error when i add the above part in  ------------------------------------------------
-		
-		
-		// If i use this line then the app will work just fine
-//		verseToDisplay = getResources().getString(R.string.joke_honesty) ;
-
 		displayVerse(verseToDisplay);
 		
+		// Delete when have uncomment above and have all spinners populated --------
 		// Get correct book, chapter, verse to check user's answer
 		correctBook = "book 0";
 		correctChapter = "chapter 0";
 		correctVerse = "verse 0";
-		
+		// --------------------------------------------------------------------------
 
 		checkUserAnswer(correctBook, correctChapter, correctVerse);
 		nextListener();
@@ -222,11 +233,11 @@ public class IKnowGame extends Activity {
 			@Override
 			public void onClick(View v) {
 				// GET RANDOM VERSE !!!
-//				database.open();
-//				ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
-//				database.close();
-//				verseToDisplay = scripture.getScriptureMissing();
-				verseToDisplay = "answer is 1 1 1";
+				database.open();
+				ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
+				database.close();
+				verseToDisplay = scripture.getPassage();
+//				verseToDisplay = "answer is 1 1 1";
 //				tv_displayVerse = (TextView)  findViewById(R.id.textview_text);
 				displayVerse(verseToDisplay);
 				
