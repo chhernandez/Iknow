@@ -9,6 +9,7 @@ package team.kyb;
 
 public final class R {
     public static final class array {
+        public static final int all_books_array=0x7f040003;
         public static final int book_array=0x7f040000;
         public static final int chapter_array=0x7f040001;
         public static final int verse_array=0x7f040002;

@@ -10,6 +10,7 @@ import team.kyb.database.Scriptures;
 import team.kyb.extragames.ScriptureForGameHelper;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -67,12 +68,12 @@ public class IKnowGame extends Activity {
 		verseToDisplay = scripture.getPassage();
 		
 		// Uncomment when have all spinners populated
-//		correctBook = scripture.getBook();
-//		correctChapter = String.valueOf(scripture.getChapter());
-//		correctVerse = String.valueOf(scripture.getVerse());
+		correctBook = scripture.getBook();
+		correctChapter = String.valueOf(scripture.getChapter());
+		correctVerse = String.valueOf(scripture.getVerse());
 		
 		
-		numVerses = database.getAllVerses().getCount();
+//		numVerses = database.getAllVerses().getCount();
 //		verseToDisplay = String.valueOf(numVerses);
 		
 //		Cursor cursorVerses = database.getAllVerses();
@@ -84,9 +85,9 @@ public class IKnowGame extends Activity {
 		
 		// Delete when have uncomment above and have all spinners populated --------
 		// Get correct book, chapter, verse to check user's answer
-		correctBook = "book 0";
-		correctChapter = "chapter 0";
-		correctVerse = "verse 0";
+//		correctBook = "book 0";
+//		correctChapter = "chapter 0";
+//		correctVerse = "verse 0";
 		// --------------------------------------------------------------------------
 
 		checkUserAnswer(correctBook, correctChapter, correctVerse);
@@ -120,11 +121,13 @@ public class IKnowGame extends Activity {
 	private void addItemsOnSpinnerBook()
 	{
 //		Spinner spinnerBook = (Spinner) findViewById(R.id.spinner_book);
-		List<String> list = new ArrayList<String>();
-		list.add("book 0");
-		list.add("book 1");
-		list.add("book 2");
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+//		List<String> list = new ArrayList<String>();
+//		list.add("book 0");
+//		list.add("book 1");
+//		list.add("book 2");
+//		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
+		Resources res = getResources();
+		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,res.getStringArray(R.array.all_books_array));
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerBook.setAdapter(dataAdapter);
 	}
@@ -133,9 +136,15 @@ public class IKnowGame extends Activity {
 	{
 //		Spinner spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
 		List<String> list = new ArrayList<String>();
-		list.add("chapter 0");
-		list.add("chapter 1");
-		list.add("chapter 2");
+//		list.add("chapter 0");
+//		list.add("chapter 1");
+//		list.add("chapter 2");
+		for (int i = 1; i<=150; i++)
+		{
+			list.add(String.valueOf(i));
+		}
+	
+		
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerChapter.setAdapter(dataAdapter);
@@ -145,9 +154,13 @@ public class IKnowGame extends Activity {
 	{
 //		Spinner spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
 		List<String> list = new ArrayList<String>();
-		list.add("verse 0");
-		list.add("verse 1");
-		list.add("verse 2");
+//		list.add("verse 0");
+//		list.add("verse 1");
+//		list.add("verse 2");
+		for (int i = 1; i<=176; i++)
+		{
+			list.add(String.valueOf(i));
+		}
 		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
 		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 		spinnerVerse.setAdapter(dataAdapter);
@@ -159,7 +172,7 @@ public class IKnowGame extends Activity {
 //		final Spinner spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
 //		final Spinner spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
 		
-		Button buttonSubmit = (Button) findViewById(R.id.button_submit);
+		final Button buttonSubmit = (Button) findViewById(R.id.button_submit);
 		
 
 		
@@ -188,6 +201,8 @@ public class IKnowGame extends Activity {
 				tv_numAttempts = (TextView) findViewById(R.id.numAttempts);
 				
 				
+				
+				
 				if ( correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
 				{
 //					Toast.makeText(IKnowGame.this, 
@@ -201,6 +216,7 @@ public class IKnowGame extends Activity {
 					tv_numCorrect.setText(String.valueOf(numCorrect));
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 					
+					buttonSubmit.setEnabled(false);
 				}
 				else
 				{
@@ -210,7 +226,7 @@ public class IKnowGame extends Activity {
 //									"\nSpinnerChapter : "+ String.valueOf(spinnerChapter.getSelectedItem()) + 
 //									"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 //									, Toast.LENGTH_SHORT).show();
-					tv_game_status.setText("Incorrect !");
+					tv_game_status.setText("Incorrect ! ");
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 
@@ -235,16 +251,20 @@ public class IKnowGame extends Activity {
 				// GET RANDOM VERSE !!!
 				database.open();
 				ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
-				database.close();
 				verseToDisplay = scripture.getPassage();
-//				verseToDisplay = "answer is 1 1 1";
-//				tv_displayVerse = (TextView)  findViewById(R.id.textview_text);
-				displayVerse(verseToDisplay);
 				
-				// Get correct book, chapter, verse to check user's answer
-				correctBook = "book 1";
-				correctChapter = "chapter 1";
-				correctVerse = "verse 1";
+				// Uncomment when have all spinners populated
+				correctBook = scripture.getBook();
+				correctChapter = String.valueOf(scripture.getChapter());
+				correctVerse = String.valueOf(scripture.getVerse());
+				database.close();
+				
+				Button buttonSubmit = (Button) findViewById(R.id.button_submit);
+				buttonSubmit.setEnabled(true);
+				
+				verseToDisplay = scripture.getPassage();
+				displayVerse(verseToDisplay);
+				tv_game_status.setText("");
 
 				checkUserAnswer(correctBook, correctChapter, correctVerse);
 	
