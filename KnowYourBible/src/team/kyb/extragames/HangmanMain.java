@@ -1,23 +1,20 @@
 package team.kyb.extragames;
 
+import team.kyb.MainActivity;
 import team.kyb.R;
 import team.kyb.animationAPI.AnimationHelper;
 import team.kyb.animationAPI.LoseEffect;
 import team.kyb.animationAPI.WinEffect;
 import team.kyb.database.DatabaseConnector;
-import team.kyb.database.RandomScripture;
 import android.app.Activity;
 import android.content.Intent;
-import android.database.Cursor;
-import android.os.AsyncTask;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Menu;
+import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
-import android.widget.CursorAdapter;
 import android.widget.ImageView;
-import android.widget.SimpleCursorAdapter;
 import android.widget.TextView;
 
 public class HangmanMain extends Activity {
@@ -75,6 +72,8 @@ public class HangmanMain extends Activity {
 
 	}
 
+
+	
 	private void setNextFiveHangManView() {
 		for (int i = 1; i < mHangman.length; i++) {
 			mHangman[i].setBackgroundResource(mHangmanView[i]);
@@ -119,10 +118,21 @@ public class HangmanMain extends Activity {
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
+		super.onCreateOptionsMenu(menu);
 		// Inflate the menu; this adds items to the action bar if it is present.
-		// getMenuInflater().inflate(R.menu.main, menu);
+		getMenuInflater().inflate(R.menu.hangman_menu, menu);
 		return true;
 	}
+
+	// handle choice from options menu
+	@Override
+	public boolean onOptionsItemSelected(MenuItem item) {
+		// create a new Intent to launch
+		Intent exitHangman = 
+				new Intent(this, MainActivity.class);
+		startActivity(exitHangman); 
+		return super.onOptionsItemSelected(item); 
+	} 	
 
 	private class ButtonClickListener implements View.OnClickListener {
 		char pressedLetter;

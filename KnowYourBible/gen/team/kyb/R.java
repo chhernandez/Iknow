@@ -77,7 +77,7 @@ public final class R {
         public static final int deletescripture=0x7f090060;
         public static final int e=0x7f09000d;
         public static final int editscripture=0x7f09005f;
-        public static final int exit=0x7f090058;
+        public static final int exit=0x7f090055;
         public static final int f=0x7f090018;
         public static final int g=0x7f090019;
         public static final int game_status=0x7f090037;
@@ -90,7 +90,7 @@ public final class R {
         public static final int hangmanView04=0x7f09002b;
         public static final int hangmanView05=0x7f09002c;
         public static final int hangmanView06=0x7f09002d;
-        public static final int help=0x7f090057;
+        public static final int help=0x7f090058;
         public static final int i=0x7f090012;
         public static final int input=0x7f090009;
         public static final int j=0x7f09001b;
@@ -118,8 +118,8 @@ public final class R {
         public static final int s=0x7f090016;
         public static final int saveScriptureButton=0x7f090041;
         public static final int scripture_hangman=0x7f090006;
-        public static final int scriptures=0x7f090055;
-        public static final int settings=0x7f090056;
+        public static final int scriptures=0x7f090056;
+        public static final int settings=0x7f090057;
         public static final int space1=0x7f090044;
         public static final int space2=0x7f090050;
         public static final int space3=0x7f09004a;
@@ -159,9 +159,11 @@ public final class R {
         public static final int verse_list=0x7f03000c;
     }
     public static final class menu {
-        public static final int main_menu=0x7f080000;
-        public static final int scriptures_menu=0x7f080001;
-        public static final int update_menu=0x7f080002;
+        public static final int hangman_menu=0x7f080000;
+        public static final int iknow_menu=0x7f080001;
+        public static final int main_menu=0x7f080002;
+        public static final int scriptures_menu=0x7f080003;
+        public static final int update_menu=0x7f080004;
     }
     public static final class string {
         public static final int about_label=0x7f060008;

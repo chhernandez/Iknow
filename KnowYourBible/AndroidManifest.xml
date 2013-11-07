@@ -67,17 +67,17 @@
 
                 <activity
             android:name="team.kyb.animationAPI.WinEffect"
-            android:label=" " >
+            android:label="You Won" >
         </activity> 
         
         <activity
             android:name="team.kyb.animationAPI.LoseEffect"
-            android:label=" " >
+            android:label="You Lost" >
         </activity> 
    
       	<activity
             android:name="team.kyb.iknow.IKnowGame"
-            android:label=" " >
+            android:label="I Know That Scripture" >
         </activity>    
                     
         

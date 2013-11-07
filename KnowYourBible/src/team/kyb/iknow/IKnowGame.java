@@ -98,7 +98,7 @@ public class IKnowGame extends Activity {
 	public boolean onCreateOptionsMenu(Menu menu) {
 		super.onCreateOptionsMenu(menu);
 		// Inflate the menu; this adds items to the action bar if it is present.
-		getMenuInflater().inflate(R.menu.main_menu, menu);
+		getMenuInflater().inflate(R.menu.iknow_menu, menu);
 		return true;
 	}
 
@@ -106,9 +106,9 @@ public class IKnowGame extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// create a new Intent to launch
-		Intent listScriptures = 
-				new Intent(this, Scriptures.class);
-		startActivity(listScriptures); 
+		Intent exitIKnow = 
+				new Intent(this, MainActivity.class);
+		startActivity(exitIKnow); 
 		return super.onOptionsItemSelected(item); 
 	} 	
 
