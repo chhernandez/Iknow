@@ -26,6 +26,9 @@ public class MainActivity extends Activity {
 		
 		// pre populate the scriptures to the database using a separate thread
 		preScriptureTask.execute((Object[]) null); 		
+		
+	
+			
 	}
 
 	public void startIKnow(View v) {
@@ -92,9 +95,9 @@ public class MainActivity extends Activity {
 			return true;
 		case R.id.help:
 			return true;
-		case R.id.exit:
-			finish();
-			return true;
+/*		case R.id.exit:
+			
+			return true;*/
 		case R.id.about:
 			return true;
 		default:		

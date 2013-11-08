@@ -65,19 +65,19 @@
             android:label="@string/hangman_label" >
         </activity>         
 
-                <activity
+        <activity
             android:name="team.kyb.animationAPI.WinEffect"
-            android:label="You Won" >
+            >
         </activity> 
         
         <activity
             android:name="team.kyb.animationAPI.LoseEffect"
-            android:label="You Lost" >
+            >
         </activity> 
    
       	<activity
             android:name="team.kyb.iknow.IKnowGame"
-            android:label="I Know That Scripture" >
+            android:label="@string/iknow_label" >
         </activity>    
                     
         

@@ -12,6 +12,7 @@
     <string name="settings_label">Settings</string>
     <string name="help_label">Help</string>
     <string name="exit_label">Exit Game</string>
+
     <string name="about_label">About</string>
 	<string name="addscripture_label">Add New</string>
 	<string name="listbooks_label">List Books</string>
