@@ -83,9 +83,12 @@ public class HangmanGame {
 		} else {
 			guessedChars.add(ch);
 			if (secretChars.contains(ch)) {
-				int pos = secretChars.indexOf(ch);
-				returnChars.add(pos, ch);
-				returnChars.remove(pos+1);
+				for (int i= 0; i < secretChars.size(); i++) {
+					if (secretChars.get(i) == ch) {
+						returnChars.add(i, ch);
+						returnChars.remove(i+1);
+					}
+				}
 				return 1;
 			} else {
 				guessRemainingNum--;
