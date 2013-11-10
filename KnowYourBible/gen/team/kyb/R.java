@@ -42,7 +42,8 @@ public final class R {
         public static final int icn_dropdown_checked=0x7f02000a;
         public static final int icn_dropdown_open=0x7f02000b;
         public static final int nice_button_enabled=0x7f02000c;
-        public static final int tear=0x7f02000d;
+        public static final int splashimage=0x7f02000d;
+        public static final int tear=0x7f02000e;
     }
     public static final class id {
         public static final int a=0x7f090015;
@@ -145,18 +146,19 @@ public final class R {
     }
     public static final class layout {
         public static final int activity_main=0x7f030000;
-        public static final int blank_falling_layout=0x7f030001;
-        public static final int book_list=0x7f030002;
-        public static final int chapter_list=0x7f030003;
-        public static final int filling_the_blank=0x7f030004;
-        public static final int hangman_layout=0x7f030005;
-        public static final int iknow_layout=0x7f030006;
-        public static final int main_menu_layout=0x7f030007;
-        public static final int scripture_add=0x7f030008;
-        public static final int scripture_list=0x7f030009;
-        public static final int scripture_random=0x7f03000a;
-        public static final int scripture_update=0x7f03000b;
-        public static final int verse_list=0x7f03000c;
+        public static final int activity_splash=0x7f030001;
+        public static final int blank_falling_layout=0x7f030002;
+        public static final int book_list=0x7f030003;
+        public static final int chapter_list=0x7f030004;
+        public static final int filling_the_blank=0x7f030005;
+        public static final int hangman_layout=0x7f030006;
+        public static final int iknow_layout=0x7f030007;
+        public static final int main_menu_layout=0x7f030008;
+        public static final int scripture_add=0x7f030009;
+        public static final int scripture_list=0x7f03000a;
+        public static final int scripture_random=0x7f03000b;
+        public static final int scripture_update=0x7f03000c;
+        public static final int verse_list=0x7f03000d;
     }
     public static final class menu {
         public static final int hangman_menu=0x7f080000;
