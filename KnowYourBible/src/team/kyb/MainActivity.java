@@ -24,8 +24,8 @@ public class MainActivity extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
-		// pre populate the scriptures to the database using a separate thread
-		preScriptureTask.execute((Object[]) null); 		
+/*		// pre populate the scriptures to the database using a separate thread
+		preScriptureTask.execute((Object[]) null); 	*/	
 		
 	
 			
@@ -115,7 +115,7 @@ public class MainActivity extends Activity {
 	
 	
 	
-	AsyncTask<Object, Object, Object> preScriptureTask = 
+/*	AsyncTask<Object, Object, Object> preScriptureTask = 
 			new AsyncTask<Object, Object, Object>() {
 
 		@Override
@@ -227,6 +227,6 @@ public class MainActivity extends Activity {
 
 	} // end of private void preInsertScripture(){
 	
-	
+	*/
 	
 } // end of public class MainActivity extends Activity {

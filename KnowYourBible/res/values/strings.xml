@@ -113,6 +113,42 @@
 	<string name="passage_c13">4</string>
 	<string name="passage_d13">20</string>	
 	
+	<string name="passage_a14">Teach me to do your will, for you are my God. Your spirit is good; may it lead me.</string>
+	<string name="passage_b14">@string/book19</string>
+	<string name="passage_c14">143</string>
+	<string name="passage_d14">10</string>
+	
+	<string name="passage_a15">Let your utterance be always with graciousness, seasoned with salt.</string>
+	<string name="passage_b15">@string/book51</string>
+	<string name="passage_c15">4</string>
+	<string name="passage_d15">6</string>
+	
+	<string name="passage_a16">Just as it occurred in the days of Noah, so it will be also in the days of the Son of man.</string>
+	<string name="passage_b16">@string/book42</string>
+	<string name="passage_c16">17</string>
+	<string name="passage_d16">26</string>
+	
+	<string name="passage_a17">Moses was by far the meekest of all the men who were upon the surface of the ground.</string>
+	<string name="passage_b17">@string/book4</string>
+	<string name="passage_c17">12</string>
+	<string name="passage_d17">3</string>
+	
+	<string name="passage_a18">What will be the sign of your presence and the conclusion of the system of things?</string>
+	<string name="passage_b18">@string/book40</string>
+	<string name="passage_c18">24</string>
+	<string name="passage_d18">3</string>		
+	
+	<string name="passage_a19">All those who sinned under law will be judged by law.</string>
+	<string name="passage_b19">@string/book45</string>
+	<string name="passage_c19">2</string>
+	<string name="passage_d19">12</string>
+	
+	<string name="passage_a20">You husbands, continue dwelling in like manner with them according to knowledge, assigning them honor as to a weaker vessel, the feminine one.</string>
+	<string name="passage_b20">@string/book60</string>
+	<string name="passage_c20">3</string>
+	<string name="passage_d20">7</string>
+		
+	
 
 	<string name="book1">Genesis</string>
 	<string name="book2">Exodus</string>	
@@ -186,7 +222,7 @@
     <string name="count_left">Number of guesses left: </string>
     
     
-    	<string name="joke_honesty">For God loved the world so much that he gave his only-begotten Son, so that everyone exercising faith in him might not be destroyed but have everlasting life.</string>
+    <string name="joke_honesty">For God loved the world so much that he gave his only-begotten Son, so that everyone exercising faith in him might not be destroyed but have everlasting life.</string>
 	
 	<string name="submit">Submit</string>
 	
