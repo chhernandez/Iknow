@@ -41,9 +41,10 @@ public final class R {
         public static final int ic_launcher=0x7f020009;
         public static final int icn_dropdown_checked=0x7f02000a;
         public static final int icn_dropdown_open=0x7f02000b;
-        public static final int nice_button_enabled=0x7f02000c;
-        public static final int splashimage=0x7f02000d;
-        public static final int tear=0x7f02000e;
+        public static final int mainimage=0x7f02000c;
+        public static final int nice_button_enabled=0x7f02000d;
+        public static final int splashimage=0x7f02000e;
+        public static final int tear=0x7f02000f;
     }
     public static final class id {
         public static final int a=0x7f090017;

@@ -6,13 +6,17 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".MainActivity" >
+    tools:context=".MainActivity"
+    android:background="@drawable/mainimage"    
+     >
 
     <Button
         android:id="@+id/btn_IKnow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="25dp"
+        android:textStyle="bold"
+        android:textColor="#ffffff"
         android:gravity="center"
         android:onClick="startIKnow"
         android:text="@string/iknow_label" />
@@ -21,7 +25,9 @@
         android:id="@+id/btn_Scriptures"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_IKnow"           
+        android:layout_below="@id/btn_IKnow"    
+        android:textStyle="bold"
+        android:textColor="#ffffff"               
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:onClick="startScriptures"
@@ -31,7 +37,9 @@
         android:id="@+id/btn_MoreGames"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/btn_Scriptures"           
+        android:layout_below="@id/btn_Scriptures"  
+        android:textStyle="bold"
+        android:textColor="#ffffff"                
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:onClick="startGames"

@@ -11,34 +11,29 @@ import android.util.Log;
 public class SplashScreen extends Activity {
 
 	// Splash screen timer
-//	private static int SPLASH_TIME_OUT = 4000;
+	private static int SPLASH_TIME_OUT = 2500;
 	
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
         
-		// pre populate the scriptures to the database using a separate thread
-		preScriptureTask.execute((Object[]) null); 	
+
  
-/*        new Handler().postDelayed(new Runnable() {
+        new Handler().postDelayed(new Runnable() {
  
             
-             * Showing splash screen with a timer. This will be useful when you
-             * want to show case your app logo / company
+         //    * Showing splash screen with a timer. This will be useful when you
+         //    * want to show case your app logo / company
              
  
             @Override
             public void run() {
                 // This method will be executed once the timer is over
-                // Start your app main activity
-                Intent i = new Intent(SplashScreen.this, MainActivity.class);
-                startActivity(i);
- 
-                // close this activity
-                finish();
+        		// pre populate the scriptures to the database using a separate thread
+        		preScriptureTask.execute((Object[]) null); 	
             }
-        }, SPLASH_TIME_OUT);*/
+        }, SPLASH_TIME_OUT);
     }
     
 	AsyncTask<Object, Object, Object> preScriptureTask = 
