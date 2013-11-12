@@ -12,9 +12,9 @@
     <string name="settings_label">Settings</string>
     <string name="help_label">Help</string>
     <string name="exit_label">Exit Game</string>
-
     <string name="about_label">About</string>
-	<string name="addscripture_label">Add New</string>
+
+    <string name="addscripture_label">Add New</string>
 	<string name="listbooks_label">List Books</string>
 	<string name="listchapters_label">List Chapters</string>
 	<string name="listverses_label">List Verses</string>	
@@ -47,6 +47,19 @@
 	<string name="vverseTitle">Verse number is required</string>
 	<string name="vverseMessage">Please enter verse number</string>	
 	<string name="vButton">OK</string>
+	
+	<string name="aboutgame">Know Your Bible (KYB) is a fun and educational game to help anyone learn and memorize Bible scriptures.\n
+	    \n
+	    KYB was created as a team course project in CS378 Mobile Computing at The University of Texas at Austin during the Fall 2013 semester.\n
+	    \n
+	    Date Created: December 15, 2013\n
+	    Created by: Carlos Hernandez, Khuong Thai, and Hoang Pham\n
+	    </string>
+	<string name="helpgame">1) To start the game click on the KYB icon on your home screen or application list.\n
+	    	2) The Welcome Screen will display for a few seconds to setup the scriptures database and installation file.\n
+	    	3) After the Welcome Screen, the Main Menu screen will display three buttons: I Know That Scripture, Scriptures Database, and More Games.\n
+	    	 
+	    		</string>
 	
 	<string name="passage_a1">Throw all your anxiety on him, because he cares for you.</string>
 	<string name="passage_b1">@string/book60</string>
