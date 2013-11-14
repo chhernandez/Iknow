@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <string name="app_name">Conozca Su Biblia</string>
+    
+    <string name="iknow_label">Yo Sé Esa Escritura</string>
+    <string name="games_label">Más Juegos</string>
+    <string name="hangman_label">El Ahorcado</string>
+    
+    
+    <string name="scriptures_label">Base de Datos</string>
+    <string name="settings_label">Ajustes</string>
+    <string name="help_label">Ayuda</string>
+    <string name="exit_label">Salir del Juego</string>
+    <string name="about_label">Informacción</string>
+
+    <string name="addscripture_label">Añadir Nuevo</string>
+	<string name="listbooks_label">Todo los Libros</string>
+	<string name="listchapters_label">Todo los Capítulos</string>
+	<string name="listverses_label">Todo los Versiculos</string>	
+	<string name="displaybooks_label">Libros</string>
+	<string name="displaychapters_label">Capítulos</string>
+	<string name="displayverses_label">Versiculos</string>
+	<string name="randomscripture_label">Escritura al Azar</string>
+		
+	<string name="editscripture_label">Editar</string>
+	<string name="deletescripture_label">Borrar</string>
+	
+    <string name="button_cancel">Cancelar</string>
+    <string name="button_delete">Borrar</string>	
+	
+    <string name="confirmDelete">¿Esta seguro?</string>
+    <string name="confirmDeleteMessage">Esto eliminará la Escritura.</string>	
+	<string name="addedit_label">Añadir/Editar</string>
+	<string name="update_label">Actualizar</string>
+	<string name="passage_hint">Introducza el pasaje aquí</string>
+	<string name="book_hint">Introduzca el nombre de libro(ej. 1 Juan, Hechos)</string>
+	<string name="chapter_hint">Introduzca el número de capítulo aquí</string>
+	<string name="verse_hint">Introduzca el número de verso (sólo uno)</string>
+	<string name="save_button_label">Guardar</string>
+	<string name="vpassageTitle">Se requiere texto</string>
+	<string name="vpassageMessage">Por favor, introduzca el texto.</string>
+	<string name="vbookTitle">Se requiere texto</string>
+	<string name="vbookMessage">Por favor, introduzca el libro.</string>	
+	<string name="vchapterTitle">Se requiere texto</string>
+	<string name="vchapterMessage">Por favor, introduzca el capítulo.</string>	
+	<string name="vverseTitle">Se requiere texto</string>
+	<string name="vverseMessage">Por favor, introduzca el versiculo,</string>	
+	<string name="vButton">OK</string>
+	
+	<string name="aboutgame">Conozca Su Biblia es un juego divertido y educativo para ayudar a alguien a aprender y memorizar pasajes bíblicos\n
+	    \n
+	    Conozca Su Biblia se creó como un proyecto de CS378 Mobile Computing de la Universidad de Texas en Austin durante el semestre del otoño de 2013.\n
+	    \n
+	    Fecha: December 15, 2013\n
+	    Hecho por: Carlos Hernandez, Khuong Thai, and Hoang Pham\n
+	    </string>
+	<string name="helpgame">1) Para iniciar el juego, haga clic en el icono de Conozca Su Biblia en la pantalla de inicio o en la lista de aplicaciones.\n
+	    	2) La pantalla de bienvenida se mostrará durante unos segundos para configurar la base de datos de las escrituras y el archivo de instalación.\n
+	    	3) Después de la pantalla de bienvenida, la pantalla del menú principal se mostrará tres botones: Yo sé la Escritura, Base de Datos, y Más Juegos.\n
+	    	 
+	 </string>
+	
+	<string name="passage_a1">Mantengan su juicio, sean vigilantes. Su adversario, el Diablo, anda en derredor como león rugiente, procurando devorar a alguien.</string>
+	<string name="passage_b1">@string/book60</string>
+	<string name="passage_c1">5</string>
+	<string name="passage_d1">8</string>
+	
+	<string name="passage_a2">Felices son los de corazón puro, puesto que a ellos verán a Dios.</string>
+	<string name="passage_b2">@string/book40</string>
+	<string name="passage_c2">5</string>
+	<string name="passage_d2">8</string>
+	
+	<string name="passage_a3">En el principio Dios creó los cielos y la tierra.</string>
+	<string name="passage_b3">@string/book1</string>
+	<string name="passage_c3">1</string>
+	<string name="passage_d3">1</string>
+	
+	<string name="passage_a4">Sirvan a Jehová con regocijo. Entren delante de él con un clamor gozoso.</string>
+	<string name="passage_b4">@string/book19</string>
+	<string name="passage_c4">100</string>
+	<string name="passage_d4">2</string>
+	
+	<string name="passage_a5">Como el último enemigo, la muerte ha de ser reducida a nada.</string>
+	<string name="passage_b5">@string/book46</string>
+	<string name="passage_c5">15</string>
+	<string name="passage_d5">26</string>
+	
+	<string name="passage_a6">Siempre regocíjense en el Señor. Una vez más diré: ¡Regocíjense!</string>
+	<string name="passage_b6">@string/book50</string>
+	<string name="passage_c6">4</string>
+	<string name="passage_d6">4</string>
+	
+	<string name="passage_a7">No muchos de ustedes deberían hacerse maestros, hermanos míos, sabiendo que recibiremos juicio más severo.</string>
+	<string name="passage_b7">@string/book59</string>
+	<string name="passage_c7">3</string>
+	<string name="passage_d7">1</string>
+	
+	<string name="passage_a8">Ustedes fueron comprados por precio; dejen de hacerse esclavos de los hombres.</string>
+	<string name="passage_b8">@string/book46</string>
+	<string name="passage_c8">7</string>
+	<string name="passage_d8">23</string>		
+	
+	<string name="passage_a9">Pues bien, entonces, no sigamos durmiendo como los demás, sino quedémonos despiertos y mantengamos nuestro juicio.</string>
+	<string name="passage_b9">@string/book52</string>
+	<string name="passage_c9">5</string>
+	<string name="passage_d9">6</string>
+	
+	<string name="passage_a10">Hasta aquellos a quienes perturbaban espíritus inmundos eran curados.</string>
+	<string name="passage_b10">@string/book42</string>
+	<string name="passage_c10">6</string>
+	<string name="passage_d10">18</string>
+	
+	<string name="passage_a11">Pues, entonces, ¿me he hecho enemigo de ustedes porque les digo la verdad?</string>
+	<string name="passage_b11">@string/book48</string>
+	<string name="passage_c11">4</string>
+	<string name="passage_d11">16</string>
+	
+	<string name="passage_a12">Y los cabezas de familia se pusieron celosos de José y lo vendieron en manos de Egipto.</string>
+	<string name="passage_b12">@string/book44</string>
+	<string name="passage_c12">7</string>
+	<string name="passage_d12">9</string>
+	
+	<string name="passage_a13">El árbol que contemplaste, que se hizo grande y llegó a ser fuerte, y la altura del cual finalmente alcanzó a los cielos, y que le era visible a toda la tierra,</string>
+	<string name="passage_b13">@string/book27</string>
+	<string name="passage_c13">4</string>
+	<string name="passage_d13">20</string>	
+	
+	<string name="passage_a14">Enséñame a hacer tu voluntad, porque tú eres mi Dios. Tu espíritu es bueno; que me guíe en la tierra de la rectitud.</string>
+	<string name="passage_b14">@string/book19</string>
+	<string name="passage_c14">143</string>
+	<string name="passage_d14">10</string>
+	
+	<string name="passage_a15">Que su habla siempre sea con gracia, sazonada con sal, para que sepan cómo deben dar una respuesta a cada uno.</string>
+	<string name="passage_b15">@string/book51</string>
+	<string name="passage_c15">4</string>
+	<string name="passage_d15">6</string>
+	
+	<string name="passage_a16">Además, así como ocurrió en los días de Noé, así será también en los días del Hijo del hombre:</string>
+	<string name="passage_b16">@string/book42</string>
+	<string name="passage_c16">17</string>
+	<string name="passage_d16">26</string>
+	
+	<string name="passage_a17">Y el hombre Moisés era con mucho el más manso de todos los hombres que habías sobre la superficie del suelo.</string>
+	<string name="passage_b17">@string/book4</string>
+	<string name="passage_c17">12</string>
+	<string name="passage_d17">3</string>
+	
+	<string name="passage_a18">Estando él sentado en el monte de los Olivos, se acercaron a él los discípulos privadamente, y dijeron: “Dinos: ¿Cuándo serán estas cosas, y qué será la señal de tu presencia y de la conclusión del sistema de cosas?”.</string>
+	<string name="passage_b18">@string/book40</string>
+	<string name="passage_c18">24</string>
+	<string name="passage_d18">3</string>		
+	
+	<string name="passage_a19">Por ejemplo, todos los que hayan pecado sin ley, también perecerán sin ley; pero todos los que hayan pecado bajo ley serán juzgados por ley.</string>
+	<string name="passage_b19">@string/book45</string>
+	<string name="passage_c19">2</string>
+	<string name="passage_d19">12</string>
+	
+	<string name="passage_a20">Él está a la diestra de Dios, porque siguió su camino al cielo; y ángeles y autoridades y poderes fueron sujetados a él.</string>
+	<string name="passage_b20">@string/book60</string>
+	<string name="passage_c20">3</string>
+	<string name="passage_d20">22</string>
+		
+	
+
+	<string name="book1">Génesis</string>
+	<string name="book2">Éxodo</string>	
+	<string name="book3">Levítico</string>	
+	<string name="book4">Números</string>
+	<string name="book5">Deuteronomio</string>	
+	<string name="book6">Josué</string>	
+	<string name="book7">Jueces</string>
+	<string name="book8">Rut</string>	
+	<string name="book9">1 Samuel</string>		
+	<string name="book10">2 Samuel</string>
+	<string name="book11">1 Reyes</string>	
+	<string name="book12">2 Reyes</string>	
+	<string name="book13">1 Crónicas</string>
+	<string name="book14">2 Crónicas</string>	
+	<string name="book15">Esdras</string>	
+	<string name="book16">Nehemías</string>
+	<string name="book17">Ester</string>	
+	<string name="book18">Job</string>				
+	<string name="book19">Salmos</string>		
+	<string name="book20">Proverbios</string>
+	<string name="book21">Eclesiastés</string>	
+	<string name="book22">El Cantar de los Cantares</string>	
+	<string name="book23">Isaías</string>
+	<string name="book24">Jeremías</string>	
+	<string name="book25">Lamentaciones</string>	
+	<string name="book26">Ezequiel</string>
+	<string name="book27">Daniel</string>	
+	<string name="book28">Oseas</string>	
+	<string name="book29">Joel</string>		
+	<string name="book30">Amós</string>
+	<string name="book31">Abdías</string>	
+	<string name="book32">Jonás</string>	
+	<string name="book33">Migueas</string>
+	<string name="book34">Nahúm</string>	
+	<string name="book35">Habacuc</string>	
+	<string name="book36">Sofonías</string>
+	<string name="book37">Ageo</string>	
+	<string name="book38">Zacarías</string>	
+	<string name="book39">Malaquías</string>		
+	<string name="book40">Mateo</string>
+	<string name="book41">Marcos</string>	
+	<string name="book42">Lucas</string>	
+	<string name="book43">Juan</string>
+	<string name="book44">Hechos</string>	
+	<string name="book45">Romanos</string>	
+	<string name="book46">1 Corintios</string>
+	<string name="book47">2 Corintios</string>	
+	<string name="book48">Gálatas</string>	
+	<string name="book49">Efesios</string>		
+	<string name="book50">Filipenses</string>
+	<string name="book51">Colosenses</string>	
+	<string name="book52">1 Tesalonicenses</string>	
+	<string name="book53">2 Tesalonicenses</string>
+	<string name="book54">1 Timoteo</string>	
+	<string name="book55">2 Timoteo</string>	
+	<string name="book56">Tito</string>
+	<string name="book57">Filemón</string>	
+	<string name="book58">Hebreos</string>
+	<string name="book59">Santiago</string>		
+	<string name="book60">1 Pedro</string>	
+	<string name="book61">2 Pedro</string>	
+	<string name="book62">1 Juan</string>	
+	<string name="book63">2 Juan</string>
+	<string name="book64">3 Juan</string>	
+	<string name="book65">Judas</string>	
+	<string name="book66">Revelación</string>	
+	
+	<string name="just_letter">Solo uno por favor!</string>
+    <string name="guessed_letter">Usted adivino: </string>
+    <string name="count_left">Número de intentos que quedan: </string>
+    
+    
+    <string name="joke_honesty">For God loved the world so much that he gave his only-begotten Son, so that everyone exercising faith in him might not be destroyed but have everlasting life.</string>
+	
+	<string name="submit">Probar</string>
+	
+	<string name="book_prompt">Elegir un libro</string>
+	<string name="book_default">Book default</string>
+	<string name="book_1">Book 1</string>
+	<string name="book_2">Book 2</string>
+	<string name="book_3">Book 3</string>
+	
+	<string name="chapter_prompt">Eligir un capítulo</string>
+	<string name="chapter_default">chapter default</string>
+	<string name="chapter_1">Chapter 1</string>
+	<string name="chapter_2">Chapter 2</string>
+	<string name="chapter_3">Chapter 3</string>
+	
+	
+	<string name="verse_prompt">Eligir un verso</string>
+	<string name="verse_default">verse default</string>
+	<string name="verse_1">Verse 1</string>
+	<string name="verse_2">Verse 2</string>
+	<string name="verse_3">Verse 3</string>
+	
+	
+</resources>

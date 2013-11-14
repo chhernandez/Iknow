@@ -61,10 +61,10 @@
 	    	 
 	    		</string>
 	
-	<string name="passage_a1">Throw all your anxiety on him, because he cares for you.</string>
+	<string name="passage_a1">Keep your senses, be watchful! Your adversary, the Devil, walks about like a roaring lion, seeking to devour someone.</string>
 	<string name="passage_b1">@string/book60</string>
 	<string name="passage_c1">5</string>
-	<string name="passage_d1">7</string>
+	<string name="passage_d1">8</string>
 	
 	<string name="passage_a2">Happy are the pure in heart, since they will see God.</string>
 	<string name="passage_b2">@string/book40</string>
@@ -86,7 +86,7 @@
 	<string name="passage_c5">15</string>
 	<string name="passage_d5">26</string>
 	
-	<string name="passage_a6">Always rejoice in [the] Lord. Once more I will say, Rejoice!</string>
+	<string name="passage_a6">Always rejoice in the Lord. Once more I will say, Rejoice!</string>
 	<string name="passage_b6">@string/book50</string>
 	<string name="passage_c6">4</string>
 	<string name="passage_d6">4</string>
@@ -126,40 +126,40 @@
 	<string name="passage_c13">4</string>
 	<string name="passage_d13">20</string>	
 	
-	<string name="passage_a14">Teach me to do your will, for you are my God. Your spirit is good; may it lead me.</string>
+	<string name="passage_a14">Teach me to do your will, for you are my God. Your spirit is good; may it lead me on level ground.</string>
 	<string name="passage_b14">@string/book19</string>
 	<string name="passage_c14">143</string>
 	<string name="passage_d14">10</string>
 	
-	<string name="passage_a15">Let your utterance be always with graciousness, seasoned with salt.</string>
+	<string name="passage_a15">Let your words always be gracious, seasoned with salt, so that you will know how you should answer each person.</string>
 	<string name="passage_b15">@string/book51</string>
 	<string name="passage_c15">4</string>
 	<string name="passage_d15">6</string>
 	
-	<string name="passage_a16">Just as it occurred in the days of Noah, so it will be also in the days of the Son of man.</string>
+	<string name="passage_a16">Moreover, just as it occurred in the days of Noah, so it will be also in the days of the Son of man.</string>
 	<string name="passage_b16">@string/book42</string>
 	<string name="passage_c16">17</string>
 	<string name="passage_d16">26</string>
 	
-	<string name="passage_a17">Moses was by far the meekest of all the men who were upon the surface of the ground.</string>
+	<string name="passage_a17">Now the man Moses was by far the meekest of all the men on the face of the earth.</string>
 	<string name="passage_b17">@string/book4</string>
 	<string name="passage_c17">12</string>
 	<string name="passage_d17">3</string>
 	
-	<string name="passage_a18">What will be the sign of your presence and the conclusion of the system of things?</string>
+	<string name="passage_a18">While he was sitting on the Mount of Olives, the disciples approached him privately, saying: “Tell us, when will these things be, and what will be the sign of your presence and of the conclusion of the system of things?”</string>
 	<string name="passage_b18">@string/book40</string>
 	<string name="passage_c18">24</string>
 	<string name="passage_d18">3</string>		
 	
-	<string name="passage_a19">All those who sinned under law will be judged by law.</string>
+	<string name="passage_a19">For all those who sinned without law will also perish without law; but all those who sinned under law will be judged by law.</string>
 	<string name="passage_b19">@string/book45</string>
 	<string name="passage_c19">2</string>
 	<string name="passage_d19">12</string>
 	
-	<string name="passage_a20">You husbands, continue dwelling in like manner with them according to knowledge, assigning them honor as to a weaker vessel, the feminine one.</string>
+	<string name="passage_a20">He is at God\'s right hand, for he went to heaven, and angels and authorities and powers were made subject to him.</string>
 	<string name="passage_b20">@string/book60</string>
 	<string name="passage_c20">3</string>
-	<string name="passage_d20">7</string>
+	<string name="passage_d20">22</string>
 		
 	
 
