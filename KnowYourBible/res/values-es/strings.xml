@@ -45,8 +45,8 @@
     <string name="confirmDeleteMessage">Esto eliminará la Escritura.</string>	
 	<string name="addedit_label">Añadir/Editar</string>
 	<string name="update_label">Actualizar</string>
-	<string name="passage_hint">Introduzca el pasaje aquí</string>
-	<string name="book_hint">Introduzca el nombre de libro (ej. 1 Juan, Hechos)</string>
+	<string name="passage_hint">Introducza el pasaje aquí</string>
+	<string name="book_hint">Introduzca el nombre de libro(ej. 1 Juan, Hechos)</string>
 	<string name="chapter_hint">Introduzca el número de capítulo aquí</string>
 	<string name="verse_hint">Introduzca el número de verso (sólo uno)</string>
 	<string name="save_button_label">Guardar</string>
