@@ -211,7 +211,7 @@ public class IKnowGame extends Activity {
 //									"\nSpinnerChapter : "+ String.valueOf(spinnerChapter.getSelectedItem()) + 
 //									"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 //									, Toast.LENGTH_SHORT).show();
-					tv_game_status.setText("Correct !");
+					tv_game_status.setText(R.string.correct_label2);
 					numCorrect++;
 					tv_numCorrect.setText(String.valueOf(numCorrect));
 					tv_numAttempts.setText(String.valueOf(numAttempts));
@@ -226,7 +226,7 @@ public class IKnowGame extends Activity {
 //									"\nSpinnerChapter : "+ String.valueOf(spinnerChapter.getSelectedItem()) + 
 //									"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 //									, Toast.LENGTH_SHORT).show();
-					tv_game_status.setText("Incorrect ! ");
+					tv_game_status.setText(R.string.incorrect_label);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 

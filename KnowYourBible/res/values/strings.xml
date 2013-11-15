@@ -14,6 +14,18 @@
     <string name="exit_label">Exit Game</string>
     <string name="about_label">About</string>
 
+	<string name="correct_label">Correct: </string>   
+	<string name="attempts_label">Attempts: </string>
+	<string name="ready_label">Ready: </string>
+	<string name="next_label"> Next </string>
+	<string name="correct_label2">Correct!</string>
+	<string name="incorrect_label">Incorrect!</string>
+	
+	<string name="guess_label">Guesses left: </string>
+	<string name="youwin_label">YOU WIN</string>
+	<string name="youlose_label">YOU LOSE</string>
+	<string name="continue_label">CONTINUE!</string>
+    
     <string name="addscripture_label">Add New</string>
 	<string name="listbooks_label">List Books</string>
 	<string name="listchapters_label">List Chapters</string>

@@ -24,7 +24,7 @@ public class HangmanMain extends Activity {
 
 	private Button mKeyboard[] = new Button[26];
 
-	private TextView mWord, mGuessLeft, mStatus, mScriptureHangman;
+	private TextView mWord, mGuessLeft, mGuessLeft2, mStatus, mScriptureHangman;
 
 	private HangmanGame mGame;
 
@@ -45,6 +45,7 @@ public class HangmanMain extends Activity {
 
 		mWord = (TextView) findViewById(R.id.word_hang_man);
 		mGuessLeft = (TextView) findViewById(R.id.countValue);
+		mGuessLeft2 = (TextView) findViewById(R.id.countValue2);
 		mStatus = (TextView) findViewById(R.id.status);
 		mScriptureHangman = (TextView) findViewById(R.id.scripture_hangman);
 
@@ -152,19 +153,25 @@ public class HangmanMain extends Activity {
 							mHangman[++trackImage], 0, 90);
 					Log.d("FLIP", "Value of trackImage " + trackImage);
 				}
-				mGuessLeft.setText("Guesses left: " + mGame.numGuessesRemaining());
+				
+				
+			//	mGuessLeft.setText("Guesses left: " + mGame.numGuessesRemaining());
+			//	mGuessLeft.setText(R.string.guess_label + String.valueOf(mGame.numGuessesRemaining()));
+				mGuessLeft.setText(R.string.guess_label);
+				mGuessLeft2.setText(String.valueOf(mGame.numGuessesRemaining()));
+				
 				mWord.setText(mGame.displayGameState());
 				if (mGame.gameOver()) {
 					if (mGame.isWin()) {
-						mStatus.setText("YOU WIN");
+						mStatus.setText(R.string.youwin_label);
 						winEffect();
 					} else {
-						mStatus.setText("YOU LOSE");
+						mStatus.setText(R.string.youlose_label);
 						mWord.setText(hiddenWord);
 						loseEffect();
 					}
 				} else {
-					mStatus.setText("CONTINUE !");
+					mStatus.setText(R.string.continue_label);
 				}
 			}
 		}

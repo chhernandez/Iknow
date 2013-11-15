@@ -13,7 +13,7 @@
     <TextView
         android:id="@+id/scripture_hangman"
         android:layout_width="match_parent"
-        android:layout_height="70dp"
+        android:layout_height="80dp"
         android:layout_centerHorizontal="true"
         android:paddingTop="8dp"
         android:text=" " />
@@ -244,9 +244,18 @@
         android:layout_below="@+id/keyboard_hangman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="22dp"
+        android:layout_marginRight="3dp"
         android:layout_centerHorizontal="true"
         android:textSize="12sp" />
+    <TextView
+        android:id="@+id/countValue2"
+        android:layout_below="@+id/keyboard_hangman"
+        android:layout_toRightOf="@+id/countValue"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginRight="22dp"
+        android:layout_centerHorizontal="true"
+        android:textSize="12sp" />    
 
     <ImageView
         android:id="@+id/hangmanView00"

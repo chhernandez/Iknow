@@ -3,7 +3,7 @@
 
     <string name="app_name">Conozca Su Biblia</string>
     
-    <string name="iknow_label">Yo Sé Esa Escritura</string>
+    <string name="iknow_label">Yo sé la Escritura</string>
     <string name="games_label">Más Juegos</string>
     <string name="hangman_label">El Ahorcado</string>
     
@@ -13,6 +13,18 @@
     <string name="help_label">Ayuda</string>
     <string name="exit_label">Salir del Juego</string>
     <string name="about_label">Informacción</string>
+    
+	<string name="correct_label">Correctos: </string>   
+	<string name="attempts_label">Intentos: </string>
+	<string name="ready_label">Listo: </string>
+	<string name="next_label"> Próximo </string> 
+	<string name="correct_label2">Correcto!</string>
+	<string name="incorrect_label">Incorrecto!</string>	 
+	
+	<string name="guess_label">Oportunidades: </string>
+	<string name="youwin_label">GANASTE</string>
+	<string name="youlose_label">PERDISTE</string>
+	<string name="continue_label">CONTINUAR!</string>	
 
     <string name="addscripture_label">Añadir Nuevo</string>
 	<string name="listbooks_label">Todo los Libros</string>

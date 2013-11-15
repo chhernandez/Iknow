@@ -4,6 +4,7 @@
     android:layout_height="match_parent"
     android:orientation="vertical"
     android:padding="10dip" 
+    android:background="@drawable/background3" 
 >
 
     <LinearLayout
@@ -19,7 +20,7 @@
        		android:layout_height="wrap_content"    
        		android:gravity="left"
             android:layout_weight="1"
-       		android:text="Correct: "
+       		android:text="@string/correct_label"
         />
         
         <TextView
@@ -37,7 +38,7 @@
        		android:layout_height="wrap_content"    
        		android:gravity="right"
             android:layout_weight="1"
-       		android:text="Attempts: "
+       		android:text="@string/attempts_label"
         />
        	
         <TextView
@@ -57,7 +58,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="9"
-        android:text="Ready" />
+        android:text="@string/ready_label" />
     
     <Spinner
         android:id="@+id/spinner_book"
@@ -66,6 +67,7 @@
         android:entries="@array/book_array"
         android:entryValues="@array/book_array"
         android:paddingTop="20dp"
+
 	/>
     
   	<LinearLayout
@@ -81,6 +83,7 @@
         	android:entries="@array/chapter_array"
         	android:entryValues="@array/chapter_array"
 			android:layout_weight="1"
+		
       	/> 
     
     	<Spinner
@@ -90,6 +93,7 @@
         	android:entries="@array/verse_array"
         	android:entryValues="@array/verse_array"
 			android:layout_weight="1"
+		
       	/>   
   	
   	</LinearLayout>   
@@ -116,7 +120,7 @@
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
   	    android:layout_gravity="right"
-  	    android:text="Next" 
+  	    android:text="@string/next_label" 
   	    android:layout_margin="10dp"
   	/>
   	
