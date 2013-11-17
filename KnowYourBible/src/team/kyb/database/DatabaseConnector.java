@@ -1,6 +1,5 @@
 package team.kyb.database;
 
-import java.util.ArrayList;
 import java.util.Random;
 
 import android.content.ContentValues;
@@ -13,9 +12,15 @@ import android.database.sqlite.SQLiteException;
 import android.database.sqlite.SQLiteOpenHelper;
 import android.util.Log;
 
+
+
 public class DatabaseConnector {
 
-	   private static final String DATABASE_NAME = "dbScriptures";
+	   String mylocale = java.util.Locale.getDefault().getLanguage();
+		
+	   private static final String DATABASE_NAME = "dbScriptures";	 
+	   private static final String DATABASE_NAME_ES = "dbScripturesES";
+  
 	   
 	   private static final String DB_PATH = "/data/data/team.kyb/databases/";
 		 
@@ -23,8 +28,20 @@ public class DatabaseConnector {
 	   private DatabaseOpenHelper databaseOpenHelper; 	
 	
 	   public DatabaseConnector(Context context) {
-		      databaseOpenHelper = 
-		         new DatabaseOpenHelper(context, DATABASE_NAME, null, 1);
+		   
+		 	if (mylocale.equals("en")){
+			      databaseOpenHelper = 
+					         new DatabaseOpenHelper(context, DATABASE_NAME, null, 1);		 		
+		 	} else if (mylocale.equals("es")){
+			      databaseOpenHelper = 
+					         new DatabaseOpenHelper(context, DATABASE_NAME_ES, null, 1);		 		
+		 	} else {
+		 		
+			      databaseOpenHelper = 
+					         new DatabaseOpenHelper(context, DATABASE_NAME, null, 1);		 		
+		 	}
+		   
+
 	   }	   
 	   
 	   public void open() throws SQLException {
@@ -32,7 +49,9 @@ public class DatabaseConnector {
 	//	   boolean dbExist = checkDataBase();
 		   
 			// create or open a database for reading/writing
-		    database = databaseOpenHelper.getWritableDatabase();	   
+		    database = databaseOpenHelper.getWritableDatabase();	
+		   
+		    
 	   
 /*		      if (dbExist){
 		    	  // do nothing database already exists
@@ -68,15 +87,43 @@ public class DatabaseConnector {
     	  
       	SQLiteDatabase checkDB = null;
       	 
-    	try{
-    		String myPath = DB_PATH + DATABASE_NAME;
-    		
-    		Log.d("DB_Path", myPath);	
-    		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
-     	} catch(SQLiteException e) {
-     		//database does't exist yet.
-     	}
- 
+      	Log.d("localization = ", mylocale);
+
+      	if (mylocale.equals("en")){
+          	Log.d("localization = ", "english");
+        	try{
+         		String myPath = DB_PATH + DATABASE_NAME;	
+    			Log.d("DB_Path", myPath);	
+        		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
+         	} 
+        	catch(SQLiteException e) {
+         		//database does't exist yet.
+         	}	     	
+ 		
+      	} else if (mylocale.equals("es")){
+        	Log.d("localization = ", "spanish");
+        	try{
+         		String myPath = DB_PATH + DATABASE_NAME_ES;	
+    			Log.d("DB_Path", myPath);	
+        		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
+         	} 
+        	catch(SQLiteException e) {
+         		//database does't exist yet.
+         	}	     	
+	
+      	} else {
+        	Log.d("localization = ", "default");
+        	try{
+         		String myPath = DB_PATH + DATABASE_NAME;	
+    			Log.d("DB_Path", myPath);	
+        		checkDB = SQLiteDatabase.openDatabase(myPath, null, SQLiteDatabase.OPEN_READWRITE);
+         	} 
+        	catch(SQLiteException e) {
+         		//database does't exist yet.
+         	}	     	
+
+      	} // end of      	if (locale == "en"){
+
     	if(checkDB != null){
      		checkDB.close();
      	}
