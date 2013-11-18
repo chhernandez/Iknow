@@ -21,7 +21,7 @@
             android:layout_height="wrap_content"
             android:layout_weight="1"
             android:gravity="left"
-            android:layout_toRightOf="@+id/textview_text"
+            android:layout_toRightOf="@id/textview_text"
             android:paddingLeft="5dp"
             android:text="@string/correct_label" />
 
@@ -32,7 +32,7 @@
             android:layout_weight="100"
             android:gravity="left"
             android:layout_marginLeft="5dp"
-            android:layout_toRightOf="@+id/correct"
+            android:layout_toRightOf="@id/correct"
             android:text="0" />
        
          <TextView
@@ -49,9 +49,9 @@
   	    android:id="@+id/attemps"
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
-  	    android:layout_above="@+id/spinner_book"
+  	    android:layout_above="@id/spinner_book"
   	    android:layout_marginRight="5dp"
-  	    android:layout_toLeftOf="@+id/numAttempts"
+  	    android:layout_toLeftOf="@id/numAttempts"
   	    android:layout_weight="1"
   	    android:gravity="right"
   	    android:text="@string/attempts_label" />
@@ -60,7 +60,7 @@
   	    android:id="@+id/spinner_book"
   	    android:layout_width="match_parent"
   	    android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/textview_text"
+		android:layout_toRightOf="@id/textview_text"
 		android:layout_below="@+id/correct"
   	    android:entries="@array/book_array"
   	    android:entryValues="@array/book_array"
@@ -69,25 +69,35 @@
         
        	<Spinner
         	android:id="@+id/spinner_chapter"
-        	android:layout_width="wrap_content"
+        	android:layout_width="100dp"
         	android:layout_height="wrap_content"
         	android:entries="@array/chapter_array"
         	android:entryValues="@array/chapter_array"
-			android:layout_weight="1"
 			android:gravity="center"
-			android:layout_toRightOf="@+id/textview_text"			
-			android:layout_below="@+id/spinner_book"
+			android:layout_toRightOf="@id/textview_text"			
+			android:layout_below="@id/spinner_book"
 			android:layout_marginLeft="15dp"
       	/>        
       	
+	<TextView
+	    android:id="@+id/colon4"
+	    android:layout_below="@id/spinner_book"
+	    android:layout_toRightOf="@id/spinner_chapter"
+	    android:layout_width="wrap_content"
+	    android:layout_height="wrap_content"
+	    android:text=" : " 
+	    android:textSize="20sp"
+	    android:paddingTop="3dp"
+	    android:textColor="#000000"
+	    >     	</TextView>
+      	
    	<Spinner
   	    android:id="@+id/spinner_verse"
-  	    android:layout_width="wrap_content"
+  	    android:layout_width="100dp"
   	    android:layout_height="wrap_content"
-		android:layout_toRightOf="@+id/spinner_chapter" 
+		android:layout_toRightOf="@id/spinner_chapter" 
 		android:layout_below="@+id/spinner_book"
 		android:layout_marginLeft="15dp"
-  	    android:layout_weight="1"
   	    android:gravity="center"
   	    android:entries="@array/verse_array"
   	    android:entryValues="@array/verse_array" />      	
@@ -98,7 +108,7 @@
         android:layout_height="wrap_content"
   	    android:gravity="center"
   	    android:layout_below="@+id/spinner_chapter"
- 		android:layout_toRightOf="@+id/textview_text" 	    
+ 		android:layout_toRightOf="@id/textview_text" 	    
         android:paddingTop="15dp"
         android:textSize="20sp" />  	
 
@@ -106,9 +116,9 @@
   	    android:id="@+id/button_submit"
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
-  	    android:layout_alignBottom="@+id/textview_text"
+  	    android:layout_alignBottom="@id/textview_text"
   	    android:layout_marginLeft="10dp"
-  	    android:layout_toRightOf="@+id/textview_text"
+  	    android:layout_toRightOf="@id/textview_text"
   	    android:text="@string/submit" />
 
   	<Button
@@ -116,7 +126,7 @@
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
    	    android:layout_alignParentRight="true"   
-  	    android:layout_alignBottom="@+id/textview_text"
+  	    android:layout_alignBottom="@id/textview_text"
 		android:layout_marginRight="10dp"
   	    android:text="@string/next_label" />
 
