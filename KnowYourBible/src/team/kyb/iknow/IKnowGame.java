@@ -68,7 +68,7 @@ public class IKnowGame extends Activity {
 		verseToDisplay = scripture.getPassage();
 		
 		// Uncomment when have all spinners populated
-		correctBook = scripture.getBook();
+		correctBook = String.valueOf(scripture.getBook());
 		correctChapter = String.valueOf(scripture.getChapter());
 		correctVerse = String.valueOf(scripture.getVerse());
 		
@@ -218,17 +218,44 @@ public class IKnowGame extends Activity {
 					
 					buttonSubmit.setEnabled(false);
 				}
-				else
+				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
 				{
-//					Toast.makeText(IKnowGame.this, 
-//							"Incorrect: " +
-//									"\nSpinnerBook : "+ String.valueOf(spinnerBook.getSelectedItem()) + 
-//									"\nSpinnerChapter : "+ String.valueOf(spinnerChapter.getSelectedItem()) + 
-//									"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
-//									, Toast.LENGTH_SHORT).show();
-					tv_game_status.setText(R.string.incorrect_label);
+					tv_game_status.setText("Wrong Book");
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
+				else if (!correctBook.equals(userBook) && !correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
+				{
+					tv_game_status.setText("Wrong Book, Chapter");
+					tv_numAttempts.setText(String.valueOf(numAttempts));
+				}
+				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && !correctVerse.equals(userVerse))
+				{
+					tv_game_status.setText("Wrong Book, Verse");
+					tv_numAttempts.setText(String.valueOf(numAttempts));
+				}
+				
+				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && correctVerse.equals(userVerse))
+				{
+					tv_game_status.setText("Wrong Chapter");
+					tv_numAttempts.setText(String.valueOf(numAttempts));
+				}
+				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && !correctVerse.equals(userVerse))
+				{
+					tv_game_status.setText("Wrong Chapter, Verse");
+					tv_numAttempts.setText(String.valueOf(numAttempts));
+				}
+				
+				else if (!correctVerse.equals(userVerse) && correctChapter.equals(userChapter) && correctBook.equals(userBook))
+				{
+					tv_game_status.setText("Wrong Verse");
+					tv_numAttempts.setText(String.valueOf(numAttempts));
+				}
+				else if (!correctVerse.equals(userVerse) && !correctChapter.equals(userChapter) && !correctBook.equals(userBook))
+				{
+					tv_game_status.setText("Wrong Book, Chapter, Verse");
+					tv_numAttempts.setText(String.valueOf(numAttempts));
+				}
+
 
 				
 	
@@ -252,9 +279,8 @@ public class IKnowGame extends Activity {
 				database.open();
 				ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
 				verseToDisplay = scripture.getPassage();
-				
-				// Uncomment when have all spinners populated
-				correctBook = scripture.getBook();
+
+				correctBook = String.valueOf(scripture.getBook());
 				correctChapter = String.valueOf(scripture.getChapter());
 				correctVerse = String.valueOf(scripture.getVerse());
 				database.close();
@@ -262,8 +288,9 @@ public class IKnowGame extends Activity {
 				Button buttonSubmit = (Button) findViewById(R.id.button_submit);
 				buttonSubmit.setEnabled(true);
 				
-				verseToDisplay = scripture.getPassage();
+				
 				displayVerse(verseToDisplay);
+				tv_game_status = (TextView) findViewById(R.id.game_status);
 				tv_game_status.setText("");
 
 				checkUserAnswer(correctBook, correctChapter, correctVerse);
