@@ -32,21 +32,22 @@ public final class R {
         public static final int angel=0x7f020000;
         public static final int background2=0x7f020001;
         public static final int background3=0x7f020002;
-        public static final int fireball=0x7f020003;
-        public static final int hangman0=0x7f020004;
-        public static final int hangman1=0x7f020005;
-        public static final int hangman2=0x7f020006;
-        public static final int hangman3=0x7f020007;
-        public static final int hangman4=0x7f020008;
-        public static final int hangman5=0x7f020009;
-        public static final int hangman6=0x7f02000a;
-        public static final int ic_launcher=0x7f02000b;
-        public static final int icn_dropdown_checked=0x7f02000c;
-        public static final int icn_dropdown_open=0x7f02000d;
-        public static final int mainimage=0x7f02000e;
-        public static final int nice_button_enabled=0x7f02000f;
-        public static final int splashimage=0x7f020010;
-        public static final int tear=0x7f020011;
+        public static final int background4=0x7f020003;
+        public static final int fireball=0x7f020004;
+        public static final int hangman0=0x7f020005;
+        public static final int hangman1=0x7f020006;
+        public static final int hangman2=0x7f020007;
+        public static final int hangman3=0x7f020008;
+        public static final int hangman4=0x7f020009;
+        public static final int hangman5=0x7f02000a;
+        public static final int hangman6=0x7f02000b;
+        public static final int ic_launcher=0x7f02000c;
+        public static final int icn_dropdown_checked=0x7f02000d;
+        public static final int icn_dropdown_open=0x7f02000e;
+        public static final int mainimage=0x7f02000f;
+        public static final int nice_button_enabled=0x7f020010;
+        public static final int splashimage=0x7f020011;
+        public static final int tear=0x7f020012;
     }
     public static final class id {
         public static final int a=0x7f090018;
