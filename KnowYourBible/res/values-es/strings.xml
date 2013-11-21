@@ -25,6 +25,14 @@
 	<string name="youwin_label">GANASTE</string>
 	<string name="youlose_label">PERDISTE</string>
 	<string name="continue_label">CONTINUAR!</string>	
+	
+	<string name="wrongb">Libro esta mal</string>
+	<string name="wrongbc">Libro y Capitulo esta mal</string>
+	<string name="wrongbv">Libro y texto esta mal</string>
+	<string name="wrongc">Capitulo esta mal</string>
+	<string name="wrongcv">Capitulo y texto esta mal</string>
+	<string name="wrongv">Texto esta mal</string>
+	<string name="wrongbcv">Libro, capitulo, y texto esta mal</string>	
 
     <string name="addscripture_label">Añadir Nuevo</string>
 	<string name="listbooks_label">Todo los Libros</string>

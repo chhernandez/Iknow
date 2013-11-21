@@ -30,7 +30,7 @@
         android:textSize="12dp"
         android:textStyle="bold"
         android:typeface="serif" 
-        android:text="version 1.0">
+        android:text="version 2.0">
 	</TextView>    
 
 </RelativeLayout>

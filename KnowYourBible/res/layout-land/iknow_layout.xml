@@ -110,7 +110,7 @@
   	    android:layout_below="@+id/spinner_chapter"
  		android:layout_toRightOf="@id/textview_text" 	    
         android:paddingTop="15dp"
-        android:textSize="20sp" />  	
+        android:textSize="15sp" />  	
 
   	<Button
   	    android:id="@+id/button_submit"

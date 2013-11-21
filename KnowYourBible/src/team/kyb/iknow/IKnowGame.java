@@ -220,45 +220,42 @@ public class IKnowGame extends Activity {
 				}
 				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
 				{
-					tv_game_status.setText("Wrong Book");
+					tv_game_status.setText(R.string.wrongb);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 				else if (!correctBook.equals(userBook) && !correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
 				{
-					tv_game_status.setText("Wrong Book, Chapter");
+					tv_game_status.setText(R.string.wrongbc);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && !correctVerse.equals(userVerse))
 				{
-					tv_game_status.setText("Wrong Book, Verse");
+					tv_game_status.setText(R.string.wrongbv);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 				
 				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && correctVerse.equals(userVerse))
 				{
-					tv_game_status.setText("Wrong Chapter");
+					tv_game_status.setText(R.string.wrongc);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && !correctVerse.equals(userVerse))
 				{
-					tv_game_status.setText("Wrong Chapter, Verse");
+					tv_game_status.setText(R.string.wrongcv);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 				
 				else if (!correctVerse.equals(userVerse) && correctChapter.equals(userChapter) && correctBook.equals(userBook))
 				{
-					tv_game_status.setText("Wrong Verse");
+					tv_game_status.setText(R.string.wrongv);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 				else if (!correctVerse.equals(userVerse) && !correctChapter.equals(userChapter) && !correctBook.equals(userBook))
 				{
-					tv_game_status.setText("Wrong Book, Chapter, Verse");
+					tv_game_status.setText(R.string.wrongbcv);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 				}
 
-
-				
-	
 			}
 		});
 		

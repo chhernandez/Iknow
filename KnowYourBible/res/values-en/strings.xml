@@ -24,7 +24,15 @@
 	<string name="guess_label">Guesses left: </string>
 	<string name="youwin_label">YOU WIN</string>
 	<string name="youlose_label">YOU LOSE</string>
-	<string name="continue_label">CONTINUE!</string>		    
+	<string name="continue_label">CONTINUE!</string>	
+	
+	<string name="wrongb">Wrong Book</string>
+	<string name="wrongbc">Wrong Book, Chapter</string>
+	<string name="wrongbv">Wrong Book, Verse</string>
+	<string name="wrongc">Wrong Chapter</string>
+	<string name="wrongcv">Wrong Chapter, Verse</string>
+	<string name="wrongv">Wrong Verse</string>
+	<string name="wrongbcv">Wrong Book, Chapter, Verse</string>		    
 
     <string name="addscripture_label">Add New</string>
 	<string name="listbooks_label">List Books</string>
