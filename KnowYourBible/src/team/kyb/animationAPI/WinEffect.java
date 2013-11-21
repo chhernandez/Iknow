@@ -87,7 +87,7 @@ public class WinEffect extends Activity {
 	private FallingObject creatingFallingObject() {
 		android.graphics.PointF mBallPos = new android.graphics.PointF();
 		android.graphics.PointF mBallVelocity = new android.graphics.PointF();
-		Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.angel);
+		Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.snowflake2);
 
 		// create variables for ball position and speed
 		mBallPos.x = rd.nextInt(mScrWidth);

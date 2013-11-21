@@ -46,7 +46,7 @@ public class LoseEffect extends Activity {
 						LayoutParams.FLAG_FULLSCREEN
 								| LayoutParams.FLAG_KEEP_SCREEN_ON);
 		super.onCreate(savedInstanceState);
-		setContentView(R.layout.blank_falling_layout);
+		setContentView(R.layout.blank_falling_layout2);
 		// create pointer to main screen
 		final FrameLayout mainView = (android.widget.FrameLayout) findViewById(R.id.main_view);
 
@@ -91,7 +91,7 @@ public class LoseEffect extends Activity {
 		android.graphics.PointF mBallPos = new android.graphics.PointF();
 		android.graphics.PointF mBallVelocity = new android.graphics.PointF();
 		Bitmap bm = BitmapFactory.decodeResource(getResources(),
-				R.drawable.fireball);
+				R.drawable.raindrop);
 
 		// create variables for ball position and speed
 		mBallPos.x = rd.nextInt(mScrWidth);

@@ -9,7 +9,7 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context=".Main_Falling"
-    android:background="#E6D3FA" 
+    android:background="#D7E4FD" 
      >
 
     <TextView
