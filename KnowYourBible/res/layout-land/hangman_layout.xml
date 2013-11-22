@@ -15,7 +15,7 @@
     <TextView
         android:id="@+id/scripture_hangman"
         android:layout_width="match_parent"
-        android:layout_height="90dp"
+        android:layout_height="70dp"
         android:layout_centerHorizontal="true"
         android:paddingTop="8dp"
         />
@@ -24,9 +24,9 @@
         android:id="@+id/word_hang_man"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/keyboard_hangman"
+		android:layout_centerInParent="true"
         android:layout_below="@+id/scripture_hangman"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="10dp"
         android:paddingTop="10dp"
         android:textSize="30sp" />   
     
@@ -34,8 +34,9 @@
         android:id="@+id/keyboard_hangman"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_alignParentRight="true"
         android:layout_below="@+id/word_hang_man"
-        android:layout_marginTop="50dp" >
+        android:layout_marginTop="10dp" >
 
         <TableRow android:gravity="center_horizontal" >
 
@@ -236,78 +237,90 @@
         android:id="@+id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/countValue"
-        android:layout_centerHorizontal="true"
-        android:paddingTop="10dp"
+		android:layout_toLeftOf="@id/keyboard_hangman"
+		android:layout_alignParentLeft="true"
+		android:layout_alignParentBottom="true"
+        android:layout_marginLeft="10dp"
         android:textSize="30sp" />
 
 
     
     <TextView
         android:id="@+id/countValue"
-        android:layout_below="@+id/keyboard_hangman"
+
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="3dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="20dp"
+        android:layout_alignParentLeft="true"
+		android:layout_above="@id/status"
         android:textSize="12sp" />
     <TextView
         android:id="@+id/countValue2"
-        android:layout_below="@+id/keyboard_hangman"
+
         android:layout_toRightOf="@+id/countValue"
+        android:layout_above="@id/status"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginRight="22dp"
-        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="20dp"
         android:textSize="12sp" />    
 
     <ImageView
         android:id="@+id/hangmanView00"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignRight="@+id/keyboard_hangman"
+        android:layout_marginLeft="10dp"
+		android:layout_alignParentLeft="true"
         android:layout_below="@+id/scripture_hangman" />
     
     <ImageView
         android:id="@+id/hangmanView01"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignRight="@+id/keyboard_hangman"
+        android:layout_marginLeft="10dp"
+		android:layout_alignParentLeft="true"
         android:layout_below="@+id/scripture_hangman" />
     
     <ImageView
         android:id="@+id/hangmanView02"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignRight="@+id/keyboard_hangman"
+        android:layout_marginLeft="10dp"        
+		android:layout_alignParentLeft="true"
         android:layout_below="@+id/scripture_hangman" />
     
     <ImageView
         android:id="@+id/hangmanView03"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignRight="@+id/keyboard_hangman"
+        android:layout_marginLeft="10dp"        
+		android:layout_alignParentLeft="true"
         android:layout_below="@+id/scripture_hangman" />
     
     <ImageView
         android:id="@+id/hangmanView04"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignRight="@+id/keyboard_hangman"
+        android:layout_marginLeft="10dp"       
+		android:layout_alignParentLeft="true"
         android:layout_below="@+id/scripture_hangman" />
     
     <ImageView
         android:id="@+id/hangmanView05"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignRight="@+id/keyboard_hangman"
+        android:layout_marginLeft="10dp"        
+		android:layout_alignParentLeft="true"
         android:layout_below="@+id/scripture_hangman" />
     
     <ImageView
         android:id="@+id/hangmanView06"
         android:layout_width="100dp"
         android:layout_height="100dp"
-        android:layout_alignRight="@+id/keyboard_hangman"
+        android:layout_marginLeft="10dp"        
+		android:layout_alignParentLeft="true"
         android:layout_below="@+id/scripture_hangman" />
 
 </RelativeLayout>
