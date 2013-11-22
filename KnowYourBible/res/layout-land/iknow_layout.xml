@@ -117,17 +117,18 @@
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
   	    android:layout_alignBottom="@id/textview_text"
-  	    android:layout_marginLeft="10dp"
-  	    android:layout_toRightOf="@id/textview_text"
+
+		android:layout_marginRight="10dp"
+    	android:layout_alignParentRight="true"    	    
   	    android:text="@string/submit" />
 
   	<Button
   	    android:id="@+id/next_iknow"
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
-   	    android:layout_alignParentRight="true"   
+  	    android:layout_toRightOf="@id/textview_text"
   	    android:layout_alignBottom="@id/textview_text"
-		android:layout_marginRight="10dp"
+  	    android:layout_marginLeft="10dp"
   	    android:text="@string/next_label" />
 
 
