@@ -58,7 +58,9 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:lines="9"
-        android:text="@string/ready_label" />
+        android:text="@string/ready_label" 
+        android:textIsSelectable="true"
+        />
     
     <Spinner
         android:id="@+id/spinner_book"

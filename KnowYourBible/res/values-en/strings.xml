@@ -68,6 +68,8 @@
 	<string name="vverseMessage">Please enter verse number</string>	
 	<string name="vButton">OK</string>
 	
+	<string name="newline">\n</string>	
+	
 	<string name="aboutgame">Know Your Bible (KYB) is a fun and educational game to help anyone learn and memorize Bible scriptures.\n
 	    \n
 	    KYB was created as a team course project in CS378 Mobile Computing at The University of Texas at Austin during the Fall 2013 semester.\n

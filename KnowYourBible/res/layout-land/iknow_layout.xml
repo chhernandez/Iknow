@@ -13,7 +13,9 @@
         android:layout_width="240dp"
         android:layout_height="match_parent"
         android:lines="9"
-        android:text="@string/ready_label" />   
+        android:text="@string/ready_label" 
+        android:textIsSelectable="true"
+        />   
 
         <TextView
             android:id="@+id/correct"

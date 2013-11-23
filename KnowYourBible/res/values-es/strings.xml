@@ -68,6 +68,8 @@
 	<string name="vverseMessage">Por favor, introduzca el versiculo,</string>	
 	<string name="vButton">OK</string>
 	
+	<string name="newline">\n</string>	
+	
 	<string name="aboutgame">Conozca Su Biblia es un juego divertido y educativo para ayudar a alguien a aprender y memorizar pasajes bíblicos\n
 	    \n
 	    Conozca Su Biblia se creó como un proyecto de CS378 Mobile Computing de la Universidad de Texas en Austin durante el semestre del otoño de 2013.\n
