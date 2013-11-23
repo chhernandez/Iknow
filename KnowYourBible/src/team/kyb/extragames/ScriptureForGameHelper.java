@@ -21,32 +21,32 @@ public class ScriptureForGameHelper {
 
 		int posOfWord = -1;
 		Random rd = new Random();
-		int rdint = rd.nextInt(passageFull.length());
-		posOfWord = passageFull.indexOf(" ", rdint);
-		posOfWord++;
-		
-		//Normal case
-		int endPos = passageFull.indexOf(" ", posOfWord);
-		
-		//Case words at the end
-		if (endPos < 0) {
-			endPos = passageFull.indexOf(".", posOfWord);
-			endPos--;
-		}
-		
-		//Case word follow by a comma
-		if (passageFull.charAt(endPos) == ',') {
-			endPos--;
-		}
+		while (randomMissingWord.length() < 4) {
+			int rdint = rd.nextInt(passageFull.length());
+			posOfWord = passageFull.indexOf(" ", rdint);
+			posOfWord++;
 
-		randomMissingWord = passageFull.substring(posOfWord, endPos);
+			// Normal case
+			int endPos = passageFull.indexOf(" ", posOfWord);
 
+			// Case words at the end
+			if (endPos < 0) {
+				endPos = passageFull.indexOf(".", posOfWord);
+			}
+
+			// Case word follow by a comma
+			if (passageFull.charAt(endPos - 1) == ',') {
+				endPos--;
+			}
+
+			randomMissingWord = passageFull.substring(posOfWord, endPos);
+		}
 		String dashes = "";
 		for (int i = 0; i < randomMissingWord.length(); i++) {
 			dashes += "-";
 		}
-		passageMissing = passageFull.replace(randomMissingWord, dashes);
 
+		passageMissing = passageFull.replace(randomMissingWord, dashes);
 	}
 
 	public int getID() {

@@ -5,7 +5,6 @@ import java.util.Timer;
 import java.util.TimerTask;
 
 import team.kyb.R;
-
 import android.app.Activity;
 import android.content.res.Configuration;
 import android.graphics.Bitmap;
@@ -17,7 +16,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
-import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
 public class LoseEffect extends Activity {
 
@@ -48,7 +47,7 @@ public class LoseEffect extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.blank_falling_layout2);
 		// create pointer to main screen
-		final FrameLayout mainView = (android.widget.FrameLayout) findViewById(R.id.main_view);
+		final RelativeLayout mainView = (android.widget.RelativeLayout) findViewById(R.id.main_view);
 
 		// get screen dimensions
 		Display display = getWindowManager().getDefaultDisplay();

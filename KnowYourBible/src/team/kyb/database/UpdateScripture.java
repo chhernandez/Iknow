@@ -9,7 +9,6 @@ import android.content.Intent;
 import android.database.Cursor;
 import android.os.AsyncTask;
 import android.os.Bundle;
-import android.text.Html;
 import android.util.Log;
 import android.view.Menu;
 import android.view.MenuInflater;
@@ -22,9 +21,8 @@ public class UpdateScripture extends Activity {
 	private TextView passage;
 	private TextView book;
 	private TextView chapter;
+	private TextView colon2;
 	private TextView verse;
-	
-	private TextView allpassage;
 	
 	@Override
 	public void onCreate(Bundle savedInstanceState){
@@ -34,9 +32,8 @@ public class UpdateScripture extends Activity {
 		passage = (TextView) findViewById(R.id.passageTextView);
 		book = (TextView) findViewById(R.id.bookTextView);		
 		chapter = (TextView) findViewById(R.id.chapterTextView);
+		colon2 = (TextView) findViewById(R.id.colon2);
 		verse = (TextView) findViewById(R.id.verseTextView);	
-		
-		allpassage = (TextView) findViewById(R.id.allpassageTextView);
 		
 		//get the selected scripture's row id
 		Bundle extras = getIntent().getExtras();
@@ -81,26 +78,11 @@ public class UpdateScripture extends Activity {
 			int chapterIndex = result.getColumnIndex("chapter");
 			int verseIndex = result.getColumnIndex("verse");
 			
-			String p = result.getString(passageIndex);
-			String b = result.getString(bookIndex);
-			String c = result.getString(chapterIndex);
-			String v = result.getString(verseIndex);
-
-			
-			String fulltext = "<b>" + p + "</b>" + "<br>" +
-					"<br>" + b + " " + c
-					+ " : " + v;			
-			
 			//fill TextViews with the retrieved data
-			
-			allpassage.setText(Html.fromHtml(fulltext));
-			
-			
 			passage.setText(result.getString(passageIndex));
-			
-	
 			book.setText(result.getString(bookIndex));
 			chapter.setText(result.getString(chapterIndex));
+			colon2.setText(":");
 			verse.setText(result.getString(verseIndex));
 			
 			result.close();

@@ -17,6 +17,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.FrameLayout;
+import android.widget.RelativeLayout;
 
 
 public class WinEffect extends Activity {
@@ -48,7 +49,7 @@ public class WinEffect extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.blank_falling_layout);
 		// create pointer to main screen
-		final FrameLayout mainView = (android.widget.FrameLayout) findViewById(R.id.main_view);
+		final RelativeLayout mainView = (android.widget.RelativeLayout) findViewById(R.id.main_view);
 
 		// get screen dimensions
 		Display display = getWindowManager().getDefaultDisplay();
