@@ -16,14 +16,14 @@
         android:layout_marginBottom="19dp"
         android:text= "@string/newgame" />
 
-    <ImageView
+<!--     <ImageView
         android:id="@+id/imageView1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="42dp"
-        android:src="@drawable/angel" />
+        android:src="@drawable/angel" /> -->
 
 </RelativeLayout>
 
