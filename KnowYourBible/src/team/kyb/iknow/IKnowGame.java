@@ -42,6 +42,7 @@ public class IKnowGame extends Activity {
 	private TextView tv_displayVerse;
 	private ArrayList<String> listVerses;
 	private int numVerses;
+	private Button buttonNextIKnow;
 	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
@@ -55,6 +56,8 @@ public class IKnowGame extends Activity {
 		spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
 		spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
 		
+		
+		buttonNextIKnow = (Button) findViewById(R.id.next_iknow);
 		
 		// populating spinners
 		addItemsOnSpinnerBook();
@@ -90,6 +93,7 @@ public class IKnowGame extends Activity {
 //		correctVerse = "verse 0";
 		// --------------------------------------------------------------------------
 
+		buttonNextIKnow.setEnabled(false);
 		checkUserAnswer(correctBook, correctChapter, correctVerse);
 		nextListener();
 	}
@@ -126,10 +130,22 @@ public class IKnowGame extends Activity {
 //		list.add("book 1");
 //		list.add("book 2");
 //		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,list);
-		Resources res = getResources();
-		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,res.getStringArray(R.array.all_books_array));
-		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-		spinnerBook.setAdapter(dataAdapter);
+		
+//		Resources res = getResources();
+//		ArrayAdapter<String> dataAdapter = new ArrayAdapter<String>(this, android.R.layout.simple_spinner_item,res.getStringArray(R.array.all_books_array));
+//		dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+//		spinnerBook.setAdapter(dataAdapter);
+		
+		ArrayAdapter<CharSequence> adapter = ArrayAdapter.createFromResource(this, R.array.all_books_array, android.R.layout.simple_spinner_item);
+		adapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+		spinnerBook.setAdapter(adapter);
+		
+//		spinnerBook.setAdapter(
+//			      new NothingSelectedSpinnerAdapter(
+//			            adapter,
+//			            R.layout.contact_spinner_row_nothing_selected,
+//			            // R.layout.contact_spinner_nothing_selected_dropdown, // Optional
+//			            this));
 	}
 	
 	private void addItemsOnSpinnerChapter()
@@ -215,45 +231,53 @@ public class IKnowGame extends Activity {
 					numCorrect++;
 					tv_numCorrect.setText(String.valueOf(numCorrect));
 					tv_numAttempts.setText(String.valueOf(numAttempts));
-					
+					buttonNextIKnow.setEnabled(true);
 					buttonSubmit.setEnabled(false);
 				}
-				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
+//				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
+//				{
+//					tv_game_status.setText(R.string.wrongb);
+//					tv_numAttempts.setText(String.valueOf(numAttempts));
+//				}
+//				else if (!correctBook.equals(userBook) && !correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
+//				{
+//					tv_game_status.setText(R.string.wrongbc);
+//					tv_numAttempts.setText(String.valueOf(numAttempts));
+//				}
+//				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && !correctVerse.equals(userVerse))
+//				{
+//					tv_game_status.setText(R.string.wrongbv);
+//					tv_numAttempts.setText(String.valueOf(numAttempts));
+//				}
+//				
+//				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && correctVerse.equals(userVerse))
+//				{
+//					tv_game_status.setText(R.string.wrongc);
+//					tv_numAttempts.setText(String.valueOf(numAttempts));
+//				}
+//				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && !correctVerse.equals(userVerse))
+//				{
+//					tv_game_status.setText(R.string.wrongcv);
+//					tv_numAttempts.setText(String.valueOf(numAttempts));
+//				}
+//				
+//				else if (!correctVerse.equals(userVerse) && correctChapter.equals(userChapter) && correctBook.equals(userBook))
+//				{
+//					tv_game_status.setText(R.string.wrongv);
+//					tv_numAttempts.setText(String.valueOf(numAttempts));
+//				}
+//				else if (!correctVerse.equals(userVerse) && !correctChapter.equals(userChapter) && !correctBook.equals(userBook))
+//				{
+//					tv_game_status.setText(R.string.wrongbcv);
+//					tv_numAttempts.setText(String.valueOf(numAttempts));
+//				}
+				else
 				{
-					tv_game_status.setText(R.string.wrongb);
+					buttonSubmit.setEnabled(false);
+					String answer = "Wrong! Answer is " + correctBook + " " + correctChapter + ":" + correctVerse ;
+					tv_game_status.setText(answer);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
-				}
-				else if (!correctBook.equals(userBook) && !correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
-				{
-					tv_game_status.setText(R.string.wrongbc);
-					tv_numAttempts.setText(String.valueOf(numAttempts));
-				}
-				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && !correctVerse.equals(userVerse))
-				{
-					tv_game_status.setText(R.string.wrongbv);
-					tv_numAttempts.setText(String.valueOf(numAttempts));
-				}
-				
-				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && correctVerse.equals(userVerse))
-				{
-					tv_game_status.setText(R.string.wrongc);
-					tv_numAttempts.setText(String.valueOf(numAttempts));
-				}
-				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && !correctVerse.equals(userVerse))
-				{
-					tv_game_status.setText(R.string.wrongcv);
-					tv_numAttempts.setText(String.valueOf(numAttempts));
-				}
-				
-				else if (!correctVerse.equals(userVerse) && correctChapter.equals(userChapter) && correctBook.equals(userBook))
-				{
-					tv_game_status.setText(R.string.wrongv);
-					tv_numAttempts.setText(String.valueOf(numAttempts));
-				}
-				else if (!correctVerse.equals(userVerse) && !correctChapter.equals(userChapter) && !correctBook.equals(userBook))
-				{
-					tv_game_status.setText(R.string.wrongbcv);
-					tv_numAttempts.setText(String.valueOf(numAttempts));
+					buttonNextIKnow.setEnabled(true);
 				}
 
 			}
@@ -264,9 +288,7 @@ public class IKnowGame extends Activity {
 	
 	private void nextListener()
 	{
-		Button buttonNextIKnow = (Button) findViewById(R.id.next_iknow);
-		
-
+//		Button buttonNextIKnow = (Button) findViewById(R.id.next_iknow);
 		
 		
 		buttonNextIKnow.setOnClickListener(new OnClickListener(){
@@ -283,14 +305,20 @@ public class IKnowGame extends Activity {
 				database.close();
 				
 				Button buttonSubmit = (Button) findViewById(R.id.button_submit);
-				buttonSubmit.setEnabled(true);
-				
+				if (!buttonSubmit.isEnabled())
+				{
+					buttonSubmit.setEnabled(true);
+				}
 				
 				displayVerse(verseToDisplay);
 				tv_game_status = (TextView) findViewById(R.id.game_status);
-				tv_game_status.setText("");
-
+				if (tv_game_status.toString() != null)
+				{
+					tv_game_status.setText("");
+				}
+				
 				checkUserAnswer(correctBook, correctChapter, correctVerse);
+				buttonNextIKnow.setEnabled(false);
 	
 			}
 		});

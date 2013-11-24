@@ -266,20 +266,20 @@
 	
 	<string name="submit">Submit</string>
 	
-	<string name="book_prompt">Choose a book</string>
+	<string name="book_prompt">Select a book:</string>
 	<string name="book_default">Book default</string>
 	<string name="book_1">Book 1</string>
 	<string name="book_2">Book 2</string>
 	<string name="book_3">Book 3</string>
 	
-	<string name="chapter_prompt">Choose a chapter</string>
+	<string name="chapter_prompt">Select a chapter:</string>
 	<string name="chapter_default">chapter default</string>
 	<string name="chapter_1">Chapter 1</string>
 	<string name="chapter_2">Chapter 2</string>
 	<string name="chapter_3">Chapter 3</string>
 	
 	
-	<string name="verse_prompt">Choose a verse</string>
+	<string name="verse_prompt">Select a verse:</string>
 	<string name="verse_default">verse default</string>
 	<string name="verse_1">Verse 1</string>
 	<string name="verse_2">Verse 2</string>

@@ -57,10 +57,19 @@
         style="@style/NiceButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="9"
+        android:lines="7"
         android:text="@string/ready_label" 
         android:textIsSelectable="true"
         />
+
+    <TextView
+        android:id="@+id/textview_book_promt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/book_prompt"
+        android:paddingLeft="10dp"
+        android:textSize="17sp" />
     
     <Spinner
         android:id="@+id/spinner_book"
@@ -68,14 +77,42 @@
         android:layout_height="wrap_content"
         android:entries="@array/book_array"
         android:entryValues="@array/book_array"
-        android:paddingTop="20dp"
-
+		android:spinnerMode="dialog"
+		android:prompt="@string/book_prompt"
 	/>
+    
+    <LinearLayout
+    	android:layout_width="fill_parent"
+    	android:layout_height="wrap_content"
+    	android:paddingTop="10dp"
+    >
+        <TextView
+        android:id="@+id/textview_chapter_promt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/chapter_prompt"
+        android:paddingLeft="10dp"
+        android:textSize="17sp" 
+        android:layout_weight="1"
+        />
+        
+        <TextView
+        android:id="@+id/textview_verse_promt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:paddingTop="10dp"
+        android:text="@string/verse_prompt"
+        android:paddingLeft="10dp"
+        android:textSize="17sp" 
+        android:layout_weight="1"
+        />
+        
+    </LinearLayout>   
     
   	<LinearLayout
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-    	android:paddingTop="10dp"
     >
 	    
       	<Spinner
@@ -85,18 +122,19 @@
         	android:entries="@array/chapter_array"
         	android:entryValues="@array/chapter_array"
 			android:layout_weight="1"
-		
+			android:spinnerMode="dialog"
+			android:prompt="@string/chapter_prompt"
       	/> 
       	
-	<TextView
-	    android:id="@+id/colon5"
-	    android:layout_width="wrap_content"
-	    android:layout_height="wrap_content"
-	    android:text=" : " 
-	    android:textColor="#000000"	    
-	    android:textSize="20sp"
-	    android:paddingTop="3dp"
-	    >     	</TextView>    
+		<TextView
+		    android:id="@+id/colon5"
+		    android:layout_width="wrap_content"
+		    android:layout_height="wrap_content"
+		    android:text=" : " 
+		    android:textColor="#000000"	    
+		    android:textSize="20sp"
+		    android:paddingTop="3dp"
+		    />
 	    
     	<Spinner
         	android:id="@+id/spinner_verse"
@@ -105,7 +143,8 @@
         	android:entries="@array/verse_array"
         	android:entryValues="@array/verse_array"
 			android:layout_weight="1"
-		
+			android:spinnerMode="dialog"
+			android:prompt="@string/verse_prompt"
       	/>   
   	
   	</LinearLayout>   
@@ -116,7 +155,7 @@
   	    android:layout_height="wrap_content"
   	    android:layout_gravity="center_horizontal"
   	    android:text="@string/submit" 
-  	    android:layout_margin="20dp"
+  	    android:layout_margin="10dp"
   	/>
   	  	
   	<TextView
