@@ -12,7 +12,7 @@
         style="@style/NiceButton"
         android:layout_width="240dp"
         android:layout_height="match_parent"
-        android:lines="9"
+
         android:text="@string/ready_label" 
         android:textIsSelectable="true"
         />   
@@ -21,7 +21,6 @@
             android:id="@+id/correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="1"
             android:gravity="left"
             android:layout_toRightOf="@id/textview_text"
             android:paddingLeft="5dp"
@@ -31,43 +30,84 @@
             android:id="@+id/numCorrect"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:layout_weight="100"
             android:gravity="left"
             android:layout_marginLeft="5dp"
             android:layout_toRightOf="@id/correct"
             android:text="0" />
-       
-         <TextView
+   
+           <TextView
             android:id="@+id/numAttempts"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-   	    	android:layout_alignParentRight="true"           
-            android:layout_weight="1"
+   	    	android:layout_alignParentRight="true"  
+   	    	android:layout_above="@id/textview_book_promt" 	    	         
             android:gravity="right"
             android:paddingRight="5dp"
-            android:text="0" />
-       	
-  	<TextView
+            android:text="0" />      
+        
+   	<TextView
   	    android:id="@+id/attemps"
   	    android:layout_width="wrap_content"
   	    android:layout_height="wrap_content"
-  	    android:layout_above="@id/spinner_book"
   	    android:layout_marginRight="5dp"
   	    android:layout_toLeftOf="@id/numAttempts"
-  	    android:layout_weight="1"
   	    android:gravity="right"
-  	    android:text="@string/attempts_label" />
+  	    android:text="@string/attempts_label" />       
         
+
+       	
+
+        
+    <TextView
+        android:id="@+id/textview_book_promt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/book_prompt"
+ 		android:layout_toRightOf="@id/textview_text"
+		android:layout_below="@id/correct"       
+        android:textSize="15sp"
+        android:paddingLeft="5dp"  
+        android:paddingTop="5dp"     
+         />  	
+  	
   	<Spinner
   	    android:id="@+id/spinner_book"
   	    android:layout_width="match_parent"
   	    android:layout_height="wrap_content"
 		android:layout_toRightOf="@id/textview_text"
-		android:layout_below="@+id/correct"
+		android:layout_below="@id/textview_book_promt"
   	    android:entries="@array/book_array"
   	    android:entryValues="@array/book_array"
-  	    android:gravity="center"
-  	    android:paddingTop="20dp" />        
+  	    android:spinnerMode="dialog"
+
+		/>        
+        
+       <TextView
+        android:id="@+id/textview_chapter_promt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="@string/chapter_prompt"
+        android:textSize="15sp" 
+        android:paddingLeft="5dp"   
+        android:layout_marginTop="5dp"      
+ 		android:layout_toRightOf="@id/textview_text"
+		android:layout_below="@id/spinner_book"       
+
+        />	
+        
+       
+       <TextView
+        android:id="@+id/textview_verse_promt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+ 		android:layout_toRightOf="@id/textview_chapter_promt"
+ 		android:layout_above="@id/spinner_chapter"
+		android:layout_marginLeft="50dp"
+		android:layout_marginTop="5dp"    
+        android:text="@string/verse_prompt"
+        android:textSize="15sp" 
+
+        />
         
        	<Spinner
         	android:id="@+id/spinner_chapter"
@@ -77,13 +117,14 @@
         	android:entryValues="@array/chapter_array"
 			android:gravity="center"
 			android:layout_toRightOf="@id/textview_text"			
-			android:layout_below="@id/spinner_book"
+			android:layout_below="@id/textview_chapter_promt"
 			android:layout_marginLeft="15dp"
+  	    	android:spinnerMode="dialog"			
       	/>        
       	
 	<TextView
 	    android:id="@+id/colon4"
-	    android:layout_below="@id/spinner_book"
+	    android:layout_below="@id/textview_chapter_promt"
 	    android:layout_toRightOf="@id/spinner_chapter"
 	    android:layout_width="wrap_content"
 	    android:layout_height="wrap_content"
@@ -98,11 +139,13 @@
   	    android:layout_width="100dp"
   	    android:layout_height="wrap_content"
 		android:layout_toRightOf="@id/spinner_chapter" 
-		android:layout_below="@+id/spinner_book"
+		android:layout_below="@+id/textview_chapter_promt"
 		android:layout_marginLeft="15dp"
   	    android:gravity="center"
   	    android:entries="@array/verse_array"
-  	    android:entryValues="@array/verse_array" />      	
+  	    android:entryValues="@array/verse_array"
+   	    android:spinnerMode="dialog" 	    
+  	     />      	
   	    
    	<TextView
         android:id="@+id/game_status"

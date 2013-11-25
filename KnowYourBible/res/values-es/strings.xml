@@ -32,7 +32,8 @@
 	<string name="wrongc">Capitulo esta mal</string>
 	<string name="wrongcv">Capitulo y texto esta mal</string>
 	<string name="wrongv">Texto esta mal</string>
-	<string name="wrongbcv">Libro, capitulo, y texto esta mal</string>	
+	<string name="wrongbcv">Libro, capitulo, y texto esta mal</string>
+ 	<string name="wronganswer">Incorrecto! La respuesta es </string>	
 
     <string name="addscripture_label">Añadir Nuevo</string>
 	<string name="listbooks_label">Todo los Libros</string>
@@ -262,20 +263,20 @@
 	
 	<string name="submit">Probar</string>
 	
-	<string name="book_prompt">Elegir un libro</string>
+	<string name="book_prompt">Libro:</string>
 	<string name="book_default">Book default</string>
 	<string name="book_1">Book 1</string>
 	<string name="book_2">Book 2</string>
 	<string name="book_3">Book 3</string>
 	
-	<string name="chapter_prompt">Eligir un capítulo</string>
+	<string name="chapter_prompt">Capítulo:</string>
 	<string name="chapter_default">chapter default</string>
 	<string name="chapter_1">Chapter 1</string>
 	<string name="chapter_2">Chapter 2</string>
 	<string name="chapter_3">Chapter 3</string>
 	
 	
-	<string name="verse_prompt">Eligir un verso</string>
+	<string name="verse_prompt">Verso:</string>
 	<string name="verse_default">verse default</string>
 	<string name="verse_1">Verse 1</string>
 	<string name="verse_2">Verse 2</string>

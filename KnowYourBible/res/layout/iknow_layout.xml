@@ -3,15 +3,15 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical"
-    android:padding="10dip" 
+    android:padding="8dip" 
     android:background="#D7E4FD"  
 >
 
     <LinearLayout
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-    	android:paddingTop="10dp"
-    	android:paddingBottom="10dp"
+    	android:paddingTop="5dp"
+    	android:paddingBottom="5dp"
     >
     
         <TextView 
@@ -44,7 +44,8 @@
         <TextView
         	android:id="@+id/numAttempts"    
         	android:layout_width="wrap_content"
-       		android:layout_height="wrap_content"   
+       		android:layout_height="wrap_content" 
+       		android:layout_marginLeft="3dp"  
        		android:text="0"
        		android:gravity="left"
             android:layout_weight="1"
@@ -57,7 +58,7 @@
         style="@style/NiceButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:lines="7"
+        android:lines="8"
         android:text="@string/ready_label" 
         android:textIsSelectable="true"
         />
@@ -66,7 +67,7 @@
         android:id="@+id/textview_book_promt"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:paddingTop="10dp"
+        android:paddingTop="5dp"
         android:text="@string/book_prompt"
         android:paddingLeft="10dp"
         android:textSize="17sp" />
@@ -84,7 +85,7 @@
     <LinearLayout
     	android:layout_width="fill_parent"
     	android:layout_height="wrap_content"
-    	android:paddingTop="10dp"
+    	android:paddingTop="5dp"
     >
         <TextView
         android:id="@+id/textview_chapter_promt"

@@ -274,7 +274,9 @@ public class IKnowGame extends Activity {
 				else
 				{
 					buttonSubmit.setEnabled(false);
-					String answer = "Wrong! Answer is " + correctBook + " " + correctChapter + ":" + correctVerse ;
+					//getString(R.string.hello)
+					//String answer = "Wrong! Answer is " + correctBook + " " + correctChapter + ":" + correctVerse ;
+					String answer = getString(R.string.wronganswer) + " " + correctBook + " " + correctChapter + " : " + correctVerse ;
 					tv_game_status.setText(answer);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 					buttonNextIKnow.setEnabled(true);
