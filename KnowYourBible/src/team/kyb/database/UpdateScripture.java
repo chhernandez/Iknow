@@ -129,13 +129,13 @@ public class UpdateScripture extends Activity {
 		switch (item.getItemId()){
 		case R.id.editscripture:
 			// create an Intent to launch the AddEditScripture Activity
-			Intent addEditScripture = new Intent(this, AddEditScripture.class);
+			Intent EditScripture = new Intent(this, EditScripture.class);
 			
-			addEditScripture.putExtra(Scriptures.ROW_ID, rowID);
-			addEditScripture.putExtra("passage", passage.getText());
-			addEditScripture.putExtra("book", book.getText());
-			addEditScripture.putExtra("chapter", chapter.getText());
-			addEditScripture.putExtra("verse", verse.getText());
+			EditScripture.putExtra(Scriptures.ROW_ID, rowID);
+			EditScripture.putExtra("passage", passage.getText());
+			EditScripture.putExtra("book", book.getText());
+			EditScripture.putExtra("chapter", chapter.getText());
+			EditScripture.putExtra("verse", verse.getText());
 			
 			Log.d("edit scripture", "row id:" + rowID);	
 			Log.d("edit scripture", "passage:" + passage.getText());	
@@ -144,7 +144,7 @@ public class UpdateScripture extends Activity {
 			Log.d("edit scripture", "verse:" + verse.getText());  
 		
 			
-			startActivity(addEditScripture);
+			startActivity(EditScripture);
 			return true;
 		case R.id.deletescripture:
 			

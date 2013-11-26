@@ -35,10 +35,15 @@
             android:label="@string/update_label">
             
         </activity>       
+ 
          <activity
-            android:name="team.kyb.database.AddEditScripture"
-            android:label="@string/addedit_label" >
-        </activity>   
+            android:name="team.kyb.database.EditScripture"
+            android:label="@string/editscripture_label" >
+        </activity>  
+         <activity
+            android:name="team.kyb.database.AddScripture"
+            android:label="@string/addscripture_label" >
+        </activity>                  
         
         <activity
             android:name="team.kyb.database.DisplayBooks"

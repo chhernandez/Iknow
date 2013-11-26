@@ -126,7 +126,7 @@ public class Scriptures extends ListActivity {
 		
 			// create a new Intent to launch
 			Intent addNew = 
-					new Intent(this, AddEditScripture.class);
+					new Intent(this, AddScripture.class);
 			startActivity(addNew); 
 			return true;
 		case R.id.listbooks:
