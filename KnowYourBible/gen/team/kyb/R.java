@@ -74,7 +74,7 @@ public final class R {
         public static final int button1=0x7f090007;
         public static final int button2=0x7f090044;
         public static final int button3=0x7f090045;
-        public static final int button_submit=0x7f090040;
+        public static final int button_submit=0x7f090041;
         public static final int bysection=0x7f090005;
         public static final int c=0x7f090025;
         public static final int chapterLView=0x7f090058;
@@ -96,7 +96,7 @@ public final class R {
         public static final int exit=0x7f090061;
         public static final int f=0x7f09001d;
         public static final int g=0x7f09001e;
-        public static final int game_status=0x7f090041;
+        public static final int game_status=0x7f090040;
         public static final int guessed=0x7f09000c;
         public static final int h=0x7f09001f;
         public static final int hangmanView00=0x7f09002c;

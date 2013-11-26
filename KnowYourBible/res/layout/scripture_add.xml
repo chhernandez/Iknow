@@ -56,7 +56,7 @@
             android:textSize="30sp" >
     	</Button>      
     
-    <EditText android:id="@+id/booktext"
+<!--     <EditText android:id="@+id/booktext"
         android:layout_below="@id/saveScriptureButton"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
@@ -74,7 +74,7 @@
         android:inputType="number"        
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/verse_hint" ></EditText>    
+        android:hint="@string/verse_hint" ></EditText>     -->
         
 
     
