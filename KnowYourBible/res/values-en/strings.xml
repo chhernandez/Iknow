@@ -146,7 +146,7 @@
 	<string name="passage_c12">7</string>
 	<string name="passage_d12">9</string>
 	
-	<string name="passage_a13">The tree that you saw that grew great and became strong, whose top reached the heavens and was visible to all the earth,</string>
+	<string name="passage_a13">The tree that you saw that grew great and became strong, whose top reached the heavens and was visible to all the earth.</string>
 	<string name="passage_b13">@string/book27</string>
 	<string name="passage_c13">4</string>
 	<string name="passage_d13">20</string>	
@@ -171,7 +171,7 @@
 	<string name="passage_c17">12</string>
 	<string name="passage_d17">3</string>
 	
-	<string name="passage_a18">While he was sitting on the Mount of Olives, the disciples approached him privately, saying: “Tell us, when will these things be, and what will be the sign of your presence and of the conclusion of the system of things?”</string>
+	<string name="passage_a18">While he was sitting on the Mount of Olives, the disciples approached him privately, saying: “Tell us, when will these things be, and what will be the sign of your presence and of the conclusion of the system of things”?</string>
 	<string name="passage_b18">@string/book40</string>
 	<string name="passage_c18">24</string>
 	<string name="passage_d18">3</string>		

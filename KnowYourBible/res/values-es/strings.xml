@@ -145,7 +145,7 @@
 	<string name="passage_c12">7</string>
 	<string name="passage_d12">9</string>
 	
-	<string name="passage_a13">El árbol que contemplaste, que se hizo grande y llegó a ser fuerte, y la altura del cual finalmente alcanzó a los cielos, y que le era visible a toda la tierra,</string>
+	<string name="passage_a13">El árbol que contemplaste, que se hizo grande y llegó a ser fuerte, y la altura del cual finalmente alcanzó a los cielos, y que le era visible a toda la tierra.</string>
 	<string name="passage_b13">@string/book27</string>
 	<string name="passage_c13">4</string>
 	<string name="passage_d13">20</string>	
@@ -160,7 +160,7 @@
 	<string name="passage_c15">4</string>
 	<string name="passage_d15">6</string>
 	
-	<string name="passage_a16">Además, así como ocurrió en los días de Noé, así será también en los días del Hijo del hombre:</string>
+	<string name="passage_a16">Además, así como ocurrió en los días de Noé, así será también en los días del Hijo del hombre.</string>
 	<string name="passage_b16">@string/book42</string>
 	<string name="passage_c16">17</string>
 	<string name="passage_d16">26</string>
