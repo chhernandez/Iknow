@@ -27,7 +27,7 @@ public class LoseEffect extends Activity {
 	Handler RedrawHandler = new Handler(); // so redraw occurs in main thread
 	Timer mTmr = null;
 
-	TimerTask mTsk = null;
+	TimerTask mTsk, mDone = null;
 
 	int mScrWidth, mScrHeight;
 	// android.graphics.PointF mBallPos, mBallVelocity;
@@ -137,6 +137,16 @@ public class LoseEffect extends Activity {
 	{
 		// create timer to move ball to new position
 		mTmr = new Timer();
+		
+		
+		mDone = new TimerTask() {
+			@Override
+			public void run() {
+				finish();	
+			}
+		};
+		mTmr.schedule(mDone, 7000);
+		
 		mTsk = new TimerTask() {
 			public void run() {
 				for (int i = 0; i < objs.length; i++) {

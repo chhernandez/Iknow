@@ -13,6 +13,8 @@ import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
+import android.view.View.OnClickListener;
+import android.view.View.OnTouchListener;
 import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
@@ -23,6 +25,8 @@ public class HangmanMain extends Activity {
 	private AnimationHelper animationHelper = new AnimationHelper();
 
 	private Button mKeyboard[] = new Button[26];
+	
+	private Button mNewGame;
 
 	private TextView mWord, mGuessLeft, mGuessLeft2, mStatus, mScriptureHangman;
 
@@ -42,6 +46,9 @@ public class HangmanMain extends Activity {
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.hangman_layout);
+		
+		mNewGame = (Button) findViewById(R.id.newGameButton);
+		mNewGame.setOnClickListener(mClickNewGame);
 
 		mWord = (TextView) findViewById(R.id.word_hang_man);
 		mGuessLeft = (TextView) findViewById(R.id.countValue);
@@ -180,12 +187,24 @@ public class HangmanMain extends Activity {
 	public void loseEffect() {
 		Intent intent = new Intent(this, LoseEffect.class);
 		startActivity(intent);
-
+		mNewGame.setVisibility(1);
 	}
 
 	public void winEffect() {
 		Intent intent = new Intent(this, WinEffect.class);
 		startActivity(intent);
+		mNewGame.setVisibility(1);
 	}
+	
+	// Listen for touches on the board
+	private OnClickListener mClickNewGame = new OnClickListener() {
+
+		@Override
+		public void onClick(View v) {
+			finish();
+			startActivity(getIntent());
+		}
+	};
+	
 
 }

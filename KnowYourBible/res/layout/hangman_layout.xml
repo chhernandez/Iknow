@@ -310,5 +310,15 @@
         android:layout_height="100dp"
         android:layout_alignRight="@+id/keyboard_hangman"
         android:layout_below="@+id/scripture_hangman" />
+    
+    <Button
+        android:id="@+id/newGameButton"
+        android:visibility="invisible"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="33dp"
+        android:text= "@string/newgame" />
 
 </RelativeLayout>

@@ -19,7 +19,6 @@ import android.view.WindowManager.LayoutParams;
 import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
 
-
 public class WinEffect extends Activity {
 
 	Random rd;
@@ -37,6 +36,8 @@ public class WinEffect extends Activity {
 	long mPrevTime;
 
 	final float ACC_FUDGE_FACTOR = .5f;
+
+	private TimerTask mDone;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -88,7 +89,8 @@ public class WinEffect extends Activity {
 	private FallingObject creatingFallingObject() {
 		android.graphics.PointF mBallPos = new android.graphics.PointF();
 		android.graphics.PointF mBallVelocity = new android.graphics.PointF();
-		Bitmap bm = BitmapFactory.decodeResource(getResources(), R.drawable.snowflake2);
+		Bitmap bm = BitmapFactory.decodeResource(getResources(),
+				R.drawable.snowflake2);
 
 		// create variables for ball position and speed
 		mBallPos.x = rd.nextInt(mScrWidth);
@@ -96,7 +98,8 @@ public class WinEffect extends Activity {
 
 		mBallVelocity.x = rd.nextFloat();
 		mBallVelocity.y = rd.nextFloat();
-		FallingObject a = new FallingObject(this, mBallPos.x, mBallPos.y, 20, bm);
+		FallingObject a = new FallingObject(this, mBallPos.x, mBallPos.y, 20,
+				bm);
 		a.mBallPos = mBallPos;
 		a.mBallVelocity = mBallVelocity;
 		return a;
@@ -129,54 +132,64 @@ public class WinEffect extends Activity {
 	}
 
 	@Override
-    public void onResume() //app moved to foreground (also occurs at app startup)
-    {
-        //create timer to move ball to new position
-        mTmr = new Timer(); 
-        mTsk = new TimerTask() {
+	public void onResume() // app moved to foreground (also occurs at app
+							// startup)
+	{
+		// create timer to move ball to new position
+		mTmr = new Timer();
+		
+		mDone = new TimerTask() {
+			@Override
 			public void run() {
-				for (int i = 0; i< objs.length; i++) {
+				finish();	
+			}
+		};
+		mTmr.schedule(mDone, 7000);
+		
+		mTsk = new TimerTask() {
+			public void run() {
+				for (int i = 0; i < objs.length; i++) {
 					final FallingObject objHere = objs[i];
-					
+
 					if (objHere.mBallPos.y + objHere.mR >= mScrHeight) {
 						objHere.mBallVelocity.y = -(objHere.mBallVelocity.y);
 						objHere.mBallPos.y = mScrHeight - objHere.mR;
 					}
-					
+
 					if (objHere.mBallPos.x + objHere.mR >= mScrWidth) {
 						objHere.mBallPos.x = mScrWidth - objHere.mR;
 						objHere.mBallVelocity.x = -(objHere.mBallVelocity.x);
 					}
-					
+
 					if (objHere.mBallPos.x - objHere.mR <= 0) {
 						objHere.mBallVelocity.x = -(objHere.mBallVelocity.x);
 						objHere.mBallPos.x = objHere.mR;
 					}
-					
+
 					if (objHere.mBallPos.y - objHere.mR <= 0) {
 						objHere.mBallVelocity.y = -(objHere.mBallVelocity.y);
 						objHere.mBallPos.y = objHere.mR;
 					}
-					
+
 					// move ball based on current speed
 					objHere.mBallPos.x += objHere.mBallVelocity.x;
 					objHere.mBallPos.y += objHere.mBallVelocity.y;
-					
+
 					// update ball class instance
 					objHere.mX = objHere.mBallPos.x;
 					objHere.mY = objHere.mBallPos.y;
-					
-				    RedrawHandler.post(new Runnable() {
-					    public void run() {
-						   objHere.invalidate();
-					    }
-				    });
+
+					RedrawHandler.post(new Runnable() {
+						public void run() {
+							objHere.invalidate();
+						}
+					});
 				}
 			}
 		};
-        mTmr.schedule(mTsk,10,10); //start timer
-        super.onResume();
-    } // onResume
+		mTmr.schedule(mTsk, 10, 10); // start timer
+		super.onResume();
+	} // onResume
 
 	@Override
 	public void onDestroy() // main thread stopped
