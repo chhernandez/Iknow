@@ -10,43 +10,107 @@
     tools:context=".Main_Falling" >
 
     <TextView
-        android:id="@+id/scripture_hangman"
+        android:id="@+id/scripture_fill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="8dp"
-        android:text="John 15:13: Greater love has no one than this, that he lay down his ______ for his friends."
-        android:textSize="30sp" />
+        android:textSize="30sp" 
+        android:text="w1aaaaaaaaaaaaaa"/>
+
+    <EditText
+        android:id="@+id/order1"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignTop="@+id/word1"
+        android:layout_marginLeft="150dp"
+        android:layout_toRightOf="@+id/word1"
+        android:ems="10"
+        android:inputType="number" />
 
     <TextView
-        android:id="@+id/countValue"
+        android:id="@+id/word1"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginRight="22dp"
+        android:layout_alignLeft="@+id/scripture_fill"
+        android:layout_below="@+id/scripture_fill"
+        android:layout_marginTop="20dp"
         android:paddingTop="10dp"
-        android:textSize="12sp" />
-
-    <TextView
-        android:id="@+id/guessed"
-        android:layout_width="100dp"
-        android:layout_height="wrap_content"
-        android:layout_alignLeft="@+id/scripture_hangman"
-        android:layout_below="@+id/scripture_hangman"
-        android:layout_marginTop="96dp"
-        android:paddingTop="10dp"
-        android:text="@string/guessed_letter"
+        android:text="w1"
         android:textSize="12sp" />
 
     <EditText
-        android:id="@+id/input"
+        android:id="@+id/order2"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/order1"
+        android:layout_below="@+id/order1"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number" />
+    
+    <EditText
+        android:id="@+id/order3"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/order2"
+        android:layout_below="@+id/order2"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number" />
+    
+    <EditText
+        android:id="@+id/order4"
+        android:layout_width="60dp"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/order3"
+        android:layout_below="@+id/order3"
+        android:layout_marginTop="20dp"
+        android:ems="10"
+        android:inputType="number" />
+
+    <TextView
+        android:id="@+id/word2"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/scripture_hangman"
-        android:layout_marginTop="23dp"
-        android:layout_toRightOf="@+id/countValue"
-        android:ems="10"
-        android:hint="@string/just_letter" >
+        android:layout_alignBaseline="@+id/order2"
+        android:layout_alignBottom="@+id/order2"
+        android:layout_alignLeft="@+id/word1"
+        android:text="TextView" />
 
-        <requestFocus />
-    </EditText>
+    <TextView
+        android:id="@+id/word3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/order3"
+        android:layout_alignBottom="@+id/order3"
+        android:layout_alignLeft="@+id/word2"
+        android:text="TextView" />
+
+    <TextView
+        android:id="@+id/word4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/order4"
+        android:layout_alignBottom="@+id/order4"
+        android:layout_alignLeft="@+id/word3"
+        android:text="TextView" />
+
+    <Button
+        android:id="@+id/newGameFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/order4"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="26dp"
+        android:text="@string/newgame" />
+
+    <Button
+        android:id="@+id/submitFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/newGameFill"
+        android:layout_centerHorizontal="true"
+        android:text="@string/submit" />
+
 </RelativeLayout>
