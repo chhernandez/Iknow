@@ -5,6 +5,7 @@ import team.kyb.R;
 import team.kyb.database.DatabaseConnector;
 import team.kyb.database.Scriptures;
 import team.kyb.extragames.HangmanMain;
+import team.kyb.extragames.MoreGames;
 import team.kyb.iknow.IKnowGame;
 import android.os.AsyncTask;
 import android.os.Bundle;
@@ -76,7 +77,7 @@ public class MainActivity extends Activity {
 	private void startMoreGames() {
 		// TODO Auto-generated method stub
 		Intent moreGames = 
-				new Intent(this, HangmanMain.class);
+				new Intent(this, MoreGames.class);
 		startActivity(moreGames);		
 	}			
 	

@@ -6,6 +6,8 @@
     <string name="iknow_label">I Know That Scripture</string>
     <string name="games_label">More Games</string>
     <string name="hangman_label">Hangman</string>
+    <string name="fillin_label">Fill in the blank</string>
+    <string name="moreGame_label">Extra Games</string>
     <string name="kybwidgetlabel">KYB Daily Scripture</string>    
     
     <string name="scriptures_label">Scriptures Database</string>
