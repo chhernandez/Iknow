@@ -6,7 +6,7 @@
     <string name="iknow_label">Yo sé la Escritura</string>
     <string name="games_label">Más Juegos</string>
     <string name="hangman_label">El Ahorcado</string>
-    
+    <string name="kybwidgetlabel">KYB Texto Diario</string>    
     
     <string name="scriptures_label">Base de Datos</string>
     <string name="settings_label">Ajustes</string>
