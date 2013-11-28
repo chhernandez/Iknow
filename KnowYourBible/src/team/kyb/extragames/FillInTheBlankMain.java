@@ -23,49 +23,59 @@ public class FillInTheBlankMain extends Activity {
 	DatabaseConnector database = new DatabaseConnector(this);
 
 	private AnimationHelper animationHelper = new AnimationHelper();
-	
+
 	private Button mNewGame, mCheckGame;
 
-	private TextView mWord1, mWord2, mWord3, mWord4, mScripture;
+	private TextView mWord1, mWord2, mWord3, mWord4, mScripture, mStatus;
 
 	private FillInTheBlankGame mGame;
 
 	private EditText mOrder1, mOrder2, mOrder3, mOrder4;
-	
-	private String scripture;
 
+	private String scripture;
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.filling_the_blank);
-		
-		mNewGame = (Button) findViewById(R.id.newGameFill);
+
+		mNewGame = (Button) findViewById(R.id.button2);
 		mNewGame.setOnClickListener(mClickNewGame);
-		
-		mCheckGame = (Button) findViewById(R.id.submitFill);
-		mNewGame.setOnClickListener(mClickCheck);
+
+		mCheckGame = (Button) findViewById(R.id.button1);
+		mCheckGame.setOnClickListener(mClickCheck);
 
 		mWord1 = (TextView) findViewById(R.id.word1);
 		mWord2 = (TextView) findViewById(R.id.word2);
 		mWord3 = (TextView) findViewById(R.id.word3);
 		mWord4 = (TextView) findViewById(R.id.word4);
-		
+
+		mStatus = (TextView) findViewById(R.id.statusFill);
+
 		mScripture = (TextView) findViewById(R.id.scripture_fill);
-		
+
 		mOrder1 = (EditText) findViewById(R.id.order1);
 		mOrder2 = (EditText) findViewById(R.id.order2);
 		mOrder3 = (EditText) findViewById(R.id.order3);
 		mOrder4 = (EditText) findViewById(R.id.order4);
-		
-		
+
 		database.open();
-		ScriptureForGameHelper scriptureHelper = new ScriptureForGameHelper(database.getRandomScriptureForGame());
+		ScriptureForGameHelper scriptureHelper = new ScriptureForGameHelper(
+				database.getRandomScriptureForGame());
 		database.close();
 
-		scripture = scriptureHelper.getScriptureFull();
+		scripture = scriptureHelper.getPassage();
 
 		mGame = new FillInTheBlankGame(scripture);
+		
+		mScripture.setText(mGame.getMissingString() + "  "
+				+ scriptureHelper.getBook() + ":"
+				+ scriptureHelper.getChapter());
+				
+		mWord1.setText(mGame.getWords()[0]);
+		mWord2.setText(mGame.getWords()[1]);
+		mWord3.setText(mGame.getWords()[2]);
+		mWord4.setText(mGame.getWords()[3]);
 
 	}
 
@@ -81,11 +91,10 @@ public class FillInTheBlankMain extends Activity {
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
 		// create a new Intent to launch
-		Intent exitHangman = 
-				new Intent(this, MainActivity.class);
-		startActivity(exitHangman); 
-		return super.onOptionsItemSelected(item); 
-	} 	
+		Intent exitHangman = new Intent(this, MainActivity.class);
+		startActivity(exitHangman);
+		return super.onOptionsItemSelected(item);
+	}
 
 	public void loseEffect() {
 		Intent intent = new Intent(this, LoseEffect.class);
@@ -98,15 +107,34 @@ public class FillInTheBlankMain extends Activity {
 		startActivity(intent);
 		mNewGame.setVisibility(1);
 	}
-	
+
 	private OnClickListener mClickCheck = new OnClickListener() {
 
 		@Override
 		public void onClick(View v) {
-			//get values from EditText
+			mScripture.setText(scripture);
+			mCheckGame.setVisibility(2);
+
+			mNewGame.setVisibility(0);
+
+			int[] input = new int[4];
+			input[0] = Integer.parseInt(mOrder1.getText().toString());
+			input[1] = Integer.parseInt(mOrder2.getText().toString());
+			input[2] = Integer.parseInt(mOrder3.getText().toString());
+			input[3] = Integer.parseInt(mOrder4.getText().toString());
+			String inputString = getOrderString(input);
+			String orderString = getOrderString(mGame.getOrder());
+
+			if (inputString.equals(orderString)) {
+				mStatus.setText("You won");
+				winEffect();
+			} else {
+				mStatus.setText("You lose");
+				loseEffect();
+			}
 		}
 	};
-	
+
 	private OnClickListener mClickNewGame = new OnClickListener() {
 
 		@Override
@@ -116,5 +144,9 @@ public class FillInTheBlankMain extends Activity {
 		}
 	};
 	
+	private String getOrderString (int[] input) {
+		return input[0] + " " + input[1] + " "
+				+ input[2] + " " + input[3];
+	}
 
 }

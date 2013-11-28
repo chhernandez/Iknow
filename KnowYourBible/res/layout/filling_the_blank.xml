@@ -7,7 +7,8 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
-    tools:context=".Main_Falling" >
+    tools:context=".Main_Falling" 
+    android:background="#D7E4FD" >
 
     <TextView
         android:id="@+id/scripture_fill"
@@ -15,7 +16,7 @@
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:paddingTop="8dp"
-        android:textSize="30sp" 
+        android:textSize="20sp" 
         android:text="w1aaaaaaaaaaaaaa"/>
 
     <EditText
@@ -34,7 +35,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/scripture_fill"
         android:layout_below="@+id/scripture_fill"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:paddingTop="10dp"
         android:text="w1"
         android:textSize="12sp" />
@@ -45,7 +46,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/order1"
         android:layout_below="@+id/order1"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="number" />
     
@@ -55,7 +56,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/order2"
         android:layout_below="@+id/order2"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="number" />
     
@@ -65,7 +66,7 @@
         android:layout_height="wrap_content"
         android:layout_alignLeft="@+id/order3"
         android:layout_below="@+id/order3"
-        android:layout_marginTop="20dp"
+        android:layout_marginTop="15dp"
         android:ems="10"
         android:inputType="number" />
 
@@ -97,20 +98,30 @@
         android:text="TextView" />
 
     <Button
-        android:id="@+id/newGameFill"
+        android:id="@+id/button1"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/order4"
         android:layout_centerHorizontal="true"
-        android:layout_marginTop="26dp"
-        android:text="@string/newgame" />
+        android:text="@string/submit" />
 
     <Button
-        android:id="@+id/submitFill"
+        android:id="@+id/button2"
+        style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/newGameFill"
+        android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
-        android:text="@string/submit" />
+        android:text="@string/newgame" 
+        android:visibility="invisible"/>
+
+    <TextView
+        android:id="@+id/statusFill"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/button2"
+        android:layout_centerHorizontal="true"
+        android:textAppearance="?android:attr/textAppearanceMedium" />
 
 </RelativeLayout>

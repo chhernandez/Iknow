@@ -46,7 +46,7 @@ public class ScriptureForGameHelper {
 			dashes += "-";
 		}
 
-		passageMissing = passageFull.replace(randomMissingWord, dashes);
+		passageMissing = passageFull.replaceFirst(randomMissingWord, dashes);
 	}
 
 	public int getID() {
