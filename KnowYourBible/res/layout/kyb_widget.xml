@@ -12,19 +12,36 @@
         android:clickable="true"
         android:src="@drawable/icon"
         android:layout_alignParentLeft="true"
-        android:layout_centerVertical="true"
+   
 		android:padding="5dp"
         >
         
     </ImageView>
+ 
+  
+    
+    
+    <TextView
+        android:id="@+id/dateTextView"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20dp"
+ 		android:padding="5dp"     
+		android:layout_toRightOf="@id/kyb_icon"  
+		android:textColor="#ffffff"
+        >
+        
+    </TextView>
      
      <TextView
         android:id="@+id/allpassageTextView"
         style="@style/passageStyle"
 		android:textIsSelectable="true"
-		android:layout_toRightOf="@id/kyb_icon"
+		android:layout_below="@id/kyb_icon"
 		android:layout_centerVertical="true"
+		android:gravity="center"
 		android:padding="5dp"
+		android:textColor="#d2d2d2"
         ></TextView>   
     
  

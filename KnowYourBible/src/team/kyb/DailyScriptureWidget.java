@@ -1,5 +1,7 @@
 package team.kyb;
 
+import java.text.SimpleDateFormat;
+
 import team.kyb.database.DatabaseConnector;
 import team.kyb.extragames.ScriptureForGameHelper;
 import android.app.PendingIntent;
@@ -7,6 +9,7 @@ import android.appwidget.AppWidgetManager;
 import android.appwidget.AppWidgetProvider;
 import android.content.Context;
 import android.content.Intent;
+import android.content.res.Resources;
 import android.text.Html;
 import android.util.Log;
 import android.widget.RemoteViews;
@@ -34,17 +37,35 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 		wBook = scripture.getBook();
 		wChapter = String.valueOf(scripture.getChapter());
 		wVerse = String.valueOf(scripture.getVerse());*/
+	
+		
+		long date = System.currentTimeMillis(); 
+
+		SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy");
+		String dateString = sdf.format(date);   		
 		
 
-		wPassage = "As the last enemy, death is to be brought to nothing.";
-		wBook = "1 Corinthians";
-		wChapter = "15";
-		wVerse = "26";
+		Resources res = context.getResources();
+		
+		wPassage = res.getString(R.string.passage_a2);
+		wBook = res.getString(R.string.passage_b2);
+		wChapter = res.getString(R.string.passage_c2);
+		wVerse = res.getString(R.string.passage_d2);
 	
 
 		String fulltext = "<b>" + wPassage + "</b>" + "<br>" +
 				"<br>" + wBook + " " + wChapter
 				+ " : " + wVerse;			
+		
+		String[] mytextarray = new String[3];
+		
+		mytextarray[0] = "<b>" + res.getString(R.string.passage_a1) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b1) + " " + res.getString(R.string.passage_c1)
+				+ " : " + res.getString(R.string.passage_d1);
+		mytextarray[1] = "<b>" + res.getString(R.string.passage_a2) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b2) + " " + res.getString(R.string.passage_c2)
+				+ " : " + res.getString(R.string.passage_d2);		
+		
 		
 		//fill TextViews with the retrieved data
 		
@@ -61,8 +82,8 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 			
 			
 			RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.kyb_widget);
-			
-			views.setTextViewText(R.id.allpassageTextView, Html.fromHtml(fulltext));
+			views.setTextViewText(R.id.dateTextView, dateString);
+			views.setTextViewText(R.id.allpassageTextView, Html.fromHtml(mytextarray[0]));
 	        views.setOnClickPendingIntent(R.id.kyb_icon, pendingIntent);
 	        
             // Tell the AppWidgetManager to perform an update on the current app widget
