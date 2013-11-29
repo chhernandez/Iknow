@@ -1,6 +1,7 @@
 package team.kyb;
 
 import java.text.SimpleDateFormat;
+import java.util.Random;
 
 import team.kyb.database.DatabaseConnector;
 import team.kyb.extragames.ScriptureForGameHelper;
@@ -41,7 +42,7 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 		
 		long date = System.currentTimeMillis(); 
 
-		SimpleDateFormat sdf = new SimpleDateFormat("MMM d, yyyy");
+		SimpleDateFormat sdf = new SimpleDateFormat("EEEE MMM d, yyyy");
 		String dateString = sdf.format(date);   		
 		
 
@@ -52,12 +53,12 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 		wChapter = res.getString(R.string.passage_c2);
 		wVerse = res.getString(R.string.passage_d2);
 	
-
-		String fulltext = "<b>" + wPassage + "</b>" + "<br>" +
-				"<br>" + wBook + " " + wChapter
-				+ " : " + wVerse;			
 		
-		String[] mytextarray = new String[3];
+/*		String fulltext = "<b>" + wPassage + "</b>" + "<br>" +
+				"<br>" + wBook + " " + wChapter
+				+ " : " + wVerse;	*/		
+		
+		String[] mytextarray = new String[4];
 		
 		mytextarray[0] = "<b>" + res.getString(R.string.passage_a1) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b1) + " " + res.getString(R.string.passage_c1)
@@ -65,7 +66,16 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 		mytextarray[1] = "<b>" + res.getString(R.string.passage_a2) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b2) + " " + res.getString(R.string.passage_c2)
 				+ " : " + res.getString(R.string.passage_d2);		
+		mytextarray[2] = "<b>" + res.getString(R.string.passage_a3) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b3) + " " + res.getString(R.string.passage_c3)
+				+ " : " + res.getString(R.string.passage_d3);	
+		mytextarray[3] = "<b>" + res.getString(R.string.passage_a4) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b4) + " " + res.getString(R.string.passage_c4)
+				+ " : " + res.getString(R.string.passage_d4);		
 		
+		int idx = new Random().nextInt(mytextarray.length);	
+		
+		String fulltext = (mytextarray[idx]);		
 		
 		//fill TextViews with the retrieved data
 		
@@ -83,7 +93,7 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 			
 			RemoteViews views = new RemoteViews(context.getPackageName(), R.layout.kyb_widget);
 			views.setTextViewText(R.id.dateTextView, dateString);
-			views.setTextViewText(R.id.allpassageTextView, Html.fromHtml(mytextarray[0]));
+			views.setTextViewText(R.id.allpassageTextView, Html.fromHtml(fulltext));
 	        views.setOnClickPendingIntent(R.id.kyb_icon, pendingIntent);
 	        
             // Tell the AppWidgetManager to perform an update on the current app widget
