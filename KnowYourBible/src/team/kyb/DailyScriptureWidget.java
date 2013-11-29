@@ -58,7 +58,7 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 				"<br>" + wBook + " " + wChapter
 				+ " : " + wVerse;	*/		
 		
-		String[] mytextarray = new String[4];
+		String[] mytextarray = new String[20];
 		
 		mytextarray[0] = "<b>" + res.getString(R.string.passage_a1) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b1) + " " + res.getString(R.string.passage_c1)
@@ -71,7 +71,56 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 				+ " : " + res.getString(R.string.passage_d3);	
 		mytextarray[3] = "<b>" + res.getString(R.string.passage_a4) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b4) + " " + res.getString(R.string.passage_c4)
-				+ " : " + res.getString(R.string.passage_d4);		
+				+ " : " + res.getString(R.string.passage_d4);	
+		mytextarray[4] = "<b>" + res.getString(R.string.passage_a5) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b5) + " " + res.getString(R.string.passage_c5)
+				+ " : " + res.getString(R.string.passage_d5);
+		mytextarray[5] = "<b>" + res.getString(R.string.passage_a6) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b6) + " " + res.getString(R.string.passage_c6)
+				+ " : " + res.getString(R.string.passage_d6);		
+		mytextarray[6] = "<b>" + res.getString(R.string.passage_a7) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b7) + " " + res.getString(R.string.passage_c7)
+				+ " : " + res.getString(R.string.passage_d7);	
+		mytextarray[7] = "<b>" + res.getString(R.string.passage_a8) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b8) + " " + res.getString(R.string.passage_c8)
+				+ " : " + res.getString(R.string.passage_d8);
+		mytextarray[8] = "<b>" + res.getString(R.string.passage_a9) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b9) + " " + res.getString(R.string.passage_c9)
+				+ " : " + res.getString(R.string.passage_d9);
+		mytextarray[9] = "<b>" + res.getString(R.string.passage_a10) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b10) + " " + res.getString(R.string.passage_c10)
+				+ " : " + res.getString(R.string.passage_d10);		
+		mytextarray[10] = "<b>" + res.getString(R.string.passage_a11) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b11) + " " + res.getString(R.string.passage_c11)
+				+ " : " + res.getString(R.string.passage_d11);	
+		mytextarray[11] = "<b>" + res.getString(R.string.passage_a12) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b12) + " " + res.getString(R.string.passage_c12)
+				+ " : " + res.getString(R.string.passage_d12);	
+		mytextarray[12] = "<b>" + res.getString(R.string.passage_a13) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b13) + " " + res.getString(R.string.passage_c13)
+				+ " : " + res.getString(R.string.passage_d13);
+		mytextarray[13] = "<b>" + res.getString(R.string.passage_a14) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b14) + " " + res.getString(R.string.passage_c14)
+				+ " : " + res.getString(R.string.passage_d14);		
+		mytextarray[14] = "<b>" + res.getString(R.string.passage_a15) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b15) + " " + res.getString(R.string.passage_c15)
+				+ " : " + res.getString(R.string.passage_d15);	
+		mytextarray[15] = "<b>" + res.getString(R.string.passage_a16) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b16) + " " + res.getString(R.string.passage_c16)
+				+ " : " + res.getString(R.string.passage_d16);
+		mytextarray[16] = "<b>" + res.getString(R.string.passage_a17) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b17) + " " + res.getString(R.string.passage_c17)
+				+ " : " + res.getString(R.string.passage_d17);	
+		mytextarray[17] = "<b>" + res.getString(R.string.passage_a18) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b18) + " " + res.getString(R.string.passage_c18)
+				+ " : " + res.getString(R.string.passage_d18);
+		mytextarray[18] = "<b>" + res.getString(R.string.passage_a19) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b19) + " " + res.getString(R.string.passage_c19)
+				+ " : " + res.getString(R.string.passage_d19);		
+		mytextarray[19] = "<b>" + res.getString(R.string.passage_a20) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b20) + " " + res.getString(R.string.passage_c20)
+				+ " : " + res.getString(R.string.passage_d20);	
+	
 		
 		int idx = new Random().nextInt(mytextarray.length);	
 		

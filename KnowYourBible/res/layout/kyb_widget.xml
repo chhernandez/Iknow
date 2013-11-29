@@ -25,7 +25,7 @@
         android:id="@+id/dateTextView"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:textSize="20dp"
+        android:textSize="20sp"
  		android:padding="5dp"     
 		android:layout_toRightOf="@id/kyb_icon"  
 		android:textColor="#ffffff"
@@ -33,9 +33,13 @@
         
     </TextView>
      
+
      <TextView
         android:id="@+id/allpassageTextView"
-        style="@style/passageStyle"
+		android:layout_width="match_parent"
+		android:layout_height="wrap_content"
+		android:textSize="18sp"
+		android:layout_margin="5dp"
 		android:textIsSelectable="true"
 		android:layout_below="@id/kyb_icon"
 		android:layout_centerVertical="true"
@@ -44,5 +48,5 @@
 		android:textColor="#d2d2d2"
         ></TextView>   
     
- 
+
 </RelativeLayout>
