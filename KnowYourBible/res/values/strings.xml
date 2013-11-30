@@ -114,10 +114,10 @@
 	<string name="passage_c5">15</string>
 	<string name="passage_d5">26</string>
 	
-	<string name="passage_a6">Always rejoice in the Lord. Once more I will say, Rejoice!</string>
-	<string name="passage_b6">@string/book50</string>
-	<string name="passage_c6">4</string>
-	<string name="passage_d6">4</string>
+	<string name="passage_a6">Trust in Jehovah with all your heart, and do not rely on your own understanding.</string>
+	<string name="passage_b6">@string/book20</string>
+	<string name="passage_c6">3</string>
+	<string name="passage_d6">5</string>
 	
 	<string name="passage_a7">Not many of you should become teachers, my brothers, knowing that we shall receive heavier judgment.</string>
 	<string name="passage_b7">@string/book59</string>
@@ -149,10 +149,10 @@
 	<string name="passage_c12">7</string>
 	<string name="passage_d12">9</string>
 	
-	<string name="passage_a13">The tree that you saw that grew great and became strong, whose top reached the heavens and was visible to all the earth.</string>
-	<string name="passage_b13">@string/book27</string>
-	<string name="passage_c13">4</string>
-	<string name="passage_d13">20</string>	
+	<string name="passage_a13">May people know that you, whose name is Jehovah, You alone are the Most High over all the earth.</string>
+	<string name="passage_b13">@string/book19</string>
+	<string name="passage_c13">83</string>
+	<string name="passage_d13">18</string>	
 	
 	<string name="passage_a14">Teach me to do your will, for you are my God. Your spirit is good; may it lead me on level ground.</string>
 	<string name="passage_b14">@string/book19</string>
@@ -174,10 +174,10 @@
 	<string name="passage_c17">12</string>
 	<string name="passage_d17">3</string>
 	
-	<string name="passage_a18">While he was sitting on the Mount of Olives, the disciples approached him privately, saying: “Tell us, when will these things be, and what will be the sign of your presence and of the conclusion of the system of things”?</string>
-	<string name="passage_b18">@string/book40</string>
-	<string name="passage_c18">24</string>
-	<string name="passage_d18">3</string>		
+	<string name="passage_a18">Sanctify them by means of the truth; your word is truth.</string>
+	<string name="passage_b18">@string/book43</string>
+	<string name="passage_c18">17</string>
+	<string name="passage_d18">17</string>			
 	
 	<string name="passage_a19">For all those who sinned without law will also perish without law; but all those who sinned under law will be judged by law.</string>
 	<string name="passage_b19">@string/book45</string>
@@ -189,7 +189,15 @@
 	<string name="passage_c20">3</string>
 	<string name="passage_d20">22</string>
 		
+	<string name="passage_a21">Jesus Christ is the same yesterday and today, and forever.</string>
+	<string name="passage_b21">@string/book58</string>
+	<string name="passage_c21">13</string>
+	<string name="passage_d21">8</string>
 	
+	<string name="passage_a22">Also, continue showing mercy to some who have doubts.</string>
+	<string name="passage_b22">@string/book65</string>
+	<string name="passage_c22">1</string>
+	<string name="passage_d22">22</string>
 
 	<string name="book1">Genesis</string>
 	<string name="book2">Exodus</string>	

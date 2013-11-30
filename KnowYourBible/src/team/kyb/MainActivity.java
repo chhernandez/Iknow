@@ -101,8 +101,8 @@ public class MainActivity extends Activity {
 					new Intent(this, Scriptures.class);
 			startActivity(listScriptures); 
 			return true;
-		case R.id.settings:
-			return true;
+/*		case R.id.settings:
+			return true;*/
 		case R.id.help:
 			showDialog(DIALOG_HELP_ID);
 			return true;

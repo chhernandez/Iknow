@@ -110,10 +110,10 @@
 	<string name="passage_c5">15</string>
 	<string name="passage_d5">26</string>
 	
-	<string name="passage_a6">Siempre regocíjense en el Señor. Una vez más diré: ¡Regocíjense!</string>
-	<string name="passage_b6">@string/book50</string>
-	<string name="passage_c6">4</string>
-	<string name="passage_d6">4</string>
+	<string name="passage_a6">Confía en Jehová con todo tu corazó, y no te apoyes en tu propio entendimiento.</string>
+	<string name="passage_b6">@string/book20</string>
+	<string name="passage_c6">3</string>
+	<string name="passage_d6">5</string>
 	
 	<string name="passage_a7">No muchos de ustedes deberían hacerse maestros, hermanos míos, sabiendo que recibiremos juicio más severo.</string>
 	<string name="passage_b7">@string/book59</string>
@@ -145,10 +145,10 @@
 	<string name="passage_c12">7</string>
 	<string name="passage_d12">9</string>
 	
-	<string name="passage_a13">El árbol que contemplaste, que se hizo grande y llegó a ser fuerte, y la altura del cual finalmente alcanzó a los cielos, y que le era visible a toda la tierra.</string>
-	<string name="passage_b13">@string/book27</string>
-	<string name="passage_c13">4</string>
-	<string name="passage_d13">20</string>	
+	<string name="passage_a13">Para que la gente sepa que tú, cuyo nombre es Jehová, tú solo eres el Altísimo sobre toda la tierra.</string>
+	<string name="passage_b13">@string/book19</string>
+	<string name="passage_c13">83</string>
+	<string name="passage_d13">18</string>	
 	
 	<string name="passage_a14">Enséñame a hacer tu voluntad, porque tú eres mi Dios. Tu espíritu es bueno; que me guíe en la tierra de la rectitud.</string>
 	<string name="passage_b14">@string/book19</string>
@@ -170,10 +170,10 @@
 	<string name="passage_c17">12</string>
 	<string name="passage_d17">3</string>
 	
-	<string name="passage_a18">Estando él sentado en el monte de los Olivos, se acercaron a él los discípulos privadamente, y dijeron: “Dinos: ¿Cuándo serán estas cosas, y qué será la señal de tu presencia y de la conclusión del sistema de cosas?”.</string>
-	<string name="passage_b18">@string/book40</string>
-	<string name="passage_c18">24</string>
-	<string name="passage_d18">3</string>		
+	<string name="passage_a18">Santifícalos por medio de la verdad; tu palabra es la verdad.</string>
+	<string name="passage_b18">@string/book43</string>
+	<string name="passage_c18">17</string>
+	<string name="passage_d18">17</string>		
 	
 	<string name="passage_a19">Por ejemplo, todos los que hayan pecado sin ley, también perecerán sin ley; pero todos los que hayan pecado bajo ley serán juzgados por ley.</string>
 	<string name="passage_b19">@string/book45</string>
@@ -185,7 +185,15 @@
 	<string name="passage_c20">3</string>
 	<string name="passage_d20">22</string>
 		
+	<string name="passage_a21">Jesucristo es el mismo ayer y hoy, y para siempre.</string>
+	<string name="passage_b21">@string/book58</string>
+	<string name="passage_c21">13</string>
+	<string name="passage_d21">8</string>
 	
+	<string name="passage_a22">También, continúen mostrando misericordia a algunos que tienen dudas.</string>
+	<string name="passage_b22">@string/book65</string>
+	<string name="passage_c22">1</string>
+	<string name="passage_d22">22</string>		
 
 	<string name="book1">Génesis</string>
 	<string name="book2">Éxodo</string>	

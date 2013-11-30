@@ -4,10 +4,11 @@
     android:initialLayout="@layout/kyb_widget"
     android:minWidth="250dp"
     android:minHeight="120dp"
-    android:updatePeriodMillis="1800000"
+    android:updatePeriodMillis="4320000"
     android:label="@string/kybwidgetlabel" 
     android:widgetCategory="keyguard|home_screen"  
     >
-  <!--    android:updatePeriodMillis="4320000"   -->
+  <!--    android:updatePeriodMillis="4320000" - 12 hrs
+  			    android:updatePeriodMillis="1800000" - 30 mins  -->
     
 </appwidget-provider>

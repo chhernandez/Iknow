@@ -190,7 +190,19 @@ public class SplashScreen extends Activity {
 						getResources().getString(R.string.passage_b20), 
 						Integer.parseInt(getResources().getString(R.string.passage_c20)), 
 						Integer.parseInt(getResources().getString(R.string.passage_d20))
-				);				
+				);		
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a21),
+						getResources().getString(R.string.passage_b21), 
+						Integer.parseInt(getResources().getString(R.string.passage_c21)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d21))
+				);								
+  				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a22),
+						getResources().getString(R.string.passage_b22), 
+						Integer.parseInt(getResources().getString(R.string.passage_c22)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d22))
+				);					
 				
 	    } // end of 		if (dbExist){
 
