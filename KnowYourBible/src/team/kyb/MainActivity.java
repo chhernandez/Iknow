@@ -101,8 +101,9 @@ public class MainActivity extends Activity {
 					new Intent(this, Scriptures.class);
 			startActivity(listScriptures); 
 			return true;
-/*		case R.id.settings:
-			return true;*/
+		case R.id.settings:
+			startActivityForResult(new Intent(this, Settings.class), 0);
+			return true;
 		case R.id.help:
 			showDialog(DIALOG_HELP_ID);
 			return true;
@@ -118,6 +119,14 @@ public class MainActivity extends Activity {
 		}
 		
 	} 	// End of 	public boolean onOptionsItemSelected(MenuItem item) {
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data){
+		
+		if (requestCode == RESULT_CANCELED){
+			
+		}
+	}
 
 	@Override
 	protected Dialog onCreateDialog(int id){

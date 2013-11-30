@@ -99,6 +99,15 @@
             android:name="team.kyb.iknow.IKnowGame"
             android:label="@string/iknow_label" >
         </activity>    
+     
+      	<activity
+      	    android:name="team.kyb.Settings"
+      	    android:label="@string/settings_label"
+      	    >
+      	    
+      	</activity>
+      	
+      	
        	<receiver 
       	    android:icon="@drawable/icon"
       	    android:label="@string/kybwidgetlabel"
