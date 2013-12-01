@@ -13,6 +13,7 @@
     <string name="help_label">Help</string>
     <string name="exit_label">Exit Game</string>
     <string name="about_label">About</string>
+    <string name="reset_label">Reset Score</string>
     
 	<string name="correct_label">Correct: </string>   
 	<string name="attempts_label">Attempts: </string>

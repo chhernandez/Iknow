@@ -13,6 +13,7 @@
     <string name="help_label">Ayuda</string>
     <string name="exit_label">Salir del Juego</string>
     <string name="about_label">Informacción</string>
+    <string name="reset_label">Restablecer Resultados</string>
     
 	<string name="correct_label">Correctos: </string>   
 	<string name="attempts_label">Intentos: </string>

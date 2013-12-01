@@ -132,6 +132,12 @@ public class IKnowGame extends Activity {
 			tv_numCorrect.setText(String.valueOf(numCorrect));
 			tv_numAttempts.setText(String.valueOf(numAttempts));
 			return true;
+		case R.id.exit:
+			// create a new Intent to launch
+			Intent exitIKnow = 
+					new Intent(this, MainActivity.class);
+			startActivity(exitIKnow); 
+
 		}
 		return false;
 	} 	
