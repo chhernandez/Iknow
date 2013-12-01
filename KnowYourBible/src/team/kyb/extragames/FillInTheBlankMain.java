@@ -6,7 +6,9 @@ import team.kyb.animationAPI.AnimationHelper;
 import team.kyb.animationAPI.LoseEffect;
 import team.kyb.animationAPI.WinEffect;
 import team.kyb.database.DatabaseConnector;
+import team.kyb.database.EditScripture;
 import android.app.Activity;
+import android.app.AlertDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
@@ -68,9 +70,9 @@ public class FillInTheBlankMain extends Activity {
 
 		mGame = new FillInTheBlankGame(scripture);
 		
-		mScripture.setText(mGame.getMissingString() + "  "
-				+ scriptureHelper.getBook() + ":"
-				+ scriptureHelper.getChapter());
+		mScripture.setText(mGame.getMissingString() + "  ("
+				+ scriptureHelper.getBook() + " " + scriptureHelper.getChapter() + " : "
+				+ scriptureHelper.getVerse() + ")");
 				
 		mWord1.setText(mGame.getWords()[0]);
 		mWord2.setText(mGame.getWords()[1]);
@@ -112,26 +114,78 @@ public class FillInTheBlankMain extends Activity {
 
 		@Override
 		public void onClick(View v) {
-			mScripture.setText(scripture);
-			mCheckGame.setVisibility(2);
 
-			mNewGame.setVisibility(0);
-
-			int[] input = new int[4];
-			input[0] = Integer.parseInt(mOrder1.getText().toString());
-			input[1] = Integer.parseInt(mOrder2.getText().toString());
-			input[2] = Integer.parseInt(mOrder3.getText().toString());
-			input[3] = Integer.parseInt(mOrder4.getText().toString());
-			String inputString = getOrderString(input);
-			String orderString = getOrderString(mGame.getOrder());
-
-			if (inputString.equals(orderString)) {
-				mStatus.setText("You won");
-				winEffect();
+			
+			if(mOrder1.getText().length() == 0 || mOrder2.getText().length() == 0 
+					|| mOrder3.getText().length() == 0 || mOrder4.getText().length() == 0 ){
+				AlertDialog.Builder vFillBlank = new AlertDialog.Builder(FillInTheBlankMain.this);
+				
+				//set dialog title and message, and provide the button to dismiss
+				vFillBlank.setTitle(R.string.vFillBlankTitle);
+				vFillBlank.setMessage(R.string.vFillBlankMessage);
+				vFillBlank.setPositiveButton(R.string.vButton, null);
+				vFillBlank.show();
+				
+			} else if(mOrder1.getText().length() > 1 || mOrder2.getText().length() > 1 
+					|| mOrder3.getText().length() > 1 || mOrder4.getText().length() > 1 ){
+				AlertDialog.Builder vFillBlank = new AlertDialog.Builder(FillInTheBlankMain.this);
+				
+				//set dialog title and message, and provide the button to dismiss
+				vFillBlank.setTitle(R.string.vFillBlankTitle);
+				vFillBlank.setMessage(R.string.vFillBlankMessage);
+				vFillBlank.setPositiveButton(R.string.vButton, null);
+				vFillBlank.show();
+				
+			} else if(Integer.parseInt(mOrder1.getText().toString()) > 4 
+					|| Integer.parseInt(mOrder2.getText().toString()) > 4
+					|| Integer.parseInt(mOrder3.getText().toString()) > 4			
+					|| Integer.parseInt(mOrder4.getText().toString()) > 4 ){
+				AlertDialog.Builder vFillBlank = new AlertDialog.Builder(FillInTheBlankMain.this);
+				
+				//set dialog title and message, and provide the button to dismiss
+				vFillBlank.setTitle(R.string.vFillBlankTitle);
+				vFillBlank.setMessage(R.string.vFillBlankMessage);
+				vFillBlank.setPositiveButton(R.string.vButton, null);
+				vFillBlank.show();
+				
+			} else if(Integer.parseInt(mOrder1.getText().toString()) < 1 
+					|| Integer.parseInt(mOrder2.getText().toString()) < 1
+					|| Integer.parseInt(mOrder3.getText().toString()) < 1			
+					|| Integer.parseInt(mOrder4.getText().toString()) < 1 ){
+				AlertDialog.Builder vFillBlank = new AlertDialog.Builder(FillInTheBlankMain.this);
+				
+				//set dialog title and message, and provide the button to dismiss
+				vFillBlank.setTitle(R.string.vFillBlankTitle);
+				vFillBlank.setMessage(R.string.vFillBlankMessage);
+				vFillBlank.setPositiveButton(R.string.vButton, null);
+				vFillBlank.show();
+				
 			} else {
-				mStatus.setText("You lose");
-				loseEffect();
-			}
+				
+				mScripture.setText(scripture);
+				mCheckGame.setVisibility(2);
+
+				mNewGame.setVisibility(0);				
+				
+				int[] input = new int[4];
+				input[0] = Integer.parseInt(mOrder1.getText().toString());
+				input[1] = Integer.parseInt(mOrder2.getText().toString());
+				input[2] = Integer.parseInt(mOrder3.getText().toString());
+				input[3] = Integer.parseInt(mOrder4.getText().toString());
+				String inputString = getOrderString(input);
+				String orderString = getOrderString(mGame.getOrder());
+
+				if (inputString.equals(orderString)) {
+					mStatus.setText("You won");
+					winEffect();
+				} else {
+					mStatus.setText("You lose");
+					loseEffect();
+				}				
+				
+				
+			} // end of if validation number
+	
 		}
 	};
 

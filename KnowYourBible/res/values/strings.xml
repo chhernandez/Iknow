@@ -72,6 +72,10 @@
 	<string name="vverseMessage">Please enter verse number</string>	
 	<string name="vButton">OK</string>
 	
+	<string name="vFillBlankTitle">Number Required</string>
+	<string name="vFillBlankMessage">Please enter a number from 1 to 4</string>
+	
+	
 	<string name="newline">\n</string>
 	<string name="newgame">New Game</string>
 	
