@@ -56,6 +56,7 @@ public final class R {
         public static final int splashimage=0x7f020018;
         public static final int tear=0x7f020019;
         public static final int tear2=0x7f02001a;
+        public static final int widgetpreview=0x7f02001b;
     }
     public static final class id {
         public static final int a=0x7f0a0024;

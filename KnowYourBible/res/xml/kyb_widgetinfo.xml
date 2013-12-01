@@ -6,6 +6,8 @@
     android:minHeight="120dp"
     android:updatePeriodMillis="4320000"
     android:label="@string/kybwidgetlabel" 
+  	android:previewImage="@drawable/widgetpreview"
+    
     android:widgetCategory="keyguard|home_screen"  
     >
   <!--    android:updatePeriodMillis="4320000" - 12 hrs

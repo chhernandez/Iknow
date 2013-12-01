@@ -70,9 +70,9 @@ public class FillInTheBlankMain extends Activity {
 
 		mGame = new FillInTheBlankGame(scripture);
 		
-		mScripture.setText(mGame.getMissingString() + "  ("
+		mScripture.setText(mGame.getMissingString() + " "
 				+ scriptureHelper.getBook() + " " + scriptureHelper.getChapter() + " : "
-				+ scriptureHelper.getVerse() + ")");
+				+ scriptureHelper.getVerse());
 				
 		mWord1.setText(mGame.getWords()[0]);
 		mWord2.setText(mGame.getWords()[1]);
