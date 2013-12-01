@@ -38,7 +38,7 @@
         android:layout_marginTop="15dp"
         android:paddingTop="10dp"
         android:text="w1"
-        android:textSize="12sp" />
+ />
 
     <EditText
         android:id="@+id/order2"
@@ -96,6 +96,8 @@
         android:layout_alignBottom="@+id/order4"
         android:layout_alignLeft="@+id/word3"
         android:text="TextView" />
+    
+
 
     <Button
         android:id="@+id/button1"
@@ -103,7 +105,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_below="@+id/order4"
-        android:layout_centerHorizontal="true"
+		android:layout_alignParentRight="true"
         android:text="@string/submit" />
 
     <Button
@@ -111,16 +113,16 @@
         style="?android:attr/buttonStyleSmall"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button1"
-        android:layout_centerHorizontal="true"
+        android:layout_below="@+id/order4"
+		android:layout_alignParentLeft="true"
         android:text="@string/newgame" 
         android:visibility="invisible"/>
 
-    <TextView
+        <TextView
         android:id="@+id/statusFill"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_below="@+id/button2"
+        android:layout_below="@+id/button1"
         android:layout_centerHorizontal="true"
         android:textAppearance="?android:attr/textAppearanceMedium" />
 
