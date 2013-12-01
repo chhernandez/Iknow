@@ -10,6 +10,7 @@ import team.kyb.database.Scriptures;
 import team.kyb.extragames.ScriptureForGameHelper;
 import android.app.Activity;
 import android.content.Intent;
+import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
 import android.view.Menu;
@@ -37,27 +38,41 @@ public class IKnowGame extends Activity {
 	private String correctBook, correctChapter, correctVerse;
 	private Spinner spinnerBook, spinnerChapter, spinnerVerse;
 	private TextView tv_game_status, tv_numCorrect, tv_numAttempts;
-	private int numCorrect, numAttempts;
+	
 	private String verseToDisplay;
 	private TextView tv_displayVerse;
 	private ArrayList<String> listVerses;
 	private int numVerses;
 	private Button buttonNextIKnow;
 	
+	private int numCorrect = 0;
+	private int numAttempts = 0;
+	private SharedPreferences mPrefs;
+	
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.iknow_layout);
 		
-		numAttempts = 0;
-		numCorrect = 0;
-		
+		// find r ids
 		spinnerBook = (Spinner) findViewById(R.id.spinner_book);
 		spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
 		spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
 		
-		
 		buttonNextIKnow = (Button) findViewById(R.id.next_iknow);
+		
+		tv_numCorrect = (TextView) findViewById(R.id.numCorrect);
+		tv_numAttempts = (TextView) findViewById(R.id.numAttempts);
+		
+		
+		// initiate, retreive scores
+		mPrefs = getSharedPreferences("ttt_prefs", MODE_PRIVATE);
+		numCorrect = mPrefs.getInt("numCorrect",0);
+		numAttempts = mPrefs.getInt("numAttempts",0);
+		
+		// set scores
+		tv_numCorrect.setText(String.valueOf(numCorrect));
+		tv_numAttempts.setText(String.valueOf(numAttempts));
 		
 		// populating spinners
 		addItemsOnSpinnerBook();
@@ -65,7 +80,6 @@ public class IKnowGame extends Activity {
 		addItemsOnSpinnerVerse();
 		
 		// GET RANDOM VERSE !!!
-
 		database.open();
 		ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
 		verseToDisplay = scripture.getPassage();
@@ -109,11 +123,17 @@ public class IKnowGame extends Activity {
 	// handle choice from options menu
 	@Override
 	public boolean onOptionsItemSelected(MenuItem item) {
-		// create a new Intent to launch
-		Intent exitIKnow = 
-				new Intent(this, MainActivity.class);
-		startActivity(exitIKnow); 
-		return super.onOptionsItemSelected(item); 
+		super.onOptionsItemSelected(item);
+		switch (item.getItemId()) {
+
+		case R.id.reset:
+			numCorrect = 0;
+			numAttempts = 0;
+			tv_numCorrect.setText(String.valueOf(numCorrect));
+			tv_numAttempts.setText(String.valueOf(numAttempts));
+			return true;
+		}
+		return false;
 	} 	
 
 	public void displayVerse( String verseToDisplay)
@@ -326,6 +346,20 @@ public class IKnowGame extends Activity {
 		});
 		
 		
-	}	
+	}
+	
+	@Override
+	protected void onStop() 
+	{
+		super.onStop();
+		
+		// save current scores
+		SharedPreferences.Editor ed = mPrefs.edit();
+		ed.putInt("numCorrect", numCorrect);
+		ed.putInt("numAttempts", numAttempts);
+		ed.commit();
+	}
+	
+	
 	
 }

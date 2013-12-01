@@ -60,9 +60,9 @@ public final class R {
     }
     public static final class id {
         public static final int a=0x7f0a0024;
-        public static final int about=0x7f0a0072;
+        public static final int about=0x7f0a0073;
         public static final int aboutgame=0x7f0a0000;
-        public static final int addscripture=0x7f0a0073;
+        public static final int addscripture=0x7f0a0074;
         public static final int allpassageTextView=0x7f0a0052;
         public static final int attemps=0x7f0a0042;
         public static final int b=0x7f0a0031;
@@ -96,9 +96,9 @@ public final class R {
         public static final int countValue2=0x7f0a0036;
         public static final int d=0x7f0a0026;
         public static final int dateTextView=0x7f0a0051;
-        public static final int deletescripture=0x7f0a0079;
+        public static final int deletescripture=0x7f0a007a;
         public static final int e=0x7f0a001c;
-        public static final int editscripture=0x7f0a0078;
+        public static final int editscripture=0x7f0a0079;
         public static final int exit=0x7f0a006e;
         public static final int f=0x7f0a0027;
         public static final int g=0x7f0a0028;
@@ -111,7 +111,7 @@ public final class R {
         public static final int hangmanView04=0x7f0a003b;
         public static final int hangmanView05=0x7f0a003c;
         public static final int hangmanView06=0x7f0a003d;
-        public static final int help=0x7f0a0071;
+        public static final int help=0x7f0a0072;
         public static final int helpgame=0x7f0a003f;
         public static final int i=0x7f0a0021;
         public static final int j=0x7f0a002a;
@@ -119,9 +119,9 @@ public final class R {
         public static final int keyboard_hangman=0x7f0a0019;
         public static final int kyb_icon=0x7f0a0050;
         public static final int l=0x7f0a002c;
-        public static final int listbooks=0x7f0a0074;
-        public static final int listchapters=0x7f0a0075;
-        public static final int listverses=0x7f0a0076;
+        public static final int listbooks=0x7f0a0075;
+        public static final int listchapters=0x7f0a0076;
+        public static final int listverses=0x7f0a0077;
         public static final int m=0x7f0a0033;
         public static final int main_view=0x7f0a0008;
         public static final int n=0x7f0a0032;
@@ -141,13 +141,14 @@ public final class R {
         public static final int passagetext=0x7f0a0055;
         public static final int q=0x7f0a001a;
         public static final int r=0x7f0a001d;
-        public static final int randomscripture=0x7f0a0077;
+        public static final int randomscripture=0x7f0a0078;
+        public static final int reset=0x7f0a006f;
         public static final int s=0x7f0a0025;
         public static final int saveScriptureButton=0x7f0a0059;
         public static final int scripture_fill=0x7f0a000b;
         public static final int scripture_hangman=0x7f0a0017;
-        public static final int scriptures=0x7f0a006f;
-        public static final int settings=0x7f0a0070;
+        public static final int scriptures=0x7f0a0070;
+        public static final int settings=0x7f0a0071;
         public static final int sp_scripturebook=0x7f0a0056;
         public static final int sp_scripturechapter=0x7f0a0057;
         public static final int sp_scriptureverse=0x7f0a0058;
