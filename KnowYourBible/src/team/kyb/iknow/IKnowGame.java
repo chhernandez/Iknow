@@ -138,7 +138,8 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
  
             @Override
             public void onClick(View view) {
-                speakOut();
+                //speakOut();
+            	speakOut2(verseToDisplay);
             }
  
         });		
@@ -215,7 +216,18 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }   
     
-    
+    private void speakOut2(String mystring) {
+   	 
+	//	TextView textview_text = (TextView)  findViewById(R.id.textview_text);
+	  	
+    	
+       String text = mystring;
+	
+		//String text = "Hello there, I'm here and working";
+		
+		Log.i("TTS", text);
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }      
     
 
 	@Override
@@ -363,6 +375,11 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 //									"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 //									, Toast.LENGTH_SHORT).show();
 					tv_game_status.setText(R.string.correct_label2);
+					
+					if(mSoundOn){	
+						speakOut2(getString(R.string.correct_label2));
+					}
+					
 					numCorrect++;
 					tv_numCorrect.setText(String.valueOf(numCorrect));
 					tv_numAttempts.setText(String.valueOf(numAttempts));
@@ -402,6 +419,10 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 					//getString(R.string.hello)
 					//String answer = "Wrong! Answer is " + correctBook + " " + correctChapter + ":" + correctVerse ;
 					String answer = getString(R.string.wronganswer) + " " + correctBook + " " + correctChapter + " : " + correctVerse ;
+					
+					if(mSoundOn){
+						speakOut2(answer);
+					}
 					tv_game_status.setText(answer);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 					buttonNextIKnow.setEnabled(true);
