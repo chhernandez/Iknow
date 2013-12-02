@@ -18,7 +18,7 @@
     <string name="reset_label">Reset Score</string>
 
 	<string name="correct_label">Correct: </string>   
-	<string name="attempts_label">Attempts: </string>
+	<string name="attempts_label">Wrong: </string>
 	<string name="ready_label">Ready: </string>
 	<string name="next_label"> Next </string>
 	<string name="correct_label2">Correct!</string>

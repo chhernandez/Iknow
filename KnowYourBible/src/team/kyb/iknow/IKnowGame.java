@@ -56,6 +56,13 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 	
 	private int numCorrect = 0;
 	private int numAttempts = 0;
+	private int numHighScore = 0;
+	private int numGoalSetting = 4; //make this adjustable later in settings. chh 12/2/2013
+	private int numWrongSetting = 3;
+	private boolean mSoundOn = true;
+
+		
+	
 	private SharedPreferences mPrefs;
 	
 	@Override
@@ -76,11 +83,21 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 		tv_numAttempts = (TextView) findViewById(R.id.numAttempts);
 		
 		btnSpeak = (ImageButton) findViewById(R.id.imageButton);
-		
+
 		// initiate, retreive scores
 		mPrefs = getSharedPreferences("ttt_prefs", MODE_PRIVATE);
 		numCorrect = mPrefs.getInt("numCorrect",0);
 		numAttempts = mPrefs.getInt("numAttempts",0);
+		numHighScore = mPrefs.getInt("numHighScore", 0);
+		numGoalSetting = mPrefs.getInt("numGoalSetting", 3);
+		numWrongSetting = mPrefs.getInt("numWrongSetting", 3);
+		mSoundOn = mPrefs.getBoolean("sound", true);
+		
+		if (mSoundOn){
+			btnSpeak.setVisibility(View.VISIBLE);
+		} else {
+			btnSpeak.setVisibility(View.GONE);
+		}
 		
 		// set scores
 		tv_numCorrect.setText(String.valueOf(numCorrect));
@@ -170,7 +187,10 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
                 Log.e("TTS", "This Language is not supported");
             } else {
                 btnSpeak.setEnabled(true);
-                speakOut();
+                
+                if(mSoundOn){
+                	speakOut();
+                }
             }
  
         } else {
@@ -212,8 +232,11 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 		case R.id.reset:
 			numCorrect = 0;
 			numAttempts = 0;
+			numHighScore = 0;
 			tv_numCorrect.setText(String.valueOf(numCorrect));
 			tv_numAttempts.setText(String.valueOf(numAttempts));
+			// need to add highscore on the layout. chh 12/2/2013
+			
 			return true;
 		case R.id.exit:
 			// create a new Intent to launch
@@ -315,7 +338,7 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 //								"\nSpinnerVerse : "+ String.valueOf(spinnerVerse.getSelectedItem()) 
 //								, Toast.LENGTH_SHORT).show();
 				
-				numAttempts++;
+
 				
 				userBook = String.valueOf(spinnerBook.getSelectedItem());
 				userChapter = String.valueOf(spinnerChapter.getSelectedItem());
@@ -342,55 +365,54 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 					buttonNextIKnow.setEnabled(true);
 					buttonSubmit.setEnabled(false);
-					winEffect();
+					 
+					Log.i("highscore = ", String.valueOf(numHighScore));	
+					Log.i("numCorrect = ", String.valueOf(numCorrect));	
+
+					if (numCorrect > numHighScore){
+						
+						numHighScore = numCorrect;
+						numCorrect = 0;
+						numAttempts = 0;
+						tv_numCorrect.setText(String.valueOf(numCorrect));
+						tv_numAttempts.setText(String.valueOf(numAttempts));						
+						
+						Log.i("highscore = ", String.valueOf(numHighScore));
+						
+						
+						 winEffect(); 
+						
+					}
+					
+			//		if (numCorrect > numGoalSetting){
+			//			winEffect();
+			//		}
 				}
-//				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
-//				{
-//					tv_game_status.setText(R.string.wrongb);
-//					tv_numAttempts.setText(String.valueOf(numAttempts));
-//				}
-//				else if (!correctBook.equals(userBook) && !correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
-//				{
-//					tv_game_status.setText(R.string.wrongbc);
-//					tv_numAttempts.setText(String.valueOf(numAttempts));
-//				}
-//				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && !correctVerse.equals(userVerse))
-//				{
-//					tv_game_status.setText(R.string.wrongbv);
-//					tv_numAttempts.setText(String.valueOf(numAttempts));
-//				}
-//				
-//				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && correctVerse.equals(userVerse))
-//				{
-//					tv_game_status.setText(R.string.wrongc);
-//					tv_numAttempts.setText(String.valueOf(numAttempts));
-//				}
-//				else if (!correctChapter.equals(userChapter) && correctBook.equals(userBook) && !correctVerse.equals(userVerse))
-//				{
-//					tv_game_status.setText(R.string.wrongcv);
-//					tv_numAttempts.setText(String.valueOf(numAttempts));
-//				}
-//				
-//				else if (!correctVerse.equals(userVerse) && correctChapter.equals(userChapter) && correctBook.equals(userBook))
-//				{
-//					tv_game_status.setText(R.string.wrongv);
-//					tv_numAttempts.setText(String.valueOf(numAttempts));
-//				}
-//				else if (!correctVerse.equals(userVerse) && !correctChapter.equals(userChapter) && !correctBook.equals(userBook))
-//				{
-//					tv_game_status.setText(R.string.wrongbcv);
-//					tv_numAttempts.setText(String.valueOf(numAttempts));
-//				}
+
 				else
 				{
 					buttonSubmit.setEnabled(false);
+					
+					numAttempts++;					
 					//getString(R.string.hello)
 					//String answer = "Wrong! Answer is " + correctBook + " " + correctChapter + ":" + correctVerse ;
 					String answer = getString(R.string.wronganswer) + " " + correctBook + " " + correctChapter + " : " + correctVerse ;
 					tv_game_status.setText(answer);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 					buttonNextIKnow.setEnabled(true);
-					loseEffect();
+					if (numAttempts > numWrongSetting){
+						
+						numCorrect = 0;
+						numAttempts = 0;
+						tv_numCorrect.setText(String.valueOf(numCorrect));
+						tv_numAttempts.setText(String.valueOf(numAttempts));
+						
+					
+						
+						loseEffect();
+						//reset score back to zeros.
+					}
+				
 				}
 
 			}
@@ -448,6 +470,10 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 		SharedPreferences.Editor ed = mPrefs.edit();
 		ed.putInt("numCorrect", numCorrect);
 		ed.putInt("numAttempts", numAttempts);
+		ed.putInt("numHighScore", numHighScore);
+		ed.putInt("numGoalSetting", numGoalSetting);
+		ed.putInt("numWrongSetting", numWrongSetting);
+		ed.putBoolean("sound", mSoundOn);
 		ed.commit();
 	}
 	
