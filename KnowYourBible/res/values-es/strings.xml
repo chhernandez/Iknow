@@ -70,6 +70,8 @@
 	<string name="vverseMessage">Por favor, introduzca el versiculo,</string>	
 	<string name="vButton">OK</string>
 	
+	<string name="tts_desc">Leer Texto</string>	
+	
 	<string name="newline">\n</string>	
 	<string name="newgame">Nuevo Juego</string>
 	

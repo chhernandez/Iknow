@@ -71,6 +71,8 @@
 	<string name="vverseMessage">Please enter verse number</string>	
 	<string name="vButton">OK</string>
 	
+	<string name="tts_desc">Read Scripture</string>	
+	
 	<string name="newline">\n</string>
 	<string name="newgame">New Game</string>		
 	

@@ -12,17 +12,28 @@
         style="@style/NiceButton"
         android:layout_width="240dp"
         android:layout_height="match_parent"
-
         android:text="@string/ready_label" 
         android:textIsSelectable="true"
         />   
 
+    <ImageButton 
+		android:id="@+id/imageButton" 
+		android:layout_width="wrap_content" 
+		android:layout_height="wrap_content"
+		android:contentDescription="@string/tts_desc" 
+        android:layout_toRightOf="@id/textview_text"		
+		android:src="@drawable/soundon4" 
+		android:layout_marginLeft="5dp"
+		android:gravity="left"
+		android:background="#D7E4FD"
+		/>      
+     
         <TextView
             android:id="@+id/correct"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:gravity="left"
-            android:layout_toRightOf="@id/textview_text"
+            android:layout_toRightOf="@id/imageButton"
             android:paddingLeft="5dp"
             android:text="@string/correct_label" />
 

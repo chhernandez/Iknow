@@ -2,6 +2,7 @@ package team.kyb.iknow;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 
 import team.kyb.MainActivity;
 import team.kyb.R;
@@ -15,12 +16,15 @@ import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.res.Resources;
 import android.os.Bundle;
+import android.speech.tts.TextToSpeech;
+import android.util.Log;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.View.OnClickListener;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
+import android.widget.ImageButton;
 import android.widget.Spinner;
 import android.widget.TextView;
 import android.widget.Toast;
@@ -28,13 +32,16 @@ import android.widget.SimpleCursorAdapter;
 import android.widget.CursorAdapter;
 import android.database.Cursor;
 
-public class IKnowGame extends Activity {
+public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 
 //	private Spinner spinnerBook = (Spinner) findViewById(R.id.spinner_book);
 //	private Spinner spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
 //	private Spinner spinnerVerse = (Spinner) findViewById(R.id.spinner_verse);
 	
 	DatabaseConnector database = new DatabaseConnector(this);
+	
+	private TextToSpeech tts;
+	private ImageButton btnSpeak;
 	
 	private String userBook, userChapter, userVerse;
 	private String correctBook, correctChapter, correctVerse;
@@ -56,6 +63,8 @@ public class IKnowGame extends Activity {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.iknow_layout);
 		
+		tts = new TextToSpeech(this, this);
+		
 		// find r ids
 		spinnerBook = (Spinner) findViewById(R.id.spinner_book);
 		spinnerChapter = (Spinner) findViewById(R.id.spinner_chapter);
@@ -66,6 +75,7 @@ public class IKnowGame extends Activity {
 		tv_numCorrect = (TextView) findViewById(R.id.numCorrect);
 		tv_numAttempts = (TextView) findViewById(R.id.numAttempts);
 		
+		btnSpeak = (ImageButton) findViewById(R.id.imageButton);
 		
 		// initiate, retreive scores
 		mPrefs = getSharedPreferences("ttt_prefs", MODE_PRIVATE);
@@ -84,6 +94,7 @@ public class IKnowGame extends Activity {
 		// GET RANDOM VERSE !!!
 		database.open();
 		ScriptureForGameHelper scripture = new ScriptureForGameHelper(database.getRandomScriptureForGame());
+		
 		verseToDisplay = scripture.getPassage();
 		
 		// Uncomment when have all spinners populated
@@ -102,6 +113,16 @@ public class IKnowGame extends Activity {
 		database.close();
 		displayVerse(verseToDisplay);
 		
+        // button on click event
+        btnSpeak.setOnClickListener(new OnClickListener() {
+ 
+            @Override
+            public void onClick(View view) {
+                speakOut();
+            }
+ 
+        });		
+		
 		// Delete when have uncomment above and have all spinners populated --------
 		// Get correct book, chapter, verse to check user's answer
 //		correctBook = "book 0";
@@ -112,7 +133,64 @@ public class IKnowGame extends Activity {
 		buttonNextIKnow.setEnabled(false);
 		checkUserAnswer(correctBook, correctChapter, correctVerse);
 		nextListener();
-	}
+		
+	}  // end of 	protected void onCreate(Bundle savedInstanceState) {
+	
+    @Override
+    public void onDestroy() {
+        // Don't forget to shutdown tts!
+        if (tts != null) {
+            tts.stop();
+            tts.shutdown();
+        }
+        super.onDestroy();
+    }	
+    
+    @Override
+    public void onInit(int status) {
+    	
+ 	   String mylocale = java.util.Locale.getDefault().getLanguage();   	
+ 
+        if (status == TextToSpeech.SUCCESS) {
+ 
+        	int result = tts.setLanguage(Locale.US);
+        	
+		 	if (mylocale.equals("es")){   
+		 		Locale locSpanish = new Locale("spa", "MEX");
+		 		result = tts.setLanguage(locSpanish);
+		 	} else if (mylocale.equals("en")){
+		 		result = tts.setLanguage(Locale.US);		 		
+		 	}
+
+        	//int result = tts.setLanguage(Locale.getDefault());  
+
+ 
+            if (result == TextToSpeech.LANG_MISSING_DATA
+                    || result == TextToSpeech.LANG_NOT_SUPPORTED) {
+                Log.e("TTS", "This Language is not supported");
+            } else {
+                btnSpeak.setEnabled(true);
+                speakOut();
+            }
+ 
+        } else {
+            Log.e("TTS", "Initilization Failed!");
+        }
+ 
+    }   // end of  public void onInit(int status) {
+    
+    private void speakOut() {
+    	 
+		TextView textview_text = (TextView)  findViewById(R.id.textview_text);
+	  	
+    	
+      //  String text = textview_text.getText().toString();
+		
+		String text = "Hello there, I'm here and working";
+ 
+        tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
+    }   
+    
 
 	@Override
 	public boolean onCreateOptionsMenu(Menu menu) {
