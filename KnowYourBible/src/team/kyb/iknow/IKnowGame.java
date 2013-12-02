@@ -5,6 +5,8 @@ import java.util.List;
 
 import team.kyb.MainActivity;
 import team.kyb.R;
+import team.kyb.animationAPI.LoseEffect;
+import team.kyb.animationAPI.WinEffect;
 import team.kyb.database.DatabaseConnector;
 import team.kyb.database.Scriptures;
 import team.kyb.extragames.ScriptureForGameHelper;
@@ -259,6 +261,7 @@ public class IKnowGame extends Activity {
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 					buttonNextIKnow.setEnabled(true);
 					buttonSubmit.setEnabled(false);
+					winEffect();
 				}
 //				else if (!correctBook.equals(userBook) && correctChapter.equals(userChapter) && correctVerse.equals(userVerse))
 //				{
@@ -306,6 +309,7 @@ public class IKnowGame extends Activity {
 					tv_game_status.setText(answer);
 					tv_numAttempts.setText(String.valueOf(numAttempts));
 					buttonNextIKnow.setEnabled(true);
+					loseEffect();
 				}
 
 			}
@@ -364,6 +368,16 @@ public class IKnowGame extends Activity {
 		ed.putInt("numCorrect", numCorrect);
 		ed.putInt("numAttempts", numAttempts);
 		ed.commit();
+	}
+	
+	public void loseEffect() {
+		Intent intent = new Intent(this, LoseEffect.class);
+		startActivity(intent);
+	}
+
+	public void winEffect() {
+		Intent intent = new Intent(this, WinEffect.class);
+		startActivity(intent);
 	}
 	
 	
