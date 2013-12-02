@@ -184,12 +184,15 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 		TextView textview_text = (TextView)  findViewById(R.id.textview_text);
 	  	
     	
-      //  String text = textview_text.getText().toString();
+       String text = textview_text.getText().toString();
+	
+		//String text = "Hello there, I'm here and working";
 		
-		String text = "Hello there, I'm here and working";
- 
+		Log.i("TTS", text);
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }   
+    
+    
     
 
 	@Override
