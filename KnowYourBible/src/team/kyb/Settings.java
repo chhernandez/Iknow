@@ -11,6 +11,7 @@ public class Settings extends PreferenceActivity {
 		super.onCreate(savedInstanceState);
 		
 		
+		getPreferenceManager().setSharedPreferencesName("ttt_prefs");		
 		addPreferencesFromResource(R.xml.preferences);	
 		
 	}

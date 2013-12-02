@@ -48,6 +48,8 @@
 	<string name="editscripture_label">Editar</string>
 	<string name="deletescripture_label">Borrar</string>
 	
+	<string name="highscore_label">Puntuacion: </string>	
+	
     <string name="button_cancel">Cancelar</string>
     <string name="button_delete">Borrar</string>	
 	

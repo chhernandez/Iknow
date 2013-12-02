@@ -167,6 +167,27 @@
  		android:layout_toRightOf="@id/textview_text" 	    
         android:paddingTop="15dp"
         android:textSize="15sp" />  	
+        
+   	   	<TextView 
+        	android:id="@+id/highscore"
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content"    
+       		android:gravity="center"
+  	    	android:layout_below="@+id/gamestatus"
+ 			android:layout_toRightOf="@id/textview_text" 
+       		android:text="@string/highscore_label"
+        />
+        
+        <TextView
+        	android:id="@+id/numhighscore"    
+        	android:layout_width="wrap_content"
+       		android:layout_height="wrap_content" 
+       		android:layout_below="@+id/gamestatus"
+ 			android:layout_toRightOf="@id/highscore"   
+       		android:text="0"
+       		android:gravity="center"
+
+        />
 
   	<Button
   	    android:id="@+id/button_submit"

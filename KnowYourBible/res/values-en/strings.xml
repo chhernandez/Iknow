@@ -49,6 +49,8 @@
 	<string name="editscripture_label">Edit</string>
 	<string name="deletescripture_label">Delete</string>
 	
+	<string name="highscore_label">High Score: </string>	
+	
     <string name="button_cancel">Cancel</string>
     <string name="button_delete">Delete</string>	
 	

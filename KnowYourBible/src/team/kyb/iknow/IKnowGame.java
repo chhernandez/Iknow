@@ -1,5 +1,6 @@
 package team.kyb.iknow;
 
+
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Locale;
@@ -46,7 +47,7 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 	private String userBook, userChapter, userVerse;
 	private String correctBook, correctChapter, correctVerse;
 	private Spinner spinnerBook, spinnerChapter, spinnerVerse;
-	private TextView tv_game_status, tv_numCorrect, tv_numAttempts;
+	private TextView tv_game_status, tv_numCorrect, tv_numAttempts, tv_numHighScore;
 	
 	private String verseToDisplay;
 	private TextView tv_displayVerse;
@@ -81,6 +82,8 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 		
 		tv_numCorrect = (TextView) findViewById(R.id.numCorrect);
 		tv_numAttempts = (TextView) findViewById(R.id.numAttempts);
+		tv_numHighScore = (TextView) findViewById(R.id.numhighscore);
+		
 		
 		btnSpeak = (ImageButton) findViewById(R.id.imageButton);
 
@@ -235,7 +238,7 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 			numHighScore = 0;
 			tv_numCorrect.setText(String.valueOf(numCorrect));
 			tv_numAttempts.setText(String.valueOf(numAttempts));
-			// need to add highscore on the layout. chh 12/2/2013
+			tv_numHighScore.setText(String.valueOf(numHighScore));
 			
 			return true;
 		case R.id.exit:
@@ -347,7 +350,7 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 				tv_game_status = (TextView) findViewById(R.id.game_status);
 				tv_numCorrect = (TextView) findViewById(R.id.numCorrect);
 				tv_numAttempts = (TextView) findViewById(R.id.numAttempts);
-				
+				tv_numHighScore = (TextView) findViewById(R.id.numhighscore);
 				
 				
 				
@@ -372,6 +375,8 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 					if (numCorrect > numHighScore){
 						
 						numHighScore = numCorrect;
+						tv_numHighScore.setText(String.valueOf(numHighScore));						
+						
 						numCorrect = 0;
 						numAttempts = 0;
 						tv_numCorrect.setText(String.valueOf(numCorrect));
@@ -486,6 +491,17 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 		Intent intent = new Intent(this, WinEffect.class);
 		startActivity(intent);
 	}
+	
+	
+	@Override
+	protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+		if (requestCode == RESULT_CANCELED) {
+			// Apply potentially new settings
+			mSoundOn = mPrefs.getBoolean("sound", true);
+			Log.i("sound on = ", String.valueOf(mSoundOn));
+			
+		}
+	}	
 	
 	
 	
