@@ -173,8 +173,10 @@
         	android:layout_width="wrap_content"
        		android:layout_height="wrap_content"    
        		android:gravity="center"
-  	    	android:layout_below="@+id/gamestatus"
+  	    	android:layout_below="@+id/game_status"
  			android:layout_toRightOf="@id/textview_text" 
+ 			android:layout_marginLeft="15dp"
+ 			android:layout_marginTop="5dp"
        		android:text="@string/highscore_label"
         />
         
@@ -182,8 +184,10 @@
         	android:id="@+id/numhighscore"    
         	android:layout_width="wrap_content"
        		android:layout_height="wrap_content" 
-       		android:layout_below="@+id/gamestatus"
- 			android:layout_toRightOf="@id/highscore"   
+       		android:layout_below="@+id/game_status"
+ 			android:layout_toRightOf="@id/highscore" 
+ 			android:layout_marginLeft="5dp"  
+  			android:layout_marginTop="5dp"			
        		android:text="0"
        		android:gravity="center"
 
