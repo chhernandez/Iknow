@@ -148,10 +148,10 @@
 	<string name="passage_c10">6</string>
 	<string name="passage_d10">18</string>
 	
-	<string name="passage_a11">Well, then, have I become YOUR enemy because I tell YOU the truth?</string>
-	<string name="passage_b11">@string/book48</string>
-	<string name="passage_c11">4</string>
-	<string name="passage_d11">16</string>
+	<string name="passage_a11">In time Jehovah commanded the fish, and it vomited Jonah out onto the dry land.</string>
+	<string name="passage_b11">@string/book32</string>
+	<string name="passage_c11">2</string>
+	<string name="passage_d11">10</string>
 	
 	<string name="passage_a12">And the family heads became jealous of Joseph and sold him into Egypt.</string>
 	<string name="passage_b12">@string/book44</string>
@@ -208,6 +208,21 @@
 	<string name="passage_c22">1</string>
 	<string name="passage_d22">22</string>
 
+	<string name="passage_a23">You are all, in fact, sons of God through your faith in Christ Jesus.</string>
+	<string name="passage_b23">@string/book48</string>
+	<string name="passage_c23">3</string>
+	<string name="passage_d23">26</string>	
+	
+	<string name="passage_a24">Get to know Him, and you will be at peace; Then good things will come your way.</string>
+	<string name="passage_b24">@string/book18</string>
+	<string name="passage_c24">22</string>
+	<string name="passage_d24">21</string>	
+	
+	<string name="passage_a25">And they were astounded at his way of teaching, for he was teaching them as one having authority, and not as the scribes.</string>
+	<string name="passage_b25">@string/book41</string>
+	<string name="passage_c25">1</string>
+	<string name="passage_d25">22</string>		
+	
 	<string name="book1">Genesis</string>
 	<string name="book2">Exodus</string>	
 	<string name="book3">Leviticus</string>	

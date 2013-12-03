@@ -140,10 +140,10 @@
 	<string name="passage_c10">6</string>
 	<string name="passage_d10">18</string>
 	
-	<string name="passage_a11">Pues, entonces, ¿me he hecho enemigo de ustedes porque les digo la verdad?</string>
-	<string name="passage_b11">@string/book48</string>
-	<string name="passage_c11">4</string>
-	<string name="passage_d11">16</string>
+	<string name="passage_a11">Con el tiempo Jehová dio orden al pez, de modo que este vomitó a Jonás en tierra seca.</string>
+	<string name="passage_b11">@string/book32</string>
+	<string name="passage_c11">2</string>
+	<string name="passage_d11">10</string>
 	
 	<string name="passage_a12">Y los cabezas de familia se pusieron celosos de José y lo vendieron en manos de Egipto.</string>
 	<string name="passage_b12">@string/book44</string>
@@ -198,7 +198,22 @@
 	<string name="passage_a22">También, continúen mostrando misericordia a algunos que tienen dudas.</string>
 	<string name="passage_b22">@string/book65</string>
 	<string name="passage_c22">1</string>
-	<string name="passage_d22">22</string>		
+	<string name="passage_d22">22</string>	
+	
+	<string name="passage_a23">Todos usteds, de hecho, son hijos de Dios mediante su fe en Cristo Jesús</string>
+	<string name="passage_b23">@string/book48</string>
+	<string name="passage_c23">3</string>
+	<string name="passage_d23">26</string>	
+	
+	<string name="passage_a24">Familiarízate con él, por favor, y conserva la paz; de tal modo te vendrán cosas buenas.</string>
+	<string name="passage_b24">@string/book18</string>
+	<string name="passage_c24">22</string>
+	<string name="passage_d24">21</string>	
+	
+	<string name="passage_a25">Y quedaban atónitos por su modo de enseñar, porque allí estaba enseñandoles como quien tiene autoridad, y no como escribas.</string>
+	<string name="passage_b25">@string/book41</string>
+	<string name="passage_c25">1</string>
+	<string name="passage_d25">22</string>					
 
 	<string name="book1">Génesis</string>
 	<string name="book2">Éxodo</string>	

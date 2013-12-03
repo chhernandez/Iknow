@@ -211,7 +211,7 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
        String text = textview_text.getText().toString();
 	
 		//String text = "Hello there, I'm here and working";
-		
+		tts.setSpeechRate((float) 0.8);		
 		Log.i("TTS", text);
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }   
@@ -226,6 +226,7 @@ public class IKnowGame extends Activity implements TextToSpeech.OnInitListener {
 		//String text = "Hello there, I'm here and working";
 		
 		Log.i("TTS", text);
+		tts.setSpeechRate((float) 0.8);
         tts.speak(text, TextToSpeech.QUEUE_FLUSH, null);
     }      
     

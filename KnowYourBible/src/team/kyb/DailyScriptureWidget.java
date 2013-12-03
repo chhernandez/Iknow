@@ -58,7 +58,7 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 				"<br>" + wBook + " " + wChapter
 				+ " : " + wVerse;	*/		
 		
-		String[] mytextarray = new String[20];
+		String[] mytextarray = new String[25];
 		
 		mytextarray[0] = "<b>" + res.getString(R.string.passage_a1) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b1) + " " + res.getString(R.string.passage_c1)
@@ -120,6 +120,21 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 		mytextarray[19] = "<b>" + res.getString(R.string.passage_a20) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b20) + " " + res.getString(R.string.passage_c20)
 				+ " : " + res.getString(R.string.passage_d20);	
+		mytextarray[20] = "<b>" + res.getString(R.string.passage_a21) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b21) + " " + res.getString(R.string.passage_c21)
+				+ " : " + res.getString(R.string.passage_d21);
+		mytextarray[21] = "<b>" + res.getString(R.string.passage_a22) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b22) + " " + res.getString(R.string.passage_c22)
+				+ " : " + res.getString(R.string.passage_d22);		
+		mytextarray[22] = "<b>" + res.getString(R.string.passage_a23) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b23) + " " + res.getString(R.string.passage_c23)
+				+ " : " + res.getString(R.string.passage_d23);	
+		mytextarray[23] = "<b>" + res.getString(R.string.passage_a24) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b24) + " " + res.getString(R.string.passage_c24)
+				+ " : " + res.getString(R.string.passage_d24);	
+		mytextarray[24] = "<b>" + res.getString(R.string.passage_a25) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b25) + " " + res.getString(R.string.passage_c25)
+				+ " : " + res.getString(R.string.passage_d25);
 	
 		
 		int idx = new Random().nextInt(mytextarray.length);	
