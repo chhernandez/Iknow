@@ -163,7 +163,7 @@ public class FillInTheBlankMain extends Activity {
 			} else {
 				
 				mScripture.setText(scripture);
-				mCheckGame.setVisibility(2);
+				mCheckGame.setEnabled(false);
 
 				mNewGame.setVisibility(0);				
 				

@@ -33,6 +33,14 @@ public class ScriptureForGameHelper {
 			if (endPos < 0) {
 				endPos = passageFull.indexOf(".", posOfWord);
 			}
+			
+			if (endPos < 0) {
+				endPos = passageFull.indexOf("!", posOfWord);
+			}
+			
+			if (endPos < 0) {
+				endPos = passageFull.length();
+			}
 
 			// Case word follow by a comma
 			if (passageFull.charAt(endPos - 1) == ',') {
