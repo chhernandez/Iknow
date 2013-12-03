@@ -10,6 +10,7 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.Display;
 import android.view.Menu;
@@ -17,6 +18,7 @@ import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class LoseEffect extends Activity {
 
@@ -27,7 +29,9 @@ public class LoseEffect extends Activity {
 	Handler RedrawHandler = new Handler(); // so redraw occurs in main thread
 	Timer mTmr = null;
 
-	TimerTask mTsk, mDone = null;
+	TimerTask mTsk = null;
+	
+	private TextView time;
 
 	int mScrWidth, mScrHeight;
 	// android.graphics.PointF mBallPos, mBallVelocity;
@@ -51,6 +55,9 @@ public class LoseEffect extends Activity {
 
 		// get screen dimensions
 		Display display = getWindowManager().getDefaultDisplay();
+		
+		time = (TextView) findViewById(R.id.timeBoxL);
+		
 		mScrWidth = display.getWidth();
 		mScrHeight = display.getHeight();
 
@@ -138,14 +145,17 @@ public class LoseEffect extends Activity {
 		// create timer to move ball to new position
 		mTmr = new Timer();
 		
-		
-		mDone = new TimerTask() {
-			@Override
-			public void run() {
-				finish();	
-			}
-		};
-		mTmr.schedule(mDone, 7000);
+		CountDownTimer a = new CountDownTimer(7000, 1000) {
+
+		     public void onTick(long millisUntilFinished) {
+		         time.setText("Try again in: " + millisUntilFinished / 1000);
+		     }
+
+		     public void onFinish() {
+		         time.setText("done!");
+		         finish();
+		     }
+		  }.start();
 		
 		mTsk = new TimerTask() {
 			public void run() {

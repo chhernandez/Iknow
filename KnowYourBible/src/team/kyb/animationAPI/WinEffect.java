@@ -10,14 +10,15 @@ import android.content.res.Configuration;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.os.Bundle;
+import android.os.CountDownTimer;
 import android.os.Handler;
 import android.view.Display;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.Window;
 import android.view.WindowManager.LayoutParams;
-import android.widget.FrameLayout;
 import android.widget.RelativeLayout;
+import android.widget.TextView;
 
 public class WinEffect extends Activity {
 
@@ -36,8 +37,8 @@ public class WinEffect extends Activity {
 	long mPrevTime;
 
 	final float ACC_FUDGE_FACTOR = .5f;
-
-	private TimerTask mDone;
+	
+	private TextView time;
 
 	@Override
 	public void onCreate(Bundle savedInstanceState) {
@@ -49,6 +50,9 @@ public class WinEffect extends Activity {
 								| LayoutParams.FLAG_KEEP_SCREEN_ON);
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.blank_falling_layout);
+		
+		time = (TextView) findViewById(R.id.timeBoxW);
+		
 		// create pointer to main screen
 		final RelativeLayout mainView = (android.widget.RelativeLayout) findViewById(R.id.main_view);
 
@@ -138,13 +142,18 @@ public class WinEffect extends Activity {
 		// create timer to move ball to new position
 		mTmr = new Timer();
 		
-		mDone = new TimerTask() {
-			@Override
-			public void run() {
-				finish();	
-			}
-		};
-		mTmr.schedule(mDone, 7000);
+		CountDownTimer a = new CountDownTimer(7000, 1000) {
+
+		     public void onTick(long millisUntilFinished) {
+		         time.setText("Congratulations! You Won! Play again in: " + millisUntilFinished / 1000);
+		     }
+
+		     public void onFinish() {
+		         time.setText("done!");
+		         finish();
+		     }
+		  }.start();
+
 		
 		mTsk = new TimerTask() {
 			public void run() {
