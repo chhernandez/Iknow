@@ -6,7 +6,10 @@
     <string name="iknow_label">Yo sé la Escritura</string>
     <string name="games_label">Más Juegos</string>
     <string name="hangman_label">El Ahorcado</string>
-    <string name="kybwidgetlabel">KYB Texto Diario</string>    
+    <string name="kybwidgetlabel">KYB Texto Diario</string> 
+    
+    <string name="fillin_label">Completar el Texto</string>
+    <string name="moreGame_label">Más Juegos</string>    
     
     <string name="scriptures_label">Base de Datos</string>
     <string name="settings_label">Ajustes</string>
@@ -83,7 +86,11 @@
 	    \n
 	    Fecha: December 15, 2013\n
 	    Hecho por: Carlos Hernandez, Khuong Thai, and Hoang Pham\n
+
 	    </string>
+	    
+	<string name="mycontactinfo">Envíenos correo a carloshernandez@utexas.edu o visite nuestro sitio web en http://www.7kplanet.com/kyb.html .</string>	
+	
 	<string name="helpgame">1) Para iniciar el juego, haga clic en el icono de Conozca Su Biblia en la pantalla de inicio o en la lista de aplicaciones.\n
 	    	2) La pantalla de bienvenida se mostrará durante unos segundos para configurar la base de datos de las escrituras y el archivo de instalación.\n
 	    	3) Después de la pantalla de bienvenida, la pantalla del menú principal se mostrará tres botones: Yo sé la Escritura, Base de Datos, y Más Juegos.\n

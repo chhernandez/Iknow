@@ -43,7 +43,21 @@
         android:layout_marginTop="25dp"
         android:gravity="center"
         android:onClick="startGames"
-        android:text="@string/games_label" />          
+        android:text="@string/games_label" />  
+        
+      <TextView
+        android:id="@+id/contactinfo"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_marginBottom="5dp"    
+        
+        android:autoLink="all"
+        android:textSize="12sp" 
+        android:text="@string/mycontactinfo"
+        android:padding="5dp"
+        android:textColor="#000000">
+	</TextView>        
      
 
 </RelativeLayout>

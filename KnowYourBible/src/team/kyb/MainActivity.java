@@ -16,29 +16,39 @@ import android.app.Dialog;
 import android.content.Context;
 import android.content.Intent;
 import android.database.Cursor;
+import android.text.Html;
 import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.Menu;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.CursorAdapter;
+import android.widget.TextView;
 
 public class MainActivity extends Activity {
 	
 	static final int DIALOG_HELP_ID = 0;
 	static final int DIALOG_ABOUT_ID = 1;
 	
-	
+//	private TextView tv_contactinfo;
+		
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
 		setContentView(R.layout.activity_main);
 		
+		//String mycontactinfo = "";
+		//String mycontactinfo2 = "";
+		
 /*		// pre populate the scriptures to the database using a separate thread
 		preScriptureTask.execute((Object[]) null); 	*/	
-		
 	
+	//	tv_contactinfo = (TextView) findViewById(R.id.contactinfo);
+	//	mycontactinfo = "<b>" + "<a href=\"http://www.7kplanet.com/kyb.html\">Know Your Bible Webpage</a>" + "</b>" + "<br/>" +
+	//			"<br/>" + "<a href=\"mailto:carloshernandez@utexas.edu?Subject=KYB\">Send Mail</a>";	
 			
+		//tv_contactinfo.setText(Html.fromHtml(mycontactinfo));		
+	//	tv_contactinfo.setText(getText(R.string.mycontactinfo));	
 	}
 
 	public void startIKnow(View v) {

@@ -6,7 +6,10 @@
     <string name="iknow_label">I Know That Scripture</string>
     <string name="games_label">More Games</string>
     <string name="hangman_label">Hangman</string>
-    <string name="kybwidgetlabel">KYB Daily Scripture</string>    
+    <string name="kybwidgetlabel">KYB Daily Scripture</string>  
+    
+    <string name="fillin_label">Fill in the blank</string>
+    <string name="moreGame_label">Extra Games</string>    
     
     <string name="scriptures_label">Scriptures Database</string>
     <string name="settings_label">Settings</string>
@@ -85,6 +88,9 @@
 	    Date Created: December 15, 2013\n
 	    Created by: Carlos Hernandez, Khuong Thai, and Hoang Pham\n
 	    </string>
+	    
+	<string name="mycontactinfo">Please contact us at carloshernandez@utexas.edu or visit our website at http://www.7kplanet.com/kyb.html .</string>	
+	
 	<string name="helpgame">1) To start the game click on the KYB icon on your home screen or application list.\n
 	    	2) The Welcome Screen will display for a few seconds to setup the scriptures database and installation file.\n
 	    	3) After the Welcome Screen, the Main Menu screen will display three buttons: I Know That Scripture, Scriptures Database, and More Games.\n
