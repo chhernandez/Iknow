@@ -99,10 +99,20 @@
 
 	
 	<string name="helpgame">1) To start the game click on the KYB icon on your home screen or application list.\n
+	    You can also install the KYB Daily Scripture Widget on your home screen and click the icon on the top left corner to launch the application\n
+	    The KYB Widget will display today\'s date and the scripture of the day.  The scripture will change every 12 hours.\n
 	    	2) The Welcome Screen will display for a few seconds to setup the scriptures database and installation file.\n
 	    	3) After the Welcome Screen, the Main Menu screen will display three buttons: I Know That Scripture, Scriptures Database, and More Games.\n
-	    	 
-	    		</string>
+	    	4) You have a 4 menu option on the Main Menu: Scriptures Database, Settings, Help, and About.\n
+	    	Scriptures Database will take you the database interface where you can view, add, update, or delete individual scriptures from the database.\n
+	    	Settings will allow you to turn on or off sounds within the game.\n
+	    	Help will display this dialog box where you can find instruction on how to use the application.\n
+	    	About will display a dialog box with more information about the app such as a short description, date created, and names of developers.\n
+	    	5) I Know That Scripture - This is a fun game where you will see a random scripture and the objective of the game is to guess where you can find that passage in the Bible.
+	    	Select from the drop downs the Bible book, chapter, and verse.  Click Submit to check your answer.  Here are the rules to the game: To reach your high score before 4 wrong answers.
+	    	If you do, you will get a winning animation otherwise you will see the losing game animation.  You can reset your score in the menu option. 
+	    	To exit the game click the back button, or select Exit from the menu options. \n
+	    </string>
 	
 	<string name="passage_a1">Keep your senses, be watchful! Your adversary, the Devil, walks about like a roaring lion, seeking to devour someone.</string>
 	<string name="passage_b1">@string/book60</string>
