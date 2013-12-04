@@ -14,7 +14,7 @@
         android:id="@+id/btn_IKnow"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:textStyle="bold"
         android:textColor="#ffffff"
         android:gravity="center"
@@ -28,7 +28,7 @@
         android:layout_below="@id/btn_IKnow"    
         android:textStyle="bold"
         android:textColor="#ffffff"               
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:onClick="startScriptures"
         android:text="@string/scriptures_label" />  
@@ -40,7 +40,7 @@
         android:layout_below="@id/btn_Scriptures"  
         android:textStyle="bold"
         android:textColor="#ffffff"                
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:gravity="center"
         android:onClick="startGames"
         android:text="@string/games_label" />  
@@ -51,9 +51,9 @@
         android:layout_height="wrap_content"
         android:layout_alignParentBottom="true"
         android:layout_marginBottom="5dp"    
-        
+        android:background="#ffffff"
         android:autoLink="all"
-        android:textSize="12sp" 
+        android:textSize="14sp" 
         android:text="@string/mycontactinfo"
         android:padding="5dp"
         android:textColor="#000000">
