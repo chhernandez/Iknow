@@ -229,7 +229,42 @@ Para salir del juego , haga clic en el botón Atrás , o seleccione Salir en las
 	<string name="passage_a25">Y quedaban atónitos por su modo de enseñar, porque allí estaba enseñandoles como quien tiene autoridad, y no como escribas.</string>
 	<string name="passage_b25">@string/book41</string>
 	<string name="passage_c25">1</string>
-	<string name="passage_d25">22</string>					
+	<string name="passage_d25">22</string>	
+	
+	<string name="passage_a26">Si ustedes me aman, observarán mis mandamientos.</string>
+	<string name="passage_b26">@string/book43</string>
+	<string name="passage_c26">14</string>
+	<string name="passage_d26">15</string>
+	
+	<string name="passage_a27">Sigan andando en sabiduría para con los de afuera, comprándose todo el tiempo oportuno que queda.</string>
+	<string name="passage_b27">@string/book51</string>
+	<string name="passage_c27">4</string>
+	<string name="passage_d27">5</string>	
+	
+	<string name="passage_a28">Ahora bien, a cada uno de nosotros se le dio bondad inmerecida según la manera como el Cristo dio por medida la dádiva gratuita.</string>
+	<string name="passage_b28">@string/book49</string>
+	<string name="passage_c28">4</string>
+	<string name="passage_d28">7</string>	
+	
+	<string name="passage_a29">Porque donde hay celos y espíritu de contradicción, allí hay desorden y toda cosa vil.</string>
+	<string name="passage_b29">@string/book59</string>
+	<string name="passage_c29">3</string>
+	<string name="passage_d29">16</string>
+	
+	<string name="passage_a30">Sé sabio, hijo mío, y regocija mi corazón, para que pueda responder al que me está desafiando con escarnio.</string>
+	<string name="passage_b30">@string/book20</string>
+	<string name="passage_c30">27</string>
+	<string name="passage_d30">11</string>
+	
+	<string name="passage_a31">Por lo tanto, sigan consolándose uno a otros y edificándose unos a otros, así como de hecho lo están haciendo.</string>
+	<string name="passage_b31">@string/book52</string>
+	<string name="passage_c31">5</string>
+	<string name="passage_d31">11</string>
+	
+	<string name="passage_a32">Jehová mismo examina al justo así como al inicuo, y Su alma ciertamente odia a cualquiera que ama la violencia.</string>
+	<string name="passage_b32">@string/book19</string>
+	<string name="passage_c32">11</string>
+	<string name="passage_d32">5</string>											
 
 	<string name="book1">Génesis</string>
 	<string name="book2">Éxodo</string>	

@@ -239,7 +239,40 @@
 	<string name="passage_c25">1</string>
 	<string name="passage_d25">22</string>	
 	
-			
+	<string name="passage_a26">If you love me, you will observe my commandments.</string>
+	<string name="passage_b26">@string/book43</string>
+	<string name="passage_c26">14</string>
+	<string name="passage_d26">15</string>	
+	
+	<string name="passage_a27">Go on walking in wisdom toward those on the outside, making the best use of your time.</string>
+	<string name="passage_b27">@string/book51</string>
+	<string name="passage_c27">4</string>
+	<string name="passage_d27">5</string>		
+	
+	<string name="passage_a28">Now undeserved kindness was given to each one of us according to how the Christ measured out the free gift.</string>
+	<string name="passage_b28">@string/book49</string>
+	<string name="passage_c28">4</string>
+	<string name="passage_d28">7</string>
+	
+	<string name="passage_a29">For wherever there are jealousy and contentiousness, there will also be disorder and every vile thing.</string>
+	<string name="passage_b29">@string/book59</string>
+	<string name="passage_c29">3</string>
+	<string name="passage_d29">16</string>	
+	
+	<string name="passage_a30">Be wise, my son, and make my heart rejoice, so that I can make a reply to him who taunts me.</string>
+	<string name="passage_b30">@string/book20</string>
+	<string name="passage_c30">27</string>
+	<string name="passage_d30">11</string>	
+	
+	<string name="passage_a31">Therefore, keep encouraging one another and building one another up, just as you are in fact doing.</string>
+	<string name="passage_b31">@string/book52</string>
+	<string name="passage_c31">5</string>
+	<string name="passage_d31">11</string>		
+	
+	<string name="passage_a32">Jehova examines the righteous one as well as the wicked one; He hates anyone who loves violence.</string>
+	<string name="passage_b32">@string/book19</string>
+	<string name="passage_c32">11</string>
+	<string name="passage_d32">5</string>				
 	
 	<string name="book1">Genesis</string>
 	<string name="book2">Exodus</string>	
