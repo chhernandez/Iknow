@@ -74,7 +74,7 @@ public class EditScripture extends Activity {
 				
 				//set dialog title and message, and provide the button to dismiss
 				vchapter.setTitle(R.string.vbookTitle);
-				vchapter.setMessage(R.string.vbookMessage);
+				vchapter.setMessage(R.string.vchapterMessage);
 				vchapter.setPositiveButton(R.string.vButton, null);
 				vchapter.show();				
 			} else if (verse.getText().length() == 0){
@@ -82,7 +82,7 @@ public class EditScripture extends Activity {
 				
 				//set dialog title and message, and provide the button to dismiss
 				vverse.setTitle(R.string.vbookTitle);
-				vverse.setMessage(R.string.vbookMessage);
+				vverse.setMessage(R.string.vverseMessage);
 				vverse.setPositiveButton(R.string.vButton, null);
 				vverse.show();				
 			} else {
