@@ -89,7 +89,7 @@
 	    Created by: Carlos Hernandez, Khuong Thai, and Hoang Pham\n
 	    </string>
 	    
-	<string name="mycontactinfo">Please contact us at carloshernandez@utexas.edu or visit our website at http://www.7kplanet.com/kyb.html .</string>	
+	<string name="mycontactinfo">Please contact us at carloswantsmail@gmail.com or visit our website at http://www.7kplanet.com/kyb.html .</string>	
 	
 	<string name="helpgame">1) To start the game click on the KYB icon on your home screen or application list.\n
 	    You can also install the KYB Daily Scripture Widget on your home screen and click the icon on the top left corner to launch the application\n
@@ -266,7 +266,12 @@
 	<string name="passage_a32">Jehova examines the righteous one as well as the wicked one; He hates anyone who loves violence.</string>
 	<string name="passage_b32">@string/book19</string>
 	<string name="passage_c32">11</string>
-	<string name="passage_d32">5</string>												
+	<string name="passage_d32">5</string>	
+	
+	<string name="passage_a33">Salvation belongs to Jehovah. Your blessing is upon your people.</string>
+	<string name="passage_b33">@string/book19</string>
+	<string name="passage_c33">3</string>
+	<string name="passage_d33">8</string>												
 
 	<string name="book1">Genesis</string>
 	<string name="book2">Exodus</string>	

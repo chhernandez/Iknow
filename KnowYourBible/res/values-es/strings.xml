@@ -89,7 +89,7 @@
 
 	    </string>
 	    
-	<string name="mycontactinfo">Envíenos correo a carloshernandez@utexas.edu o visite nuestro sitio web en http://www.7kplanet.com/kyb.html .</string>	
+	<string name="mycontactinfo">Envíenos correo a carloswantsmail@gmail.com o visite nuestro sitio web en http://www.7kplanet.com/kyb.html .</string>	
 	
 	<string name="helpgame">1) Para iniciar el juego, haga clic en el icono de Conozca Su Biblia en la pantalla de inicio o en la lista de aplicaciones.\n
 	    También puede instalar el KYB Texto Diario widget en la pantalla principal y haga clic en el icono en la esquina superior izquierda para iniciar la aplicación \ n
@@ -264,7 +264,12 @@ Para salir del juego , haga clic en el botón Atrás , o seleccione Salir en las
 	<string name="passage_a32">Jehová mismo examina al justo así como al inicuo, y Su alma ciertamente odia a cualquiera que ama la violencia.</string>
 	<string name="passage_b32">@string/book19</string>
 	<string name="passage_c32">11</string>
-	<string name="passage_d32">5</string>											
+	<string name="passage_d32">5</string>	
+	
+	<string name="passage_a33">La salvación pertenece a Jehova. Tu bendición está sobre tu pueblo.</string>
+	<string name="passage_b33">@string/book19</string>
+	<string name="passage_c33">3</string>
+	<string name="passage_d33">8</string>											
 
 	<string name="book1">Génesis</string>
 	<string name="book2">Éxodo</string>	

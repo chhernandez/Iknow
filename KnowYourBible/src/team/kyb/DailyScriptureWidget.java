@@ -135,6 +135,31 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 		mytextarray[24] = "<b>" + res.getString(R.string.passage_a25) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b25) + " " + res.getString(R.string.passage_c25)
 				+ " : " + res.getString(R.string.passage_d25);
+		mytextarray[25] = "<b>" + res.getString(R.string.passage_a26) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b26) + " " + res.getString(R.string.passage_c26)
+				+ " : " + res.getString(R.string.passage_d26);
+		mytextarray[26] = "<b>" + res.getString(R.string.passage_a27) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b27) + " " + res.getString(R.string.passage_c27)
+				+ " : " + res.getString(R.string.passage_d27);	
+		mytextarray[27] = "<b>" + res.getString(R.string.passage_a28) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b28) + " " + res.getString(R.string.passage_c28)
+				+ " : " + res.getString(R.string.passage_d28);
+		mytextarray[28] = "<b>" + res.getString(R.string.passage_a29) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b29) + " " + res.getString(R.string.passage_c29)
+				+ " : " + res.getString(R.string.passage_d29);		
+		mytextarray[29] = "<b>" + res.getString(R.string.passage_a30) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b30) + " " + res.getString(R.string.passage_c30)
+				+ " : " + res.getString(R.string.passage_d30);	
+		mytextarray[30] = "<b>" + res.getString(R.string.passage_a31) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b31) + " " + res.getString(R.string.passage_c31)
+				+ " : " + res.getString(R.string.passage_d31);
+		mytextarray[31] = "<b>" + res.getString(R.string.passage_a32) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b32) + " " + res.getString(R.string.passage_c32)
+				+ " : " + res.getString(R.string.passage_d32);		
+		mytextarray[32] = "<b>" + res.getString(R.string.passage_a33) + "</b>" + "<br>" +
+				"<br>" + res.getString(R.string.passage_b33) + " " + res.getString(R.string.passage_c33)
+				+ " : " + res.getString(R.string.passage_d33);			
+		
 	
 		
 		int idx = new Random().nextInt(mytextarray.length);	
