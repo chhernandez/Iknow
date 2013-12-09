@@ -58,7 +58,7 @@ public class DailyScriptureWidget extends AppWidgetProvider{
 				"<br>" + wBook + " " + wChapter
 				+ " : " + wVerse;	*/		
 		
-		String[] mytextarray = new String[25];
+		String[] mytextarray = new String[33];
 		
 		mytextarray[0] = "<b>" + res.getString(R.string.passage_a1) + "</b>" + "<br>" +
 				"<br>" + res.getString(R.string.passage_b1) + " " + res.getString(R.string.passage_c1)
