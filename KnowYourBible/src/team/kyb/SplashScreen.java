@@ -202,7 +202,73 @@ public class SplashScreen extends Activity {
 						getResources().getString(R.string.passage_b22), 
 						Integer.parseInt(getResources().getString(R.string.passage_c22)), 
 						Integer.parseInt(getResources().getString(R.string.passage_d22))
+				);		
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a23),
+						getResources().getString(R.string.passage_b23), 
+						Integer.parseInt(getResources().getString(R.string.passage_c23)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d23))
+				);	
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a24),
+						getResources().getString(R.string.passage_b24), 
+						Integer.parseInt(getResources().getString(R.string.passage_c24)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d24))
+				);								
+  				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a25),
+						getResources().getString(R.string.passage_b25), 
+						Integer.parseInt(getResources().getString(R.string.passage_c25)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d25))
+				);
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a26),
+						getResources().getString(R.string.passage_b26), 
+						Integer.parseInt(getResources().getString(R.string.passage_c26)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d26))
+				);
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a27),
+						getResources().getString(R.string.passage_b27), 
+						Integer.parseInt(getResources().getString(R.string.passage_c27)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d27))
+				);
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a28),
+						getResources().getString(R.string.passage_b28), 
+						Integer.parseInt(getResources().getString(R.string.passage_c28)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d28))
 				);					
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a29),
+						getResources().getString(R.string.passage_b29), 
+						Integer.parseInt(getResources().getString(R.string.passage_c29)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d29))
+				);								
+  				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a30),
+						getResources().getString(R.string.passage_b30), 
+						Integer.parseInt(getResources().getString(R.string.passage_c30)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d30))
+				);		
+				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a31),
+						getResources().getString(R.string.passage_b31), 
+						Integer.parseInt(getResources().getString(R.string.passage_c31)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d31))
+				);								
+  				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a32),
+						getResources().getString(R.string.passage_b32), 
+						Integer.parseInt(getResources().getString(R.string.passage_c32)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d32))
+				);	  				
+  				databaseConnector.insertScripture(
+						getResources().getString(R.string.passage_a33),
+						getResources().getString(R.string.passage_b33), 
+						Integer.parseInt(getResources().getString(R.string.passage_c33)), 
+						Integer.parseInt(getResources().getString(R.string.passage_d33))
+				);	  				
 				
 	    } // end of 		if (dbExist){
 
