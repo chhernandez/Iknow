@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Conozca Su Biblia</string>
+    <string name="app_version">Version 3.0</string>   
     
     <string name="iknow_label">Yo sé la Escritura</string>
     <string name="games_label">Más Juegos</string>

@@ -2,6 +2,7 @@
 <resources>
 
     <string name="app_name">Know Your Bible</string>
+    <string name="app_version">Version 3.0</string>   
     
     <string name="iknow_label">I Know That Scripture</string>
     <string name="games_label">More Games</string>

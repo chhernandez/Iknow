@@ -30,7 +30,7 @@
         android:textSize="12dp"
         android:textStyle="bold"
         android:typeface="serif" 
-        android:text="version 2.5">
+        android:text="@string/app_version">
 	</TextView>    
 	
 
